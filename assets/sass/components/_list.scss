@@ -10,9 +10,13 @@
 		list-style: decimal;
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1.25em;
+		list-style-position: outside;
+
 
 		li {
 			padding-left: 0.25em;
+			list-style-position: outside;
+
 		}
 	}
 
@@ -20,9 +24,13 @@
 		list-style: disc;
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
+		list-style-position: outside;
+
 
 		li {
 			padding-left: 0.5em;
+			list-style-position: outside;
+
 		}
 
 		&.alt {

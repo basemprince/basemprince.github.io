@@ -23,7 +23,10 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	list-style-position: outside;
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -35,6 +38,8 @@ body {
 
 ol, ul {
 	list-style: none;
+	list-style-position: outside;
+
 }
 
 blockquote, q {
@@ -651,8 +656,11 @@ input, select, textarea {
 
 		.image:before {
 			pointer-events: none;
+			
 			background-image: url("../../images/overlay.png");
+			/*
 			background-color: rgba(19, 21, 25, 0.5);
+			*/
 			border-radius: 4px;
 			content: '';
 			display: block;
@@ -670,7 +678,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 40%;
+			max-width: 50%;
 		}
 
 			.image.left img, .image.right img {
@@ -726,9 +734,24 @@ input, select, textarea {
 		}
 
 /* List */
+	ul li {
+		/*
+		* We want the bullets outside of the list,
+		* so the text is aligned. Now the actual bullet
+		* is outside of the list’s container
+		*/
+		list-style-position: outside;
+
+		/*
+		* Because the bullet is outside of the list’s
+		* container, indent the list entirely
+		*/
+		margin-left: 1em;
+	}
 
 	ol {
 		list-style: decimal;
+		list-style-position: outside;
 		margin: 0 0 2rem 0;
 		padding-left: 1.25em;
 	}
@@ -741,10 +764,13 @@ input, select, textarea {
 		list-style: disc;
 		margin: 0 0 2rem 0;
 		padding-left: 1em;
+		list-style-position: outside;
+
 	}
 
 		ul li {
 			padding-left: 0.5em;
+
 		}
 
 		ul.alt {
@@ -764,6 +790,7 @@ input, select, textarea {
 
 	dl {
 		margin: 0 0 2rem 0;
+		list-style-position: outside;
 	}
 
 		dl dt {
@@ -787,6 +814,8 @@ input, select, textarea {
 		list-style: none;
 		margin-left: -1rem;
 		padding-left: 0;
+		list-style-position: outside;
+
 	}
 
 		ul.actions li {
