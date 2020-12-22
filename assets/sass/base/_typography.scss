@@ -58,7 +58,7 @@
 		margin: 0 0 _size(element-margin) 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2, h3, h4, h5, h6, d1 {
 		color: _palette(fg-bold);
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
@@ -108,6 +108,10 @@
 
 	h6 {
 		font-size: 0.6rem;
+	}
+
+	d1 {
+		position: absolute; top: 0.35em; right: 0;
 	}
 
 	@include breakpoint('<=small') {
