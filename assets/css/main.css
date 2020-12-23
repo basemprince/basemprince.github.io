@@ -747,7 +747,7 @@ input, select, textarea {
 		* Because the bullet is outside of the list’s
 		* container, indent the list entirely
 		*/
-		margin-left: 1em;
+		/*margin-left: 1em;*/
 	}
 
 	ol {
@@ -1383,10 +1383,11 @@ input, select, textarea {
 			padding-left: 0;
 			border: solid 4px #ffffff;
 			border-radius: 10px;
+			
 		}
 
 			#header nav ul li {
-				padding-left: 0;
+				padding-left:0;
 				border-left: solid 0px #ffffff;
 			}
 
@@ -1417,10 +1418,10 @@ input, select, textarea {
 		#header nav.use-middle:after {
 			content: '';
 			display: block;
-			position: relatvie;
+			position: absolute;
 			top: 0;
 			left: calc(50% - 1px);
-			width: 1px;
+			width: 0px;
 			height: 100%;
 			background: #ffffff;
 		}
