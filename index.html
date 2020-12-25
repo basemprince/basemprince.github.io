@@ -874,7 +874,34 @@
 							
 							<hr>
 
-							<p>UNDER CONSTRUCTION</p>
+							<!-- PERCEPTION SENSOR FUSION  -->
+							<h2 style="color:rgb(255, 136, 0)" >PERCEPTION SENSOR FUSION</h2>
+
+							<span><img src="images/lookup_gif.gif" ALIGN="right" width = 560px></span>
+							<ul >
+								<li>As a member of the Driver-less Formula team I dealt with fusing the input from the camera and lidar sensors</li>
+								<Li>The hardware is a Zed stereo camera and a Velodyne VLP-16 with an Nvidia Xavier as a GPU. the Driver-less pipeline uses Robot Operating System (ROS)</Li>
+								<Li>The Zed camera input is fed into YOLO (You Only Look Once), which is a real-time object detection CNN</Li>
+								<Li>The YOLO algorithm detects the cones and outputs the color of the cone and the bounding box points locations</Li>
+								<Li>The point cloud output from the Lidar was used to get the correct distance to the cones and had to be transformed to the camera image frame</Li>
+								<Li>To compute the transformation, the intrensic and the extrensic matrices had to be calculated first</Li>
+								<Li>The intrensic and the extrensic matrices were calculated using Matlab's camera calibration tool box</Li>
+								<Li>After the point cloud was transformed to camera frame, the bounding boxes from Yolo were used to filter out the transformed point cloud</Li>
+								<Li>The output now includes the location, distance and color of all cones along with a time stamp and the covariance matrices</Li>
+								<Li>The lookup output is later fed to the next step in the pipeline, which is SLAM</Li>
+	
+								
+								<span><img src="images/zed_vel_eq.png" class="left" width = 360px></span>
+								
+								<span><img src="images/lookup_pipeline.png"    width = 760px></span>
+								
+								
+								<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw"></iframe> -->
+
+							</ul>
+							
+							<hr>
+							<p>MORE TO COME</p>
 	
 							</article>			
 
