@@ -23,3 +23,22 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+const $menu = $('nav.use-middle');
+const $article_open = $('is-article-visible')
+
+$(document).mouseup(e => {
+   if (!$menu.is(e.target) // if the target of the click isn't the container...
+   && $menu.has(e.target).length === 0 // ... nor a descendant of the container
+   && !$article_open.is(e.target)
+)
+   {
+    for (j = 0; j < dropdown.length; j++) {
+      // if (i!== j){
+          dropdown[j].nextElementSibling.style.display = "none"
+      // }
+      
+    }
+  }
+ });
+
