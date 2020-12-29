@@ -49,13 +49,36 @@ $(document).mouseup(e => {
    showDivs(slideIndex += n);
  }
  
+ var slideIndex1 = 1;
+ showDivs1(slideIndex1);
+ 
+ function plusDivs1(n) {
+   showDivs1(slideIndex1 += n);
+ }
+
  function showDivs(n) {
    var i;
    var x = document.getElementsByClassName("mySlides");
+
    if (n > x.length) {slideIndex = 1}
    if (n < 1) {slideIndex = x.length} ;
    for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
    }
    x[slideIndex-1].style.display = "block";
+  }
+
+  function showDivs1(n) {
+   var j;
+   var y = document.getElementsByClassName("mySlides2")
+
+   if (n > y.length) {slideIndex1 = 1}
+   if (n < 1) {slideIndex1 = y.length} ;
+   for (j = 0; j < y.length; j++) {
+     y[j].style.display = "none";
+   }
+   y[slideIndex1-1].style.display = "block";
+
  }
+
+ 
