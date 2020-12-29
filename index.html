@@ -908,6 +908,17 @@
 							
 							
 							<hr>
+
+							<!-- NAME PLATE DESIGNS -->
+							<h2 style="color:rgb(255, 136, 0)" >NAME PLATE DESIGNS</h2>
+				
+							
+							<ul >
+								<Li>UNDER CONSTRUCTION</Li>
+							</ul> 
+							
+							
+							<hr>
 							MORE TO COME
 						</article>
 
@@ -1187,11 +1198,17 @@
 							<ul >
 								<li>A Gazebo simulation of a TIAGo robot localizing in a previously mapped apartment</Li>
 								<Li>The robot has several onboard sensors and a manipulator which enable it to navigate and interact with the environment through simple manipulation tasks</Li>
+								<Li>The robot has modules for path planning, control, localization, sensing, and manipulation</Li>
 								<Li>The main mission is to navigate to a specific location to pick up an object, then transport it to a different target location</Li>
 								<Li>We made use of the available sensors and actuator through the software packages provided to accomplish the goal</Li>
 								<Li>The simulation uses Robot Operating System (ROS)</Li>
+								<Li>In the localization step, the robot spins around to gather as much information as possible from the enviroment using the sensors</Li>
+								<Li>Localization is done by using a particle filter. Random distribution of poses of the robot gets scattered across the map, then each one of them gets evaluated to find out how likely it is the true pose</Li>
+								<Li>The least likely ones get deleted, and the most likely ones are used to generate poses nearby in a reiterative manner to find out the correct pose</Li>
 								<Li>ARUCO markers were used to find the cube's pose. Once the robot can see the marker, it can target it's location with the manipulator</Li>
-								<Li>The robot also has the capability to recognize when it is kidnapped, and relocalizes when it occurs</Li>
+								<Li>State Machine and Behaviour Tree were both used as models for the robots behaviour</Li>
+								<Li>The robot has the capability to recognize when it is kidnapped, and relocalizes when it occurs</Li>
+
 								<span><img src="images/rob1.png" ALIGN="left" width = 530px></span>
 								<iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic"></iframe>															
 
