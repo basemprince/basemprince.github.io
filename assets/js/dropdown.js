@@ -49,12 +49,9 @@ $(document).mouseup(e => {
    showDivs(slideIndex += n);
  }
  
- var slideIndex1 = 1;
- showDivs1(slideIndex1);
- 
- function plusDivs1(n) {
-   showDivs1(slideIndex1 += n);
- }
+
+
+
 
  function showDivs(n) {
    var i;
@@ -66,6 +63,14 @@ $(document).mouseup(e => {
      x[i].style.display = "none";
    }
    x[slideIndex-1].style.display = "block";
+  }
+
+
+  var slideIndex1 = 1;
+  showDivs1(slideIndex1);
+  
+  function plusDivs1(n) {
+    showDivs1(slideIndex1 += n);
   }
 
   function showDivs1(n) {
@@ -81,4 +86,25 @@ $(document).mouseup(e => {
 
  }
 
+
+
+ var slideIndex2 = 1;
+ showDivs2(slideIndex2);
+ 
+ function plusDivs2(n) {
+   showDivs2(slideIndex2 += n);
+ }
+
+ function showDivs2(n) {
+  var k;
+  var z = document.getElementsByClassName("mySlides3")
+
+  if (n > z.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = z.length} ;
+  for (k = 0; k < z.length; k++) {
+    z[k].style.display = "none";
+  }
+  z[slideIndex2-1].style.display = "block";
+
+}
  
