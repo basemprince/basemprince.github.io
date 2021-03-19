@@ -1744,13 +1744,26 @@ input, select, textarea {
 			
 		}
 
-		img {
-			
+		img {	
 			border-radius: 22px;
 			padding: 8px;
 			
 		}
-
+        .center-fit {
+            max-width: 100%;
+            margin: auto;
+        }
+		.two-pictures {
+            max-width: 50%;
+            
+		}
+		iframe {	
+			border-radius: 22px;
+			padding: 8px;
+		}
+		.two-pictures {
+            max-width: 47%;  
+		}			
 		hr { 
 			background: url("../../images/logo.png") no-repeat top center;
 			background-size: contain;

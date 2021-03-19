@@ -15,7 +15,7 @@ for (i = 0; i < dropdown.length; i++) {
       
       for (j = 0; j < dropdown.length; j++) {
         if (i!== j){
-            //  dropdown[j].nextElementSibling.style.display = "none"
+            // dropdown[j].nextElementSibling.style.display = "none"
         }
         
       }
