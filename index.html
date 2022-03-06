@@ -64,6 +64,7 @@
 
 									<a href="#uofm_portfolio">UOFM PORTFOLIO</a>
 									<a href="#kth_portfolio">KTH PORTFOLIO</a>
+									<a href="#unitn_portfolio">UNITN PORTFOLIO</a>
 								  </div></Li>
 
 								  <li><a href="#extracurricular">EXTRACURRICULAR</a></li>
@@ -276,9 +277,6 @@
 
 							</article>
 
-
-
-
 						<!-- uofm portfolio -->
 							<article id="uofm_portfolio">
 								<h1 class="major">UNIVERSITY OF MANITOBA PORTFOLIO</h1>
@@ -451,9 +449,236 @@
 								
 								<hr>
 
-								More to Come
+								MORE TO COME
 							</article>
 
+
+
+						<!-- kth portfolio -->
+						<article id="kth_portfolio">
+							<h1 class="major">KTH ROYAL INSTITUTE OF TECHNOLOGY PORTFOLIO</h1>
+							<!--<span class="image main"><img src="images/pic01.jpg" alt="" /></span>-->
+
+							<!-- ROBOT EXPLORATION SIMULATION -->
+							<h2 style="color:rgb(255, 136, 0)" >ROBOT EXLPORATION SIMULATION</h2>
+
+							
+							<ul >
+								<li>The objective is to create a Gazebo simulation of a turtlebot using Robot Operating System(ROS)</Li>
+								<li>Exploration is done based on receding horizon "next-best-view" (RH-NBV)</Li>
+								<li>Collision avoidance is based on the obstacle-restriction method (ORM) and pure pursuit</Li>
+								<li>In order for Burger to localize, Hector SLAM was used for mapping and localization</Li>
+								<li>ROS was used to create a controller node to combine the exploration, slam and collision avoidance node to move the robot around in the enviroment</Li>
+								
+								<span><img src="images/turtlebot.jpg" ALIGN="left" width = 490px></span>
+								<iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe>
+
+							</ul>
+							
+							<hr>
+
+							<!-- INVERSE KINEMATICS  -->
+							<h2 style="color:rgb(255, 136, 0)" >SCARA AND KUKA INVERSE KINEMATICS SIMULATION</h2>
+
+							
+							<ul >
+								<li>Inverse kinematic algorithm was used to move the robots joints so that it follows a desired path with the end-effector</Li>
+								<li>The first robot is a 3 DOF scara robot, with an inverse kinematic solution that is possible in analytic form</Li>
+								<li>The second robot is a 7 DOF kuka robot, with the inverse kinematic solution that was implemented with iterative algorithms, the robot DH table, and computing the robot's Jacobian</Li>
+								
+								<span><img src="images/kuka1.jpg" ALIGN="left" width = 460px></span>
+								<iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe>
+
+							</ul>
+
+							<hr>
+
+							<!-- PERCEPTION SENSOR FUSION  -->
+							<h2 style="color:rgb(255, 136, 0)" >PERCEPTION SENSOR FUSION</h2>
+
+							<span><img src="images/lookup_gif.gif" ALIGN="right" width = 560px></span>
+							<ul >
+								<li>As a member of the Driver-less Formula team I dealt with fusing the input from the camera and lidar sensors</li>
+								<Li>The hardware is a Zed stereo camera and a Velodyne VLP-16 with an Nvidia Xavier as a GPU. the Driver-less pipeline uses Robot Operating System (ROS)</Li>
+								<Li>The Zed camera input is fed into YOLO (You Only Look Once), which is a real-time object detection CNN</Li>
+								<Li>The YOLO algorithm detects the cones and outputs the color of the cone and the bounding box points locations</Li>
+								<Li>The point cloud output from the Lidar was used to get the correct distance to the cones and had to be transformed to the camera image frame</Li>
+								<Li>To compute the transformation, the intrensic and the extrensic matrices had to be calculated first</Li>
+								<Li>The intrensic and the extrensic matrices were calculated using Matlab's camera calibration tool box</Li>
+								<Li>After the point cloud was transformed to camera frame, the bounding boxes from Yolo were used to filter out the transformed point cloud</Li>
+								<Li>The output now includes the location, distance and color of all cones along with a time stamp and the covariance matrices</Li>
+								<Li>The lookup output is later fed to the next step in the pipeline, which is SLAM</Li>
+								<Li>Designed and 3d printed a bracket holder to connect the lidar and camera together for consistent locating during calibration procedures</Li>
+
+								<span><img src="images/zed_vel_eq.png" class="left" width = 360px></span>
+								
+								<span><img src="images/lookup_pipeline.jpg"    width = 760px></span>
+								
+								
+								<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe> -->
+
+							</ul>
+							
+							<hr>
+
+							<!-- MACHINE LEARNING PROJECTS -->
+							<h2 style="color:rgb(255, 136, 0)" >MACHINE LEARNING</h2>
+
+							<ul >
+								<li> UNDER CONSTRUCTION</Li>
+															
+
+							</ul>
+							
+							<hr>
+
+							<!-- ROBOT MISSION PLANNER SIMULATION -->
+							<h2 style="color:rgb(255, 136, 0)" >ROBOT MISSION PLANNER SIMULATION</h2>
+							
+							<ul >
+								<li>A Gazebo simulation of a TIAGo robot localizing in a previously mapped apartment</Li>
+								<Li>The robot has several onboard sensors and a manipulator which enable it to navigate and interact with the environment through simple manipulation tasks</Li>
+								<Li>The robot has modules for path planning, control, localization, sensing, and manipulation</Li>
+								<Li>The main mission is to navigate to a specific location to pick up an object, then transport it to a different target location</Li>
+								<Li>We made use of the available sensors and actuator through the software packages provided to accomplish the goal</Li>
+								<Li>The simulation uses Robot Operating System (ROS)</Li>
+								<Li>In the localization step, the robot spins around to gather as much information as possible from the enviroment using the sensors</Li>
+								<Li>Localization is done by using a particle filter. Random distribution of poses of the robot gets scattered across the map, then each one of them gets evaluated to find out how likely it is the true pose</Li>
+								<Li>The least likely ones get deleted, and the most likely ones are used to generate poses nearby in a reiterative manner to find out the correct pose</Li>
+								<Li>ARUCO markers were used to find the cube's pose. Once the robot can see the marker, it can target it's location with the manipulator</Li>
+								<Li>State Machine and Behaviour Tree were both used as models for the robots behaviour</Li>
+								<Li>The robot has the capability to recognize when it is kidnapped, and relocalizes when it occurs</Li>
+
+								<span><img src="images/rob1.jpg" ALIGN="left" width = 530px></span>
+								<iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic?rel=0"></iframe>															
+
+
+							</ul>
+							
+							<hr>
+
+							<!-- DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH -->
+							<h2 style="color:rgb(255, 136, 0)" >DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
+							<span><img src="images/process_diagram.png" ALIGN="right" width = 620px></span>
+							<ul >
+								<li>This three month work was part of a project related to the topic of Research Methodology and Scientific Writing</Li>
+								<Li>The work evaluates the performance of using One-Class Support Vector Machine (SVM) to detect deceptive reviews online</Li>
+								<Li>After performing extensive resarch in the field, previous efforts were found that used both genuine and deceptive reviews to train a multitude of Machine Learning (ML) algorithms</Li>
+								<Li>The objective of this project was to prove that only using the genuine reviews is sufficient to produce a machine learning classifier that performs better or as good as multi-class SVM without losing accuracy in classifications</Li>							
+								<Li>Online reviews play an increasing role in business. In the digital world they have replaced the word of mouth. With all the benefits it brings, unfortunately fake reviews produced by bots falsify this data</Li>
+								<Li>The purpose of this work is to further facilitate the prevention of deceptive text from decreasing thecredibility of online reviews</Li>
+								<Li>This is done by developing a machine learning model to identify deceptive reviews that is simple enough to produce a better performance than a given existing solution without sacrificing accuracy</Li>
+								<Li>The project used quantitative techniques to classify review data-sets as deceptive or genuine. Once the ML algorithm was developed, an analytical method was used to quantify the performanceand accuracy. This was later compared to the approach of using the combination of genuine and deceptive reviews in order to confirm or to invalidate the stated hypothesis</Li>
+								<Li>The data-sets were gathered, cleaned up and merged into one table using R studio and Pandas. The data was then pre-processed before feeding it into the SVM algorithms</Li>
+								<Li>Extensive pre-processing was required through Natural Language Processing (NLP).This is essential to enable the computer to interpret the human language. The following five steps were performed to transform the review text into a form that can be fed into the algorithm:</Li>
+								<ul style="list-style-type:square">
+									<Li><b>Tokenization:</b> To break a block of text into a list of words</Li>
+									<Li><b>Remove Stop words and Non-alpha text:</b> Stop words such as (a, at, but, etc) and numbers are irrelevantand can create over-fitting issues. Therefore, they are removed from the text</Li>
+									<Li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analysed as a single item.For an example, change, changing, and changer</Li>
+									<Li><b>Word Vectorization:</b> It is a general process of turning a collection of text documents into numericalfeature vectors. The method used is called TF-ID. The method summarizes how often a word appears,and down scales words that have a high frequency across all documents, which in return highlightsmore interesting words</Li>
+									<Li><b>Undersampling:</b> To eliminate imbalance from the data-sets, undersampling removes samples from themajority class until all labels are equally represented</Li>
+								</ul>
+								<Li>Results pending</Li>
+							</ul>
+							
+							<hr>
+
+							<!-- AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS -->
+							<h2 style="color:rgb(255, 136, 0)" >AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS</h2>
+
+							<ul >
+								<li> UNDER CONSTRUCTION</Li>
+															
+								
+
+							</ul>
+							
+							<hr>
+
+							<!-- ENTERPENURIAL BUSINESS VENTURE  -->
+							<h2 style="color:rgb(255, 136, 0)" >ENTREPRENEURIAL BUSINESS VENTURE</h2>
+							<span><img src="images/ebike1.jpg" ALIGN="right" width = 600px></span>
+							<ul >
+								<li>The name of the startup venture is “Ebike Amp”. The startup is a new electric bike product that offers solutions for everyday commuting, or as a recreational/competitive sport</Li>
+								<Li>The bike has both pedaling and electric assist capabilities that would allow the driver to either get a comfortable and easy commute, or a hard workout if needed</Li>
+								<Li>Furthermore, the bike also can offer the driver a shield against the weather whether it’s raining, snowing, or just plain windy</Li>
+								<Li>The idea was generated due to a personal interest. I really enjoy biking and have been into it for many years</Li>
+								<Li>I started getting into biking as a hobby at the beginning, However, since I arrived in Sweden, it is my way of commuting as well. Multiple variables made biking here a lot more difficult than what I am used to, which in return made it unsustainable</Li>
+								<Li>I also have a great interest in automation, and an electronic bike was the perfect combination between the two interests, biking and automation</Li>
+								<Li>The concept of the ebike went through three iterations. The first iteration was a two-wheel ebike that looked very similar to current ebikes on the market, these forms of ebikes do not offer any form of protection against the environment</Li>
+								<Li>I wanted the ebike to easily offer the capability of transforming into a stationary bike, which currently no ebike manufacturers offer. Furthermore, I wanted to offer the capability of putting back power into the grid from pedaling while using the ebike in the stationary mode</Li>
+								<Li>With some research, I discovered that if you pedaled eight hours every day for 30 days (no weekends off), then doing the math, you'd generate about 16 kWh. A typical house in the U.S. uses about 1,000 kWh a month, which means with all that pedaling, would be able to save about 0.16% of your electric bill. With these results, putting power back to the grid is completely unsustainable and not worth going after</Li>
+								<Li>The second iteration was to create a bike that would use one wheel instead of two. However, that proved difficult to combine both stability and the possibility of pedaling while riding. While a one-wheel ebike would be more efficient and might be easier to weatherproof, it will also be very uncomfortable and harder to control. Furthermore, it’s a lot more complicated to stabilize</Li>
+								<Li>The third iteration was to put the driver inside the one wheel and provide means of assistance with balancing and turning. This iteration also made it possible to add weather protection without compromising the ebike dimensions, as it will be still enclosed within the wheel</Li>
+								<Li>The product is still in the concept phase, which means no prototype has been created nor tested</Li>
+								<Li>The Ebike Amp has innovative features that tackle multiple challenges when it comes to using bikes for commuting. The innovative solutions were developed for the following challenges:</Li>
+								<ul style="list-style-type:square">
+									<Li><b>The roads have too many hills:</b> The Ebike Amp has an electric motor/generator to assist in pedaling. The user can have two options to choose how much assisting is required. The first option would be a torque multiplier, so as an example, the user can choose to multiply their torque input from pedaling by 1.5X. The second option is choosing the maximum torque applied by the user to the pedals. This option will make the pedal have a constant feel even if you are going on ramps or hills</Li>
+									<Li><b>Difficulty turning with one wheel:</b> The Ebike Amp has electric motor/generators to assist in turning. The electric motors can control the two wheels to turn the bike. By slowing down the left wheel, and speeding up the right, the bike will turn left, and vice versa. The turn assist can also be used in regenerative breaking to transform breaking energy into charging the batteries. The turn assist frame can also swing upwards to reduce friction and increase efficiency when the bike is traveling in higher speeds</Li>
+									<Li><b>Un-versatile:</b> the Ebike Amp can be also used as a stationary bike. If the user would like to train at home. The bike can be used as a stationary bike without any modifications. With just a press of a button, the motor used in assisting in pedaling can turn into a generator. That means if the bike is in stationary mode, the user can charge the ebike’s batteries. The turn assist frame would make sure the bike is standing up at all times</Li>
+									<Li><b>Not enough range in the batteries:</b> The Ebike Amp has a large dome on the top that can host a large solar panel. A flexible solar panel can be installed on the dome to use solar energy to constantly charge the batteries. The Ebike Amp will also offer hot swappable batteries that can be changed in seconds</Li>
+								</ul>
+							</ul>
+							
+							<hr>	
+
+							<!-- ARTIFICIAL INTELLIGENCE -->
+							<h2 style="color:rgb(255, 136, 0)" >ARTIFICIAL INTELLIGENCE ALGORITHMS</h2>
+
+							<iframe width="620" height="350" src="https://www.youtube.com/embed/fieUkDx-bsU?rel=0" ALIGN= "right"></iframe>
+							<ul >
+								<li>Learned about the different principles of artificial intelligence, and used them to implement solutions to AI problems</Li>
+								<li>Topics covered were as follows:</li>
+								<ul style="list-style-type:square">
+									<Li><b>Problem solving:</b> Search, Games</Li>
+									<Li><b>Taming uncertainty:</b> Probabilistic reasoning, Bayesian Networks and Hidden Markov Models</Li>
+									<Li><b>Decision making under uncertainty:</b> Decision making using Markov Decision Processes (MDPs) and Partially Observable Markov Decision Processes (POMDPs), Reinforcement learning</Li>
+									<Li><b>Knowledge, reasoning, and planning:</b> Logic, Planning</Li>
+									<Li><b>Communicating and perceiving:</b> Natural language processing, Computer vision</Li>
+								</ul>
+								<li>Implemented Minmax algorithm in a game of fishing derby against an intelligent agent. Used the scoring and the Euclidian distance as a heuristic</li>
+								<li>Used Hidden Markov Model (HMM) to model a fish type guessing game.</li>
+								<li>Started with random guessing at the beginning, then used those guesses to build lambda models for those known types to build a more accurate guess for the unknown fish</Li>															
+
+							</ul>
+							
+							<hr>							
+							
+
+							<p>MORE TO COME</p>
+	
+							</article>			
+
+						<!-- unitn portfolio -->
+						<article id="unitn_portfolio">
+							<h1 class="major">UNIVERSITY OF TRENTO PORTFOLIO</h1>
+							<!--<span class="image main"><img src="images/pic01.jpg" alt="" /></span>-->
+
+							<!-- ROBOT EVACUATION MISSION PLANNING -->
+							<h2 style="color:rgb(255, 136, 0)" >ROBOT EVACUATION MISSION PLANNING</h2>
+
+							<span><img src="images/pathplan1.png" ALIGN="right" width = 440px></span>
+							<ul >
+								<Li>The project objective is to evacute three robots from a room in which a number of obstacles are present</Li>
+								<Li>Evacuation must be as fast as possible without colliding with any walls, obstacles or with each other</Li>
+								<Li>The robots initial positions, the location of the gate, and the number/ location of obstacles are random</Li>
+								<li>Written entierly in C++ and used Robot Operating System(ROS)</Li>
+								<Li>The solution is based on constructing a roadmap using the vertical cell decomposition algorithm</Li>
+								<Li>The path for each robot is then found by using breadth first search and later optimized to remove any redundant movements</Li>
+								<Li>Once we find all paths for the robots, we recursively check for collision detection between the robot paths and adjust them accordingly</Li>
+								<Li>The optimization is done by looking ahead to the future. Each point on the path is allowed to look at the upcoming points (up to a defined limit). it compares the distances between itself and each point that is on the horizon. The smallest distance will decide which point we will jump to next [given that no collision has been detected]</Li>
+								<Li>The function uses a tunable cost discount that could encourage going for further away points [in the index] even though they are not the least distance</Li>
+								<Li>The look ahead that decides the horizon is a variable that is controlled by the algorithm. It starts greedily with the full horizon, then later restricts it to allow for an increase in the distance of the path</Li>
+								<Li>As shown in the figure below, that increase in the length is done when a collision has been detected on that path to maybe allow for more time for the other robot to clear the collision point</Li>
+								<figure><img src="images/collision_a.png"  height = 345px>
+								<iframe width="600" height="345" src="https://www.youtube.com/embed/G5HU3dn15KI?rel=0"></iframe></figure>
+							</ul>
+
+							<hr>
+
+							<p>MORE TO COME</p>
+	
+							</article>		
 
 						<!-- hylife portfolio -->
 						<article id="hl_portfolio">
@@ -462,9 +687,9 @@
 							<!-- BUTT AND LOIN LINES MERGE CONVEYORS -->
 							<h2 style="color:rgb(255, 136, 0)" >BUTT AND LOIN LINES MERGE CONVEYORS</h2>
 
-							<iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN= "right"></iframe>
+							<iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN = "right">></iframe>
 
-							<ul >
+							<ul style="margin-bottom: 20px;">
 							<Li>The merge conveyors between the butt and loin lines is a source of multiple issues including foreign material and product pile ups</Li>
 							<Li>Worked with the industrial engineer from the loin and packaging area along with the continuous improvement manager to come up with solutions to this issue</Li>
 							<Li>I measured lengths of conveyors and product flow to use javascript simulation to find out the proper speeds for each conveyor that result in no product pile ups</Li>
@@ -504,9 +729,8 @@
 							<Li>Presented the solutions to the maintenance supervisor and team and agreed on the PLC logic reprogramming</Li>
 							<Li>Designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to keep track of empty spaces between products and only merge when there is enough space</Li></ul>
 
-							<span><img src="images/HY2.jpg" ALIGN="left" width = 520px></span>
-							<iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe>
-							<br> <br> <br> <br> <br>
+							<figure><img src="images/HY2.jpg" height = 615px>
+							<iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure>
 							<hr>	
 
 							<!-- HAM LINE TUMBLER/SKINNER STATION -->
@@ -557,9 +781,8 @@
 							<Li>Helped the team present the results to higher management</Li>
 							<Li>Designed a new multi-purpose table using Autocad Inventor to serve as a table top to process rework boxes, a box shelf that can hold up to 135 boxes and a bag holding rack. The design was given to the maintenance team for fabrication</Li></ul>
 
-							<span><img src="images/HY5.jpg" ALIGN="left" width = 790px></span>
-							<span><img src="images/HY6.jpg" ALIGN="left" width = 490px></span>
-							<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+							<figure><img src="images/HY5.jpg"  height = 300px>
+							<img src="images/HY6.jpg" height = 300px></figure>
 							<hr>		
 
 
@@ -599,18 +822,14 @@
 
 							<!-- OVERHEAD CONVEYORS WEAR GUARDS -->
 							<h2 style="color:rgb(255, 136, 0)" >OVERHEAD CONVEYORS WEAR GUARDS</h2>
-							
-							<span><img src="images/HY8.jpg" ALIGN="right" width = 520px></span>
-
-							<ul >
+							<img src="images/HY8.jpg" width = 520px  ALIGN = "right">							
+							<ul style = "margin-bottom: 200px;">
 							<Li>The new conveyors on the cut floor created black foreign material that contaminated the products</Li>
 							<Li>I measured all the lengths and dimensions of the affected conveyors to fabricate wear guards that would stop the belt from rubbing against the metal</Li>
 							<Li>I made observations and employed the help of the sanitation team to identify another source of the foreign material, which was the long rollers spanning the width of the conveyors</Li>
 							<Li>Created a priority list with the help of the maintenance and production team for which conveyors to tackle first</Li>
 							<Li>I kept contact with the contractor hired to install the wear guards and gave regular updates to the foreign material task force team</Li>
-							<Li>Audited the work of the contractor and created an ongoing document to mark progress and deficiencies</Li></ul><br> <br> <br> <br> <br> 
-
-							
+							<Li>Audited the work of the contractor and created an ongoing document to mark progress and deficiencies</Li></ul>
 							<hr>
 	
 
@@ -639,7 +858,7 @@
 							<Li>The simulation showed that at least five bagging stations is required to keep up with plant speed</Li>
 							<Li>The simulation also showed we will encounter a problem with the take away conveyors after the two Supervacs</Li>
 							<Li>I modelled three different solutions using Solidworks for the take away conveyor system and presented to management</Li></ul>
-							<span><img src="images/HY1.jpg" ALIGN="left" width = 650px></span>
+							<span><img src="images/HY1.jpg" ALIGN="left" height = 415px></span>
 							<iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe>
 
 							<hr>
@@ -669,7 +888,7 @@
 							<Li>I was able to use the production data to simulate timings of the different products flowing into the trim line</Li>
 							<Li>Used cylce times for each type of product along with the number of manning required to show that these parameters are sufficient to keep up with production demand</Li>
 							<Li>Used SolidWorks to create different layouts of concepts for the trim line worker stations to improve ergonomics and presented to the production team</Li></ul>
-							<span><img src="images/HY4.jpg" ALIGN="left" width = 650px></span>
+							<span><img src="images/HY4.jpg" ALIGN="left" height = 415px></span>
 							<iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe>
 							
 							<hr>
@@ -748,14 +967,14 @@
 
 							<!-- FEED MILL PELLETING IMPROVEMENT -->
 							<h2 style="color:rgb(255, 136, 0)" >FEED MILL PELLETING IMPROVEMENT</h2>
-							<span><img src="images/HY3.png" ALIGN="right" width = 850px></span>
-							<ul >
+							<img src="images/HY3.png" ALIGN ="right" width = 650px>
+							<ul style="margin-bottom: 250px;">
 							<Li>The Feed Mill was designed to produce 4800 Tonnes/week [250KT/Y]</Li>
 							<Li>Base Line before project: 4300 Tonnes/week [220KT/Y]. Down time was identified as the main cause of under performance. More specifically, down time due to pellet Mill plugging</Li>
 							<Li>Increased production capability to 5600 Tonnes/week [290KT/Y] [30% improvement]</Li>
 							<Li>From average 12 plugs/week to 1.3 plugs/week</Li>
 							<Li>Reduction of over time hours [$680K /Year]</Li></ul>
-							<br><br><br><br><br><br><br><br><br><br>
+
 							<hr>
 
 							<!-- Batching down time improvement -->
@@ -1256,201 +1475,6 @@
 							<p>MORE TO COME</p>
 	
 							</article>
-
-						<!-- kth portfolio -->
-						<article id="kth_portfolio">
-							<h1 class="major">KTH ROYAL INSTITUTE OF TECHNOLOGY PORTFOLIO</h1>
-							<!--<span class="image main"><img src="images/pic01.jpg" alt="" /></span>-->
-
-							<!-- ROBOT EXPLORATION SIMULATION -->
-							<h2 style="color:rgb(255, 136, 0)" >ROBOT EXLPORATION SIMULATION</h2>
-
-							
-							<ul >
-								<li>The objective is to create a Gazebo simulation of a turtlebot using Robot Operating System(ROS)</Li>
-								<li>Exploration is done based on receding horizon "next-best-view" (RH-NBV)</Li>
-								<li>Collision avoidance is based on the obstacle-restriction method (ORM) and pure pursuit</Li>
-								<li>In order for Burger to localize, Hector SLAM was used for mapping and localization</Li>
-								<li>ROS was used to create a controller node to combine the exploration, slam and collision avoidance node to move the robot around in the enviroment</Li>
-								
-								<span><img src="images/turtlebot.jpg" ALIGN="left" width = 490px></span>
-								<iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe>
-
-							</ul>
-							
-							<hr>
-
-							<!-- INVERSE KINEMATICS  -->
-							<h2 style="color:rgb(255, 136, 0)" >SCARA AND KUKA INVERSE KINEMATICS SIMULATION</h2>
-
-							
-							<ul >
-								<li>Inverse kinematic algorithm was used to move the robots joints so that it follows a desired path with the end-effector</Li>
-								<li>The first robot is a 3 DOF scara robot, with an inverse kinematic solution that is possible in analytic form</Li>
-								<li>The second robot is a 7 DOF kuka robot, with the inverse kinematic solution that was implemented with iterative algorithms, the robot DH table, and computing the robot's Jacobian</Li>
-								
-								<span><img src="images/kuka1.jpg" ALIGN="left" width = 460px></span>
-								<iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe>
-
-							</ul>
-
-							<hr>
-
-							<!-- PERCEPTION SENSOR FUSION  -->
-							<h2 style="color:rgb(255, 136, 0)" >PERCEPTION SENSOR FUSION</h2>
-
-							<span><img src="images/lookup_gif.gif" ALIGN="right" width = 560px></span>
-							<ul >
-								<li>As a member of the Driver-less Formula team I dealt with fusing the input from the camera and lidar sensors</li>
-								<Li>The hardware is a Zed stereo camera and a Velodyne VLP-16 with an Nvidia Xavier as a GPU. the Driver-less pipeline uses Robot Operating System (ROS)</Li>
-								<Li>The Zed camera input is fed into YOLO (You Only Look Once), which is a real-time object detection CNN</Li>
-								<Li>The YOLO algorithm detects the cones and outputs the color of the cone and the bounding box points locations</Li>
-								<Li>The point cloud output from the Lidar was used to get the correct distance to the cones and had to be transformed to the camera image frame</Li>
-								<Li>To compute the transformation, the intrensic and the extrensic matrices had to be calculated first</Li>
-								<Li>The intrensic and the extrensic matrices were calculated using Matlab's camera calibration tool box</Li>
-								<Li>After the point cloud was transformed to camera frame, the bounding boxes from Yolo were used to filter out the transformed point cloud</Li>
-								<Li>The output now includes the location, distance and color of all cones along with a time stamp and the covariance matrices</Li>
-								<Li>The lookup output is later fed to the next step in the pipeline, which is SLAM</Li>
-								<Li>Designed and 3d printed a bracket holder to connect the lidar and camera together for consistent locating during calibration procedures</Li>
-
-								<span><img src="images/zed_vel_eq.png" class="left" width = 360px></span>
-								
-								<span><img src="images/lookup_pipeline.jpg"    width = 760px></span>
-								
-								
-								<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe> -->
-
-							</ul>
-							
-							<hr>
-
-							<!-- MACHINE LEARNING PROJECTS -->
-							<h2 style="color:rgb(255, 136, 0)" >MACHINE LEARNING</h2>
-
-							<ul >
-								<li> UNDER CONSTRUCTION</Li>
-															
-
-							</ul>
-							
-							<hr>
-
-							<!-- ROBOT MISSION PLANNER SIMULATION -->
-							<h2 style="color:rgb(255, 136, 0)" >ROBOT MISSION PLANNER SIMULATION</h2>
-							
-							<ul >
-								<li>A Gazebo simulation of a TIAGo robot localizing in a previously mapped apartment</Li>
-								<Li>The robot has several onboard sensors and a manipulator which enable it to navigate and interact with the environment through simple manipulation tasks</Li>
-								<Li>The robot has modules for path planning, control, localization, sensing, and manipulation</Li>
-								<Li>The main mission is to navigate to a specific location to pick up an object, then transport it to a different target location</Li>
-								<Li>We made use of the available sensors and actuator through the software packages provided to accomplish the goal</Li>
-								<Li>The simulation uses Robot Operating System (ROS)</Li>
-								<Li>In the localization step, the robot spins around to gather as much information as possible from the enviroment using the sensors</Li>
-								<Li>Localization is done by using a particle filter. Random distribution of poses of the robot gets scattered across the map, then each one of them gets evaluated to find out how likely it is the true pose</Li>
-								<Li>The least likely ones get deleted, and the most likely ones are used to generate poses nearby in a reiterative manner to find out the correct pose</Li>
-								<Li>ARUCO markers were used to find the cube's pose. Once the robot can see the marker, it can target it's location with the manipulator</Li>
-								<Li>State Machine and Behaviour Tree were both used as models for the robots behaviour</Li>
-								<Li>The robot has the capability to recognize when it is kidnapped, and relocalizes when it occurs</Li>
-
-								<span><img src="images/rob1.jpg" ALIGN="left" width = 530px></span>
-								<iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic?rel=0"></iframe>															
-
-
-							</ul>
-							
-							<hr>
-
-							<!-- DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH -->
-							<h2 style="color:rgb(255, 136, 0)" >DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
-							<span><img src="images/process_diagram.png" ALIGN="right" width = 620px></span>
-							<ul >
-								<li>This three month work was part of a project related to the topic of Research Methodology and Scientific Writing</Li>
-								<Li>The work evaluates the performance of using One-Class Support Vector Machine (SVM) to detect deceptive reviews online</Li>
-								<Li>After performing extensive resarch in the field, previous efforts were found that used both genuine and deceptive reviews to train a multitude of Machine Learning (ML) algorithms</Li>
-								<Li>The objective of this project was to prove that only using the genuine reviews is sufficient to produce a machine learning classifier that performs better or as good as multi-class SVM without losing accuracy in classifications</Li>							
-								<Li>Online reviews play an increasing role in business. In the digital world they have replaced the word of mouth. With all the benefits it brings, unfortunately fake reviews produced by bots falsify this data</Li>
-								<Li>The purpose of this work is to further facilitate the prevention of deceptive text from decreasing thecredibility of online reviews</Li>
-								<Li>This is done by developing a machine learning model to identify deceptive reviews that is simple enough to produce a better performance than a given existing solution without sacrificing accuracy</Li>
-								<Li>The project used quantitative techniques to classify review data-sets as deceptive or genuine. Once the ML algorithm was developed, an analytical method was used to quantify the performanceand accuracy. This was later compared to the approach of using the combination of genuine and deceptive reviews in order to confirm or to invalidate the stated hypothesis</Li>
-								<Li>The data-sets were gathered, cleaned up and merged into one table using R studio and Pandas. The data was then pre-processed before feeding it into the SVM algorithms</Li>
-								<Li>Extensive pre-processing was required through Natural Language Processing (NLP).This is essential to enable the computer to interpret the human language. The following five steps were performed to transform the review text into a form that can be fed into the algorithm:</Li>
-								<ul style="list-style-type:square">
-									<Li><b>Tokenization:</b> To break a block of text into a list of words</Li>
-									<Li><b>Remove Stop words and Non-alpha text:</b> Stop words such as (a, at, but, etc) and numbers are irrelevantand can create over-fitting issues. Therefore, they are removed from the text</Li>
-									<Li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analysed as a single item.For an example, change, changing, and changer</Li>
-									<Li><b>Word Vectorization:</b> It is a general process of turning a collection of text documents into numericalfeature vectors. The method used is called TF-ID. The method summarizes how often a word appears,and down scales words that have a high frequency across all documents, which in return highlightsmore interesting words</Li>
-									<Li><b>Undersampling:</b> To eliminate imbalance from the data-sets, undersampling removes samples from themajority class until all labels are equally represented</Li>
-								</ul>
-								<Li>Results pending</Li>
-							</ul>
-							
-							<hr>
-
-							<!-- AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS -->
-							<h2 style="color:rgb(255, 136, 0)" >AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS</h2>
-
-							<ul >
-								<li> UNDER CONSTRUCTION</Li>
-															
-								
-
-							</ul>
-							
-							<hr>
-
-							<!-- ENTERPENURIAL BUSINESS VENTURE  -->
-							<h2 style="color:rgb(255, 136, 0)" >ENTREPRENEURIAL BUSINESS VENTURE</h2>
-							<span><img src="images/ebike1.jpg" ALIGN="right" width = 600px></span>
-							<ul >
-								<li>The name of the startup venture is “Ebike Amp”. The startup is a new electric bike product that offers solutions for everyday commuting, or as a recreational/competitive sport</Li>
-								<Li>The bike has both pedaling and electric assist capabilities that would allow the driver to either get a comfortable and easy commute, or a hard workout if needed</Li>
-								<Li>Furthermore, the bike also can offer the driver a shield against the weather whether it’s raining, snowing, or just plain windy</Li>
-								<Li>The idea was generated due to a personal interest. I really enjoy biking and have been into it for many years</Li>
-								<Li>I started getting into biking as a hobby at the beginning, However, since I arrived in Sweden, it is my way of commuting as well. Multiple variables made biking here a lot more difficult than what I am used to, which in return made it unsustainable</Li>
-								<Li>I also have a great interest in automation, and an electronic bike was the perfect combination between the two interests, biking and automation</Li>
-								<Li>The concept of the ebike went through three iterations. The first iteration was a two-wheel ebike that looked very similar to current ebikes on the market, these forms of ebikes do not offer any form of protection against the environment</Li>
-								<Li>I wanted the ebike to easily offer the capability of transforming into a stationary bike, which currently no ebike manufacturers offer. Furthermore, I wanted to offer the capability of putting back power into the grid from pedaling while using the ebike in the stationary mode</Li>
-								<Li>With some research, I discovered that if you pedaled eight hours every day for 30 days (no weekends off), then doing the math, you'd generate about 16 kWh. A typical house in the U.S. uses about 1,000 kWh a month, which means with all that pedaling, would be able to save about 0.16% of your electric bill. With these results, putting power back to the grid is completely unsustainable and not worth going after</Li>
-								<Li>The second iteration was to create a bike that would use one wheel instead of two. However, that proved difficult to combine both stability and the possibility of pedaling while riding. While a one-wheel ebike would be more efficient and might be easier to weatherproof, it will also be very uncomfortable and harder to control. Furthermore, it’s a lot more complicated to stabilize</Li>
-								<Li>The third iteration was to put the driver inside the one wheel and provide means of assistance with balancing and turning. This iteration also made it possible to add weather protection without compromising the ebike dimensions, as it will be still enclosed within the wheel</Li>
-								<Li>The product is still in the concept phase, which means no prototype has been created nor tested</Li>
-								<Li>The Ebike Amp has innovative features that tackle multiple challenges when it comes to using bikes for commuting. The innovative solutions were developed for the following challenges:</Li>
-								<ul style="list-style-type:square">
-									<Li><b>The roads have too many hills:</b> The Ebike Amp has an electric motor/generator to assist in pedaling. The user can have two options to choose how much assisting is required. The first option would be a torque multiplier, so as an example, the user can choose to multiply their torque input from pedaling by 1.5X. The second option is choosing the maximum torque applied by the user to the pedals. This option will make the pedal have a constant feel even if you are going on ramps or hills</Li>
-									<Li><b>Difficulty turning with one wheel:</b> The Ebike Amp has electric motor/generators to assist in turning. The electric motors can control the two wheels to turn the bike. By slowing down the left wheel, and speeding up the right, the bike will turn left, and vice versa. The turn assist can also be used in regenerative breaking to transform breaking energy into charging the batteries. The turn assist frame can also swing upwards to reduce friction and increase efficiency when the bike is traveling in higher speeds</Li>
-									<Li><b>Un-versatile:</b> the Ebike Amp can be also used as a stationary bike. If the user would like to train at home. The bike can be used as a stationary bike without any modifications. With just a press of a button, the motor used in assisting in pedaling can turn into a generator. That means if the bike is in stationary mode, the user can charge the ebike’s batteries. The turn assist frame would make sure the bike is standing up at all times</Li>
-									<Li><b>Not enough range in the batteries:</b> The Ebike Amp has a large dome on the top that can host a large solar panel. A flexible solar panel can be installed on the dome to use solar energy to constantly charge the batteries. The Ebike Amp will also offer hot swappable batteries that can be changed in seconds</Li>
-								</ul>
-							</ul>
-							
-							<hr>	
-
-							<!-- ARTIFICIAL INTELLIGENCE -->
-							<h2 style="color:rgb(255, 136, 0)" >ARTIFICIAL INTELLIGENCE ALGORITHMS</h2>
-
-							<iframe width="620" height="350" src="https://www.youtube.com/embed/fieUkDx-bsU?rel=0" ALIGN= "right"></iframe>
-							<ul >
-								<li>Learned about the different principles of artificial intelligence, and used them to implement solutions to AI problems</Li>
-								<li>Topics covered were as follows:</li>
-								<ul style="list-style-type:square">
-									<Li><b>Problem solving:</b> Search, Games</Li>
-									<Li><b>Taming uncertainty:</b> Probabilistic reasoning, Bayesian Networks and Hidden Markov Models</Li>
-									<Li><b>Decision making under uncertainty:</b> Decision making using Markov Decision Processes (MDPs) and Partially Observable Markov Decision Processes (POMDPs), Reinforcement learning</Li>
-									<Li><b>Knowledge, reasoning, and planning:</b> Logic, Planning</Li>
-									<Li><b>Communicating and perceiving:</b> Natural language processing, Computer vision</Li>
-								</ul>
-								<li>Implemented Minmax algorithm in a game of fishing derby against an intelligent agent. Used the scoring and the Euclidian distance as a heuristic</li>
-								<li>Used Hidden Markov Model (HMM) to model a fish type guessing game.</li>
-								<li>Started with random guessing at the beginning, then used those guesses to build lambda models for those known types to build a more accurate guess for the unknown fish</Li>															
-
-							</ul>
-							
-							<hr>							
-							
-
-							<p>MORE TO COME</p>
-	
-							</article>			
 
 						<!-- contact -->
 						<article id="contact">
