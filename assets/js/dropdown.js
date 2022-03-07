@@ -1,47 +1,44 @@
 //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
+var dropdown_c = document.getElementsByTagName("a");
 
 
-var i;
-var j;
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {  
-      
-      for (j = 0; j < dropdown.length; j++) {
-        if (i!== j){
-            // dropdown[j].nextElementSibling.style.display = "none"
-        }
-        
+// if a dropdown menu is clicked -> if closed, open it -> if already opened, then close it
+$(dropdown).click(function() {
+  if ($(this)[0].nextElementSibling.style.display == "block"){
+    $(this)[0].nextElementSibling.style.display = "none"
+    $(this)[0].style.background = "";
+  }
+  else{
+    $(this)[0].nextElementSibling.style.display = "block";
+    $(this)[0].style.background = "#84860abd";
+  }
+});
+
+// to check for all clicks outside all elements
+function outsideClick(event, notelem)	{
+  notelem = $(notelem); // jquerize (optional)
+  // check outside click for multiple elements
+  var clickedOut = true, i, len = notelem.length;
+  for (i = 0;i < len;i++)  {
+      if (event.target == notelem[i] || notelem[i].contains(event.target)) {
+          clickedOut = false;
       }
-      dropdownContent.style.display = "block";
-
-    }
-  });
+  }
+  if (clickedOut) return true;
+  else return false;
 }
 
-const $menu = $('nav.use-middle');
-const $article_open = $('is-article-visible')
-
-$(document).mouseup(e => {
-   if (!$menu.is(e.target) // if the target of the click isn't the container...
-   && $menu.has(e.target).length === 0 // ... nor a descendant of the container
-   && !$article_open.is(e.target)
-)
-   {
+// listens for clicks on the document -> if outside of all elements, close all dropdown menus
+ document.addEventListener('click', function(event) {
+  if (outsideClick(event, dropdown) && outsideClick(event,dropdown_c)) {
+    console.log("activated");
     for (j = 0; j < dropdown.length; j++) {
-      // if (i!== j){
           dropdown[j].nextElementSibling.style.display = "none"
-      // }
-      
+          dropdown[j].style.background = "";
     }
-  }
- });
+}
+});
 
  var slideIndex = 1;
  showDivs(slideIndex);
@@ -50,7 +47,6 @@ $(document).mouseup(e => {
    showDivs(slideIndex += n);
  }
  
-
 
 
 
