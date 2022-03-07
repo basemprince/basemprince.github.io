@@ -742,12 +742,17 @@ input, select, textarea {
 		* is outside of the list’s container
 		*/
 		list-style-position: outside;
+		text-align: justify;
+		text-justify: inter-character;
+		/* max-width: 65%; */
+		word-wrap : break-word;
+
 
 		/*
 		* Because the bullet is outside of the list’s
 		* container, indent the list entirely
 		*/
-		/*margin-left: 1em;*/
+		/* margin-left: 1em; */
 	}
 
 	ol {
@@ -766,7 +771,6 @@ input, select, textarea {
 		/*margin: 0 0 2rem 0;*/
 		padding-left: 1em;
 		list-style-position: outside;
-
 	}
 	ul b {
 		list-style-type: square;
@@ -774,7 +778,6 @@ input, select, textarea {
 
 		ul li {
 			padding-left: 0.5em;
-
 		}
 
 		ul.alt {
@@ -1397,6 +1400,7 @@ input, select, textarea {
 				#header nav ul li a {
 					display: block;
 					min-width: 15rem;
+					text-align: center;
 					height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.25rem;

@@ -382,10 +382,11 @@
 						<Li>The function uses a tunable cost discount that could encourage going for further away points [in the index] even though they are not the least distance</Li>
 						<Li>The look ahead that decides the horizon is a variable that is controlled by the algorithm. It starts greedily with the full horizon, then later restricts it to allow for an increase in the distance of the path</Li>
 						<Li>As shown in the figure below, that increase in the length is done when a collision has been detected on that path to maybe allow for more time for the other robot to clear the collision point</Li>
+						<li>Link to the github repo: <a href="https://github.com/basemprince/robot_evacuation_planning" target="_blank" rel="noopener noreferrer">Link</a></Li>
 						<figure><img src="images/collision_a.png"  height = 345px>
 						<iframe width="600" height="345" src="https://www.youtube.com/embed/G5HU3dn15KI?rel=0"></iframe></figure>
 					</ul>
-
+				
 					<hr>
 
 					<!-- ROBOT MISSION PLANNER SIMULATION -->
@@ -404,61 +405,11 @@
 						<Li>ARUCO markers were used to find the cube's pose. Once the robot can see the marker, it can target it's location with the manipulator</Li>
 						<Li>State Machine and Behaviour Tree were both used as models for the robots behaviour</Li>
 						<Li>The robot has the capability to recognize when it is kidnapped, and relocalizes when it occurs</Li>
+						<li>Link to the github repo: <a href="https://github.com/basemprince/mission_planner" target="_blank" rel="noopener noreferrer">Link</a></Li>
 
 						<span><img src="images/rob1.jpg" ALIGN="left" width = 530px></span>
 						<iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic?rel=0"></iframe>															
 
-
-					</ul>
-					
-					<hr>
-
-					<!-- 6 AXIS ROBOT ARM -->
-					<h2 style="color:rgb(255, 136, 0)" >6 AXIS ROBOT ARM</h2>
-		
-					
-					
-					<ul >
-						<li>Built a 6-axis robot using a 3D printer, servo motors and an Arduino Mega with a RepRap shield and servo drives</Li>
-						<li>Next step is to build an ROS interface to control the servos using inverse kinematics</Li>
-						<li>Plans for adding vision system using openCV to see targets, pick and deliver pay loads</Li>
-						<li>Link to timeline pictures of the robot: <a href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7" target="_blank" rel="noopener noreferrer">Link</a></Li>
-					</ul>
-					<iframe class = "two-pictures" width = "700" height="520" src="https://www.youtube.com/embed/U-jQ4iV8sJ8?rel=0" ></iframe>
-					<span><img class = "two-pictures" src="images/EX1_merg.jpg"  width = 800px></span>
-					
-					
-					<hr>
-
-					<!-- ROBOT EXPLORATION SIMULATION -->
-					<h2 style="color:rgb(255, 136, 0)" >ROBOT EXLPORATION SIMULATION</h2>
-
-					
-					<ul >
-						<li>The objective is to create a Gazebo simulation of a turtlebot using Robot Operating System(ROS)</Li>
-						<li>Exploration is done based on receding horizon "next-best-view" (RH-NBV)</Li>
-						<li>Collision avoidance is based on the obstacle-restriction method (ORM) and pure pursuit</Li>
-						<li>In order for Burger to localize, Hector SLAM was used for mapping and localization</Li>
-						<li>ROS was used to create a controller node to combine the exploration, slam and collision avoidance node to move the robot around in the enviroment</Li>
-						
-						<span><img src="images/turtlebot.jpg" ALIGN="left" width = 490px></span>
-						<iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe>
-
-					</ul>
-					
-					<hr>
-
-					<!-- INVERSE KINEMATICS  -->
-					<h2 style="color:rgb(255, 136, 0)" >SCARA AND KUKA INVERSE KINEMATICS SIMULATION</h2>
-
-					
-					<ul >
-						<li>Inverse kinematic algorithm was used to move the robots joints so that it follows a desired path with the end-effector</Li>
-						<li>The first robot is a 3 DOF scara robot, with an inverse kinematic solution that is possible in analytic form</Li>
-						<li>The second robot is a 7 DOF kuka robot, with the inverse kinematic solution that was implemented with iterative algorithms, the robot DH table, and computing the robot's Jacobian</Li>
-						
-						<span><img src="images/kuka1.jpg" ALIGN="left" width = 460px></span>
-						<iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe>
 
 					</ul>
 
@@ -492,6 +443,72 @@
 					
 					<hr>
 
+					<!-- OPTIMIZATION BASED ROBOT CONTROL  -->
+					<h2 style="color:rgb(255, 136, 0)" >OPTIMIZATION BASED ROBOT CONTROL</h2>
+
+					
+					<ul >
+						<li>Took an elective class in my master's that covered a wide range of robot control methods and algorithms</Li>
+						<li>This included reactive control methods in both joint and task spaces. for motion control I leraned about PID, inverse dynamics, operational space control, task space inverse dynamics. For interaction control, we covered impedance control</Li>
+						<li>Explored optimization based control using quadratic programs in inverse dynamics and covered applications of it such as underactuation and rigid contact</Li>
+						<li>Covered multiple methods for solving optimal control problems, mainly dynamic programming and direct methods [single shooting, multiple shooting, collocation]</li>
+						<li>Focused on the topic of Linear Quadratic Regulator (LQR) as a special optimcal control problem. Further expanded it to a nonlinear problem using Differential Dynamic Programming (DDP)</li>
+						<li>Went over Model Predictive Control (MPC) as a method for finding a reference trajectory and providing a feedback loop to properly follow it. This also considered the challenges of stability and recursive feasibility</li>
+						<li>The course also included Reinforcement Learning algorithms that has a markovian structure (Markov Decesion Process). Discussed methods for prediction such as Monte-Carlo and Temporal Difference [TD0,TD(λ)], and methods for control such as Q-learning and SARSA</li>
+						<li>Briefly talked about value approximators, such as Deep Q Networks, which I implemented as the main project for the course</li>
+					</ul>
+
+					<hr>
+
+					<!-- INVERSE KINEMATICS  -->
+					<h2 style="color:rgb(255, 136, 0)" >SCARA AND KUKA INVERSE KINEMATICS SIMULATION</h2>
+
+					
+					<ul >
+						<li>Inverse kinematic algorithm was used to move the robots joints so that it follows a desired path with the end-effector</Li>
+						<li>The first robot is a 3 DOF scara robot, with an inverse kinematic solution that is possible in analytic form</Li>
+						<li>The second robot is a 7 DOF kuka robot, with the inverse kinematic solution that was implemented with iterative algorithms, the robot DH table, and computing the robot's Jacobian</Li>
+						
+						<span><img src="images/kuka1.jpg" ALIGN="left" width = 460px></span>
+						<iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe>
+
+					</ul>
+
+					<hr>
+					<!-- ROBOT EXPLORATION SIMULATION -->
+					<h2 style="color:rgb(255, 136, 0)" >ROBOT EXLPORATION SIMULATION</h2>
+
+					
+					<ul >
+						<li>The objective is to create a Gazebo simulation of a turtlebot using Robot Operating System(ROS)</Li>
+						<li>Exploration is done based on receding horizon "next-best-view" (RH-NBV)</Li>
+						<li>Collision avoidance is based on the obstacle-restriction method (ORM) and pure pursuit</Li>
+						<li>In order for Burger to localize, Hector SLAM was used for mapping and localization</Li>
+						<li>ROS was used to create a controller node to combine the exploration, slam and collision avoidance node to move the robot around in the enviroment</Li>
+						
+						<span><img src="images/turtlebot.jpg" ALIGN="left" width = 490px></span>
+						<iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe>
+
+					</ul>
+					
+					<hr>
+
+					<!-- 6 AXIS ROBOT ARM -->
+					<h2 style="color:rgb(255, 136, 0)" >6 AXIS ROBOT ARM</h2>
+		
+					
+					
+					<ul >
+						<li>Built a 6-axis robot using a 3D printer, servo motors and an Arduino Mega with a RepRap shield and servo drives</Li>
+						<li>Next step is to build an ROS interface to control the servos using inverse kinematics</Li>
+						<li>Plans for adding vision system using openCV to see targets, pick and deliver pay loads</Li>
+						<li>Link to timeline pictures of the robot: <a href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7" target="_blank" rel="noopener noreferrer">Link</a></Li>
+					</ul>
+					<iframe class = "two-pictures" width = "700" height="520" src="https://www.youtube.com/embed/U-jQ4iV8sJ8?rel=0" ></iframe>
+					<span><img class = "two-pictures" src="images/EX1_merg.jpg"  width = 800px></span>
+					
+					
+					<hr>
 					<!-- APPLIED INSTRUMENTATION -->
 					<h2 style="color:rgb(255, 136, 0)" >APPLIED INSTRUMENTATION</h2>
 					
@@ -511,6 +528,31 @@
 
 				<article id="machine_learn">
 					<h1 class="major">MACHINE LEARNING PORTFOLIO</h1>
+
+					<!-- DEEP Q LEARN - PENDULUM -->
+					<h2 style="color:rgb(255, 136, 0)" >DEEP Q LEARN - PENDULUM</h2>
+					<span><img src="images/pendulum.png" ALIGN="right" width = 400px></span>
+					<ul >
+						<li>DQN was used to train a network to provide control in the form of applying torque to the pendulum joints</li>
+						<li>The algorithm must supply the correct torque control to the joints to perform a “handstand maneuver" as shows below</li>
+						<li>The neural networks were created using TensorFlow and Keras</li>
+						<li>The performance of the algorithm relies on a considerable amount of hyper parameters, which can be experimented with and optimized</li>
+						<li>The training time was quite significant, which limited the resources to try out and optimize different values for the parameters</li>
+						<li>An (ε) greedy policy was used with an exponential decay. The probability (ε) starts at 1, which will promote extensive exploration at the beginning</li>
+						<li>The algorithm starts the exploitation process towards later episodes and acts greedily towards reducing cost</li>
+						<li>The replay buffer keeps adding new observations until it reaches its full capacity. At that time, an old observation gets replaced with a new one every iteration</li>
+						<li>A sample is taken from the buffer randomly to use it in training the Q-value function neural network. This is to create more independent data points</li>
+						<li>The first neural network is the main Q-value function (Q) that we are working on minimizing by using Stochastic Gradient Decent (SGD)</li>
+						<li>The second neural network is the Target Q-value function (Q̂) and is used as a target for (Q)</li>
+						<li>The weights of (Q) gets updated frequently every short number of iterations. However, the weights of (Q̂) remains constant for a much more extended number of iterations (P) to give time for (Q) to converge</li>
+						<li>Without this feature, the algorithm will become unstable because the target we are trying to reach is constantly moving</li>
+						<li>The model is stored every number of iterations because there is a chance that the algorithm may diverge</li>
+						<li>Link to the github repo: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a></Li>
+						<span><img src="images/pendulum_gif.gif" height = 315px></span>
+						<iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe>
+					</ul>
+					
+					<hr>
 
 					<!-- DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH -->
 					<h2 style="color:rgb(255, 136, 0)" >DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
@@ -537,6 +579,7 @@
 					</ul>
 					
 					<hr>
+
 					<!-- MACHINE LEARNING PROJECTS -->
 					<h2 style="color:rgb(255, 136, 0)" >KTH MACHINE LEARNING PROJECTS</h2>
 
@@ -1251,10 +1294,10 @@
 					<span><img src="images/autogenerate1.gif" ALIGN="right" width = 600px></span>
 					
 					<ul >
-						<li>Most of the slot drains have standard profile and dimensions, however, custom work usually needs to be created to fit the client's needs</Li>
+						<li>At my previous job, most of the products offered have standard profile and dimensions, however, custom work usually needs to be created to fit the client's needs</Li>
 						<Li>Custom work is time consuming for the engineering department and could take days of work to finish up</Li>
 						<Li>Started researching how to use Visual Basic and iLogic to automate some of the custom work Engineering needs to deal with regularly</Li>
-						<Li>Used what I learnt to create an automated model that can generate a grate with variables that the user can change</Li>
+						<Li>Used what I learnt to create an automated model that can generate grates with variables that the user can change</Li>
 						<Li>The grate model variables include changing its width, length, height, seration, material thickness, etc</Li>
 						<Li>The iLogic assembly models required creating multiple parameters in each sub component that used complex equations to calculate the correct placement for all the features</Li>
 						<Li>All the components were linked together because locating features in one component must follow the placement of other features in the rest of the components in the assembly</Li>
@@ -1268,11 +1311,12 @@
 					<h2 style="color:rgb(255, 136, 0)" >AUTOMATION OF GENERATING KPI REPORTS AND GRAIN CAPACITIES AT FEED MILLS</h2>
 					
 					<ul >
-						<li>I set up excel sheets that have the capabilities to streamline data entry and save them in tables with the help of Macros</li>
+						<li>At Hylife, countless hours were spent to gather data about production performance, which was a huge non-added value</li>						
+						<li>To speed up and automate the process, I set up excel sheets that have the capabilities to streamline data entry and save them in tables with the help of Macros</li>
 						<li>I set up SQL queries that do complex data calculations from different sources to automatically put together meaningful reports to track the Feed division performance</li>
 						<li>These reports include monitoring the micron levels of the ground ingredients, daily production performance in terms of tonnes per hour for the different processes in the Feed Mill, down times, tonnes ordered and delivered, and feed forecasting accuracy</li>
 						<li>I used the ASABE S413 (Procedure for Establishing Volumetric Capacities of Cylindrical Grain Bins) to learn about the right factors to use to calculate accurate capacities of bins and the right compaction factor based on the type of bin and grain</Li>
-						<Li>I set up an excel sheet that is connected to our company server (using SQL) to grab actual averages of our own daily tests for the received grains bushel weights to calculate the most accurate tonnes capacity from volume</Li>
+						<Li>I set up an excel sheet that is connected to the company's server (using SQL) to grab actual averages of our own daily tests for the received grains bushel weights to calculate the most accurate tonnes capacity from volume</Li>
 
 					</ul>
 					
