@@ -1719,7 +1719,7 @@ input, select, textarea {
 		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 		.dropdown-container {
 			display: none;
-			background-color: #1a500fb4;
+			background-color: #0d477eb4;
 			border: solid;
 			border-color: #091b05;
 			/*padding-left: 8px;*/

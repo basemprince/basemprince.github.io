@@ -11,7 +11,7 @@ $(dropdown).click(function() {
   }
   else{
     $(this)[0].nextElementSibling.style.display = "block";
-    $(this)[0].style.background = "#84860abd";
+    $(this)[0].style.background = "#66a7e4b4";
   }
 });
 
