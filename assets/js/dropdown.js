@@ -102,6 +102,45 @@ function outsideClick(event, notelem)	{
     z[k].style.display = "none";
   }
   z[slideIndex2-1].style.display = "block";
+ }
+
+
+  var slideIndex3 = 1;
+  showDivs3(slideIndex3);
+  
+  function plusDivs3(n) {
+    showDivs3(slideIndex3 += n);
+  }
+ 
+  function showDivs3(n) {
+   var l;
+   var f = document.getElementsByClassName("mySlides4")
+ 
+   if (n > f.length) {slideIndex3 = 1}
+   if (n < 1) {slideIndex3 = f.length} ;
+   for (l = 0; l < f.length; l++) {
+     f[l].style.display = "none";
+   }
+   f[slideIndex3-1].style.display = "block";
 
 }
- 
+
+var slideIndex4 = 1;
+showDivs4(slideIndex4);
+
+function plusDivs4(n) {
+  showDivs4(slideIndex4 += n);
+}
+
+function showDivs4(n) {
+ var m;
+ var g = document.getElementsByClassName("mySlides5")
+
+ if (n > g.length) {slideIndex4 = 1}
+ if (n < 1) {slideIndex4 = g.length} ;
+ for (m = 0; m < g.length; m++) {
+   g[m].style.display = "none";
+ }
+ g[slideIndex4-1].style.display = "block";
+
+}
