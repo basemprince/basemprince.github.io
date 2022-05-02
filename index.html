@@ -23,12 +23,16 @@
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 	</head>
-	<body>
+	<body class="is-preload">
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWPSB7X"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
 
+		<div class="splash">
+		<h1>Basem Shaker</h1>
+		<h2>Loading - please wait ..</h2>
+		</div>
 		<!-- <body class="is-preload"> -->
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -255,7 +259,7 @@
 					<!-- ARTIFICIAL INTELLIGENCE -->
 					<h2 style="color:rgb(255, 136, 0)" >ARTIFICIAL INTELLIGENCE ALGORITHMS</h2>
 
-					<iframe width="620" height="350" src="https://www.youtube.com/embed/fieUkDx-bsU?rel=0" ALIGN= "right"></iframe>
+					<!-- <iframe width="620" height="350" src="https://www.youtube.com/embed/fieUkDx-bsU?rel=0" ALIGN= "right"></iframe> -->
 					<ul >
 						<li>Learned about the different principles of artificial intelligence, and used them to implement solutions to AI problems</Li>
 						<li>Topics covered were as follows:</li>
@@ -271,7 +275,55 @@
 						<li>Started with random guessing at the beginning, then used those guesses to build lambda models for those known types to build a more accurate guess for the unknown fish</Li>															
 
 					</ul>
-					
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=350 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/fieUkDx-bsU?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/fieUkDx-bsU/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="350"
+							src="https://www.youtube.com/embed/fieUkDx-bsU?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 		
+
 					<hr>	
 					<!-- AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS -->
 					<h2 style="color:rgb(255, 136, 0)" >AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS</h2>
@@ -288,7 +340,7 @@
 		
 					<span><img src="images/UOFM5.jpg" ALIGN="right" width = 340px></span>
 					
-					<ul >
+					<ul style="margin-bottom: 100px;">
 						<li>The main objective of the project was to design and manufacture an autonomous vehicle powered by Arduino that can navigate a course and fire projectiles at targets</li>
 						<Li>The vehicle and all of its external components were designed using SolidWorks. The additional components required to meet the objective of launching a projectile to a target from the track were manufactured using rapid prototyping (3D printing), laser cutting, and CNC machining</li>
 						<Li>The track was designed such that the vehicle required an array of line sensors and bump sensors to successfully navigate it</Li>
@@ -354,7 +406,7 @@
 					<!-- ROBOT EVACUATION MISSION PLANNING -->
 					<h2 style="color:rgb(255, 136, 0)" >ROBOT EVACUATION MISSION PLANNING</h2>
 
-					<span><img src="images/pathplan1.png" ALIGN="right" width = 440px></span>
+					<!-- <span><img src="images/pathplan1.png" ALIGN="right" width = 440px></span> -->
 					<ul >
 						<Li>The project's objective is to evacuate three robots from a room in which a number of obstacles are present</Li>
 						<Li>Evacuation must be as fast as possible without colliding with any walls, obstacles or with each other</Li>
@@ -368,8 +420,56 @@
 						<Li>The look ahead that decides the horizon is a variable that is controlled by the algorithm. It starts greedily with the full horizon, then later restricts it to allow for an increase in the distance of the path</Li>
 						<Li>As shown in the figure below, that increase in the length is done when a collision has been detected on that path to maybe allow for more time for the other robot to clear the collision point</Li>
 						<li>Link to the github repo: <a href="https://github.com/basemprince/robot_evacuation_planning" target="_blank" rel="noopener noreferrer">Link</a></Li>
-						<figure><img src="images/collision_a.png"  height = 345px>
-						<iframe width="600" height="345" src="https://www.youtube.com/embed/G5HU3dn15KI?rel=0"></iframe></figure>
+						<figure ALIGN = "center"><img src="images/collision_a.png"  width = 620px></figure>
+						<!-- <iframe width="600" height="345" src="https://www.youtube.com/embed/G5HU3dn15KI?rel=0"></iframe></figure> -->
+						<div style="display: flex; justify-content: center">
+							<div style="position: relative; width= 620px height=350 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/G5HU3dn15KI?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/G5HU3dn15KI/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="620" height="350"
+								src="https://www.youtube.com/embed/G5HU3dn15KI?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
 					</ul>
 				
 					<hr>
@@ -392,9 +492,56 @@
 						<Li>The robot has the capability to recognize when it is kidnapped, and re-localizes when it occurs</Li>
 						<li>Link to the github repo: <a href="https://github.com/basemprince/mission_planner" target="_blank" rel="noopener noreferrer">Link</a></Li>
 
-						<span><img src="images/rob1.jpg" ALIGN="left" width = 530px></span>
-						<iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic?rel=0"></iframe>															
-
+						<figure ALIGN = "center"><img src="images/rob1.jpg" ALIGN="center" width = 660px></figure>
+						<!-- <iframe width="660" height="425" src="https://www.youtube.com/embed/K5JCUoVxqic?rel=0"></iframe>															 -->
+						<div style="display: flex; justify-content: center">
+							<div style="position: relative; width= 660px height=425 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/K5JCUoVxqic?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/K5JCUoVxqic/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="660" height="425"
+								src="https://www.youtube.com/embed/K5JCUoVxqic?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
 
 					</ul>
 
@@ -421,9 +568,6 @@
 						
 						<span><img src="images/lookup_pipeline.jpg"    width = 760px></span>
 						
-						
-						<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe> -->
-
 					</ul>
 					
 					<hr>
@@ -454,9 +598,56 @@
 						<li>The first robot is a 3 DOF SCARA robot, with an inverse kinematic solution that is possible in analytic form</Li>
 						<li>The second robot is a 7 DOF KUKA robot, with the inverse kinematic solution that was implemented with iterative algorithms, the robot DH table, and computing the robot's Jacobian</Li>
 						
-						<span><img src="images/kuka1.jpg" ALIGN="left" width = 460px></span>
-						<iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe>
-
+						<span><img src="images/kuka1.jpg" ALIGN="left" height = 445px></span>
+						<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/V5xQYo_gMcw?rel=0"></iframe> -->
+						<div style="display: flex; justify-content: flex-end">
+							<div style="position: relative; width= 660px height=445 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/V5xQYo_gMcw?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/V5xQYo_gMcw/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="660" height="445"
+								src="https://www.youtube.com/embed/V5xQYo_gMcw?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
 					</ul>
 
 					<hr>
@@ -472,8 +663,55 @@
 						<li>ROS was used to create a controller node to combine the exploration, slam and collision avoidance node to move the robot around in the environment</Li>
 						
 						<span><img src="images/turtlebot.jpg" ALIGN="left" width = 490px></span>
-						<iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe>
-
+						<!-- <iframe width="660" height="445" src="https://www.youtube.com/embed/bMZBmDRP2XM?rel=0"></iframe> -->
+						<div style="display: flex; justify-content: flex-end">
+							<div style="position: relative; width= 660px height=445 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/bMZBmDRP2XM?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/bMZBmDRP2XM/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="660" height="445"
+								src="https://www.youtube.com/embed/bMZBmDRP2XM?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
 					</ul>
 					
 					<hr>
@@ -489,8 +727,56 @@
 						<li>Plans for adding vision system using openCV to see targets, pick and deliver pay loads</Li>
 						<li>Link to timeline pictures of the robot: <a href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7" target="_blank" rel="noopener noreferrer">Link</a></Li>
 					</ul>
-					<iframe class = "two-pictures" width = "700" height="520" src="https://www.youtube.com/embed/U-jQ4iV8sJ8?rel=0" ></iframe>
-					<span><img class = "two-pictures" src="images/EX1_merg.jpg"  width = 800px></span>
+					<figure ALIGN = "center"><img  src="images/EX1_merg.jpg"  width = 700px></figure>
+					<!-- <iframe class = "two-pictures" width = "700" height="520" src="https://www.youtube.com/embed/U-jQ4iV8sJ8?rel=0" ></iframe> -->
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 700px height=520 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/U-jQ4iV8sJ8?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/U-jQ4iV8sJ8/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="700" height="520"
+							src="https://www.youtube.com/embed/U-jQ4iV8sJ8?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 	
 					
 					
 					<hr>
@@ -533,8 +819,56 @@
 						<li>Without this feature, the algorithm will become unstable because the target we are trying to reach is constantly moving</li>
 						<li>The model is stored every number of iterations because there is a chance that the algorithm may diverge</li>
 						<li>Link to the github repo: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a></Li>
-						<span><img src="images/pendulum_gif.gif" height = 315px></span>
-						<iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe>
+						<figure><img src="images/pendulum_gif.gif" ALIGN = "left" height = 315px></span>
+						<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe> -->
+						<div style="display: flex; justify-content: flex-end">
+							<div style="position: relative; width= 620px height=315 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/Lbb5raPBL6o?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/Lbb5raPBL6o/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="620" height="315"
+								src="https://www.youtube.com/embed/Lbb5raPBL6o?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
 					</ul>
 					
 					<hr>
@@ -617,15 +951,64 @@
 					<!-- BUTT AND LOIN LINES MERGE CONVEYORS -->
 					<h2 style="color:rgb(255, 136, 0)" >BUTT AND LOIN LINES MERGE CONVEYORS</h2>
 
-					<iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN = "right">></iframe>
+					<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN = "right">></iframe> -->
+					<ul>
+						<Li>The merge conveyors between the butt and loin lines is a source of multiple issues including foreign material and product pile ups</Li>
+						<Li>Worked with the industrial engineer from the loin and packaging area along with the continuous improvement manager to come up with solutions to this issue</Li>
+						<Li>I measured lengths of conveyors and product flow to use javascript simulation to find out the proper speeds for each conveyor that result in no product pile ups</Li>
+						<Li>Further simulated layouts of multiple ideas including a two merge system and an indexer triple merge system</Li>
+						<Li>The simulation of the indexer triple merge system showed the most consistency and kept up well with the randomness of production floor</Li>
+						<Li>The simulation was shared with the equipment supplier to be installed along with the calculated conveyor speeds</Li></ul>
+	
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=315 px; overflow: hidden;">
+						  <iframe 
 
-					<ul style="margin-bottom: 20px;">
-					<Li>The merge conveyors between the butt and loin lines is a source of multiple issues including foreign material and product pile ups</Li>
-					<Li>Worked with the industrial engineer from the loin and packaging area along with the continuous improvement manager to come up with solutions to this issue</Li>
-					<Li>I measured lengths of conveyors and product flow to use javascript simulation to find out the proper speeds for each conveyor that result in no product pile ups</Li>
-					<Li>Further simulated layouts of multiple ideas including a two merge system and an indexer triple merge system</Li>
-					<Li>The simulation of the indexer triple merge system showed the most consistency and kept up well with the randomness of production floor</Li>
-					<Li>The simulation was shared with the equipment supplier to be installed along with the calculated conveyor speeds</Li></ul>
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/huuG1ylV_P8?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/huuG1ylV_P8/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="315"
+							src="https://www.youtube.com/embed/huuG1ylV_P8?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					  </div>  
+
 
 					
 					<hr>
@@ -640,9 +1023,60 @@
 					<Li>I came up with different solutions for each root cause and used javascript coding to simulate current condition and compare it with the implementation of the solutions</Li>
 					<Li>Presented the solutions to the maintenance supervisor and team and agreed on the PLC logic reprogramming</Li>
 					<Li>Designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to keep track of empty spaces between products and only merge when there is enough space</Li></ul>
+	
+					<!-- <iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure> -->
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 720px height=615 px; overflow: hidden;">
+						  <iframe 
 
-					<figure><img src="images/HY2.jpg" height = 615px>
-					<iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure>
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/Uehql8uK2NE?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/Uehql8uK2NE/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="315"
+							src="https://www.youtube.com/embed/Uehql8uK2NE?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					  </div>  
+					  <figure ALIGN = "center"><img src="images/HY2.jpg" width = 620px>
+
+
+
 					<hr>
 
 					<!-- SUPERVAC SIMULATION PROJECT FOR BELLY LINE -->
@@ -656,9 +1090,57 @@
 					<Li>The simulation showed that at least five bagging stations is required to keep up with plant speed</Li>
 					<Li>The simulation also showed we will encounter a problem with the take away conveyors after the two Supervacs</Li>
 					<Li>I modelled three different solutions using SolidWorks for the take away conveyor system and presented to management</Li></ul>
-					<span><img src="images/HY1.jpg" ALIGN="left" height = 415px></span>
-					<iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe>
+					
+					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe> -->
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=415 px; overflow: hidden;">
+						  <iframe 
 
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/k-blMlFuksY?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/k-blMlFuksY/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="415"
+							src="https://www.youtube.com/embed/k-blMlFuksY?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 
+					<span><img src="images/HY1.jpg" ALIGN="center" width = 620px></span>
 					<hr>
 
 					<!-- TRIM LINE REDESIGN -->
@@ -673,8 +1155,57 @@
 					<Li>I was able to use the production data to simulate timings of the different products flowing into the trim line</Li>
 					<Li>Used cycle times for each type of product along with the number of manning required to show that these parameters are sufficient to keep up with production demand</Li>
 					<Li>Used SolidWorks to create different layouts of concepts for the trim line worker stations to improve ergonomics and presented to the production team</Li></ul>
-					<span><img src="images/HY4.jpg" ALIGN="left" height = 415px></span>
-					<iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe>
+					
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=415 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/FXd6nKMt7so/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="415"
+							src="https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 					
+					<span><img src="images/HY4.jpg" ALIGN="center" width = 620px></span>
+					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe> -->
 					
 					<hr>
 
@@ -873,8 +1404,56 @@
 					<Li>Used the Inventor Studio to animate the indexer to show the movement of the gams</Li>
 					<Li>The generated concepts were presented to management and a concept was chosen to create a test rig for</Li></ul>
 					
-					<span><img src="images/HY7.jpg" ALIGN="left" width = 580px></span>
-					<iframe width="620" height="431" src="https://www.youtube.com/embed/F1gV79oE4HM?rel=0"></iframe>							
+					<span><img src="images/HY7.jpg" ALIGN="left" height = 431px></span>
+					<!-- <iframe width="620" height="431" src="https://www.youtube.com/embed/F1gV79oE4HM?rel=0"></iframe>							 -->
+					<div style="display: flex; justify-content: flex-end">
+						<div style="position: relative; width= 620px height=431 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/F1gV79oE4HM?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/F1gV79oE4HM/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="431"
+							src="https://www.youtube.com/embed/F1gV79oE4HM?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 						
 					<hr>
 
 					<!-- SHEET METAL DESIGN AND PRODUCTION EQUIPMENTS -->
@@ -1250,7 +1829,56 @@
 					<h2 style="color:rgb(255, 136, 0)" >3D PRINTED SOLUTIONS</h2>
 					The following are some challenges and problems that I solved using 3D designed and printed parts:<br><br>
 					<h3 style="color:rgb(255, 136, 0)" ><u>HAMMER MILL SAMPLE PROBE SEALER</u></h3>
-					<iframe width="620" height="315" src="https://www.youtube.com/embed/Ik6jkhjOABc?rel=0" ALIGN= "right"></iframe>
+					<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/Ik6jkhjOABc?rel=0" ALIGN= "right"></iframe> -->
+
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=315 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/Ik6jkhjOABc?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/Ik6jkhjOABc/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="315"
+							src="https://www.youtube.com/embed/Ik6jkhjOABc?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 	
 
 					<ul >
 						<li>The Hammer Mill grinds commodities like Corn, Wheat and Barley. The ground commodities need to be tested to check their micron size level</li>
@@ -1436,7 +2064,8 @@
 					<!-- BUTT AND LOIN LINES MERGE CONVEYORS -->
 					<h2 style="color:rgb(255, 136, 0)" >BUTT AND LOIN LINES MERGE CONVEYORS</h2>
 
-					<iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN = "right">></iframe>
+					<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/huuG1ylV_P8?rel=0" ALIGN = "right">></iframe> -->
+
 
 					<ul style="margin-bottom: 20px;">
 					<Li>The merge conveyors between the butt and loin lines is a source of multiple issues including foreign material and product pile ups</Li>
@@ -1446,6 +2075,54 @@
 					<Li>The simulation of the indexer triple merge system showed the most consistency and kept up well with the randomness of production floor</Li>
 					<Li>The simulation was shared with the equipment supplier to be installed along with the calculated conveyor speeds</Li></ul>
 
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=315 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/huuG1ylV_P8?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/huuG1ylV_P8/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="315"
+							src="https://www.youtube.com/embed/huuG1ylV_P8?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 	
 					
 					<hr>
 					
@@ -1477,9 +2154,58 @@
 					<Li>I came up with different solutions for each root cause and used javascript coding to simulate current condition and compare it with the implementation of the solutions</Li>
 					<Li>Presented the solutions to the maintenance supervisor and team and agreed on the PLC logic reprogramming</Li>
 					<Li>Designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to keep track of empty spaces between products and only merge when there is enough space</Li></ul>
+	
+					<!-- <iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure> -->
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 720px height=615 px; overflow: hidden;">
+						  <iframe 
 
-					<figure><img src="images/HY2.jpg" height = 615px>
-					<iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure>
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/Uehql8uK2NE?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/Uehql8uK2NE/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="315"
+							src="https://www.youtube.com/embed/Uehql8uK2NE?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					  </div>  
+					  <figure ALIGN = "center"><img src="images/HY2.jpg" width = 620px>
+
 					<hr>
 
 					<!-- HAM LINE TUMBLER/SKINNER STATION -->
@@ -1585,9 +2311,57 @@
 					<Li>The simulation showed that at least five bagging stations is required to keep up with plant speed</Li>
 					<Li>The simulation also showed we will encounter a problem with the take away conveyors after the two Supervacs</Li>
 					<Li>I modelled three different solutions using SolidWorks for the take away conveyor system and presented to management</Li></ul>
-					<span><img src="images/HY1.jpg" ALIGN="left" height = 415px></span>
-					<iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe>
+					
+					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe> -->
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=415 px; overflow: hidden;">
+						  <iframe 
 
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/k-blMlFuksY?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/k-blMlFuksY/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="415"
+							src="https://www.youtube.com/embed/k-blMlFuksY?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 
+					<span><img src="images/HY1.jpg" ALIGN="center" width = 620px></span>
 					<hr>
 
 					<!-- OCM EJECTION SYSTEM LAYOUT -->
@@ -1612,8 +2386,57 @@
 					<Li>I was able to use the production data to simulate timings of the different products flowing into the trim line</Li>
 					<Li>Used cycle times for each type of product along with the number of manning required to show that these parameters are sufficient to keep up with production demand</Li>
 					<Li>Used SolidWorks to create different layouts of concepts for the trim line worker stations to improve ergonomics and presented to the production team</Li></ul>
-					<span><img src="images/HY4.jpg" ALIGN="left" height = 415px></span>
-					<iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe>
+					
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=415 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/FXd6nKMt7so/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="415"
+							src="https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 					
+					<span><img src="images/HY4.jpg" ALIGN="center" width = 620px></span>
+					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe> -->
 					
 					<hr>
 
@@ -1654,8 +2477,58 @@
 					<Li>Used the Inventor Studio to animate the indexer to show the movement of the gams</Li>
 					<Li>The generated concepts were presented to management and a concept was chosen to create a test rig for</Li></ul>
 					
-					<span><img src="images/HY7.jpg" ALIGN="left" width = 580px></span>
-					<iframe width="620" height="425" src="https://www.youtube.com/embed/F1gV79oE4HM?rel=0"></iframe>							
+					
+					<div style="display: flex; justify-content: center">
+						<div style="position: relative; width= 620px height=415 px; overflow: hidden;">
+						  <iframe 
+
+							loading="lazy";
+							srcdoc="<style>
+							  * {
+							  padding: 0;
+							  margin: 0;
+							  overflow: hidden;
+							  }
+							  
+							  body, html {
+								height: 100%;
+							  }
+							  
+							  img, svg {
+								position: absolute;
+								width: 100%;
+								top: 0;
+								bottom: 0;
+								margin: auto;
+							  }
+							  
+							  svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+								transition: all 250ms ease-in-out;
+							  }
+							  
+							  body:hover svg {
+								filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+								transform: scale(1.2);
+							  }
+							</style>
+							<a href='https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1'>
+							  <img src='https://img.youtube.com/vi/FXd6nKMt7so/hqdefault.jpg'>
+							  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+							</a>
+							"
+							width="620" height="415"
+							src="https://www.youtube.com/embed/FXd6nKMt7so?autoplay=1" 
+							frameborder="0"
+							
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen>
+						  </iframe>
+						</div>
+					</div> 					
+					<span><img src="images/HY4.jpg" ALIGN="center" width = 620px></span>
+					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe> -->
+					
 					<hr>
 
 					<!-- FREEZER REQUIREMENT FOR CHINESE PRODUCTS -->
