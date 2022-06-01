@@ -802,108 +802,71 @@
 
 					<!-- DEEP Q LEARN - PENDULUM -->
 					<h2 style="color:rgb(255, 136, 0)" >DEEP Q LEARN - PENDULUM</h2>
-					<span><img src="images/pendulum.png" ALIGN="right" width = 400px></span>
 					<ul >
-						<li>DQN was used to train a network to provide control in the form of applying torque to the pendulum joints</li>
-						<li>The algorithm must supply the correct torque control to the joints to perform a “handstand maneuver" as shows below</li>
-						<li>The neural networks were created using TensorFlow and Keras</li>
-						<li>The performance of the algorithm relies on a considerable amount of hyper parameters, which can be experimented with and optimized</li>
-						<li>The training time was quite significant, which limited the resources to try out and optimize different values for the parameters</li>
+						<li>I trained a Deep Q network to provide torque control to a pendulum's joints to perform a “handstand maneuver"</li>
+						<li>Two neural networks were created using TensorFlow and Keras:</li>
+						<ul style="list-style-type:square">
+							<li>The first neural network is the main Q-value function (Q) that we are working on minimizing by using Stochastic Gradient Decent (SGD)</li>
+							<li>The second neural network is the Target Q-value function (Q-hat) and is used as a target for (Q)</li>
+							<li>The weights of (Q-hat) remains constant for a much more extended number of iterations</li>
+							<li>Without this feature, the algorithm will become unstable because the target we are trying to reach is constantly moving</li>
+						</ul>
+						<li>The performance of the algorithm relies on a considerable amount of hyper parameters, which were experimented with and optimized</li>
 						<li>An (ε) greedy policy was used with an exponential decay. The probability (ε) starts at 1, which will promote extensive exploration at the beginning</li>
 						<li>The algorithm starts the exploitation process towards later episodes and acts greedily towards reducing cost</li>
-						<li>The replay buffer keeps adding new observations until it reaches its full capacity. At that time, an old observation gets replaced with a new one every iteration</li>
+						<li>Utilized a replay buffer that holds a certain number of observations. Old observations get replaced with new ones once it's full</li>
 						<li>A sample is taken from the buffer randomly to use it in training the Q-value function neural network. This is to create more independent data points</li>
-						<li>The first neural network is the main Q-value function (Q) that we are working on minimizing by using Stochastic Gradient Decent (SGD)</li>
-						<li>The second neural network is the Target Q-value function (Q̂) and is used as a target for (Q)</li>
-						<li>The weights of (Q) gets updated frequently every short number of iterations. However, the weights of (Q̂) remains constant for a much more extended number of iterations (P) to give time for (Q) to converge</li>
-						<li>Without this feature, the algorithm will become unstable because the target we are trying to reach is constantly moving</li>
 						<li>The model is stored every number of iterations because there is a chance that the algorithm may diverge</li>
 						<li>Link to the github repo: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a></Li>
-						<figure><img src="images/pendulum_gif.gif" ALIGN = "left" height = 315px></span>
+						<figure ALIGN = "center"><img src="images/pendulum_gif.gif" height = 315px></figure>
 						<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe> -->
-						<div style="display: flex; justify-content: flex-end">
-							<div style="position: relative; width= 620px height=315 px; overflow: hidden;">
-							  <iframe 
-	
-								loading="lazy";
-								srcdoc="<style>
-								  * {
-								  padding: 0;
-								  margin: 0;
-								  overflow: hidden;
-								  }
-								  
-								  body, html {
-									height: 100%;
-								  }
-								  
-								  img, svg {
-									position: absolute;
-									width: 100%;
-									top: 0;
-									bottom: 0;
-									margin: auto;
-								  }
-								  
-								  svg {
-									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
-									transition: all 250ms ease-in-out;
-								  }
-								  
-								  body:hover svg {
-									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
-									transform: scale(1.2);
-								  }
-								</style>
-								<a href='https://www.youtube.com/embed/Lbb5raPBL6o?autoplay=1'>
-								  <img src='https://img.youtube.com/vi/Lbb5raPBL6o/hqdefault.jpg'>
-								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
-								</a>
-								"
-								width="620" height="315"
-								src="https://www.youtube.com/embed/Lbb5raPBL6o?autoplay=1" 
-								frameborder="0"
-								
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-								allowfullscreen>
-							  </iframe>
-							</div>
-						</div> 	
+					
 					</ul>
 					
 					<hr>
 
 					<!-- DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH -->
 					<h2 style="color:rgb(255, 136, 0)" >DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
-					<span><img src="images/process_diagram.png" ALIGN="right" width = 620px></span>
+
 					<ul >
-						<li>This three month work was part of a project related to the topic of Research Methodology and Scientific Writing</Li>
-						<Li>The work evaluates the performance of using One-Class Support Vector Machine (SVM) to detect deceptive reviews online</Li>
-						<Li>After performing extensive research in the field, previous efforts were found that used both genuine and deceptive reviews to train a multitude of Machine Learning (ML) algorithms</Li>
-						<Li>The objective of this project was to prove that only using the genuine reviews is sufficient to produce a machine learning classifier that performs better or as good as multi-class SVM without losing accuracy in classifications</Li>							
-						<Li>Online reviews play an increasing role in business. In the digital world they have replaced the word of mouth. With all the benefits it brings, unfortunately fake reviews produced by bots falsify this data</Li>
-						<Li>The purpose of this work is to further facilitate the prevention of deceptive text from decreasing the credibility of online reviews</Li>
-						<Li>This is done by developing a machine learning model to identify deceptive reviews that is simple enough to produce a better performance than a given existing solution without sacrificing accuracy</Li>
-						<Li>The project used quantitative techniques to classify review data-sets as deceptive or genuine. Once the ML algorithm was developed, an analytical method was used to quantify the performance and accuracy. This was later compared to the approach of using the combination of genuine and deceptive reviews in order to confirm or to invalidate the stated hypothesis</Li>
-						<Li>The data-sets were gathered, cleaned up and merged into one table using R studio and Pandas. The data was then pre-processed before feeding it into the SVM algorithms</Li>
-						<Li>Extensive pre-processing was required through Natural Language Processing (NLP).This is essential to enable the computer to interpret the human language. The following five steps were performed to transform the review text into a form that can be fed into the algorithm:</Li>
+						<Li>The project evaluated the performance of using One-Class Support Vector Machine (SVM) to detect online deceptive reviews</Li>
+						<Li>The hypothesis is that using only the genuine reviews is enough to detect deceptive reviews, which reduces data and time required for training and inference</Li>
+						<Li>A One-Class SVM is an unsupervised learning approach, usually used for detecting anomalies in data-sets. The algorithm is trained on the normal data, then figures out the boundaries and can classify other points that lies outside that boundary</Li>						
+						<Li>Multiple data-sets were gathered, cleaned up and merged into one table using R studio and Pandas. Some preliminary statistical analysis were conducted as follows:</Li>
+						<ul style="list-style-type:square">
+							<Li>As expected the deceptive reviews are on average contain less words compared to genuine review</Li>
+							<Li>Users that wrote fewer reviews mostly give a rating of 4, with low variance</Li>
+							<Li>Users with more reviews start to diverge in their ratings and the average rating slowly decreases the more reviews a user writes</Li>
+						</ul>					
+						<Li>Extensive pre-processing was done through Natural Language Processing (NLP). The following five steps were performed to transform text into a form that can be fed into the nn:</Li>
 						<ul style="list-style-type:square">
 							<Li><b>Tokenization:</b> To break a block of text into a list of words</Li>
 							<Li><b>Remove Stop words and Non-alpha text:</b> Stop words such as (a, at, but, etc) and numbers are irrelevant and can create over-fitting issues. Therefore, they are removed from the text</Li>
-							<Li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analysed as a single item.For an example, change, changing, and changer</Li>
+							<Li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analyzed as a single item.For an example, change, changing, and changer</Li>
 							<Li><b>Word Vectorization:</b> It is a general process of turning a collection of text documents into numerical feature vectors. The method used is called TF-ID. The method summarizes how often a word appears,and down scales words that have a high frequency across all documents, which in return highlights more interesting words</Li>
 							<Li><b>Undersampling:</b> To eliminate imbalance from the data-sets, under-sampling removes samples from the majority class until all labels are equally represented</Li>
 						</ul>
-						<Li>Results pending</Li>
+						<Li>Results of the research:
+							<ul style="list-style-type:square">
+								<Li>One-class SVM lacks in performance compared to the multi-class. The diverse review content made it difficult to detect outliers</Li>
+								<Li>Confirmed that using linguistic features are not enough to detect real life fake reviews</Li>
+								<Li>One-Class Showed great improvement on the time elapsed metric. Poses as a great candidate for quick fake post detection</Li>
+								<Li>One-class SVM could be deployed on a user review level.Performing the training and prediction on the spot could be capable of detecting if a user is posting in an unusual manner or not within their behavior</Li>
+							</ul>
+						</Li>
 					</ul>
 					
+					<span><img src="images/dr1.png" ALIGN = "left" height = 300px></span>
+					<span><img src="images/dr3.jpg" height = 300px></span>
+					<figure ALIGN="center"><img src="images/dr2.png" height = 300px></figure>
+
 					<hr>
 
 					<!-- MACHINE LEARNING PROJECTS -->
 					<h2 style="color:rgb(255, 136, 0)" >KTH MACHINE LEARNING PROJECTS</h2>
 
 					<ul >
-						<li>Learned basic knowledge of the most important algorithms and theory that form the foundation of machine learning</Li>
+						<li>Gained basic knowledge of the most important algorithms and theory that form the foundation of machine learning</Li>
 						<li>Worked through lab work to implement the following ML algorithms:</li>
 						<ul style="list-style-type:square">
 							<Li>Face classification using boosted decision Trees</Li>
@@ -911,7 +874,7 @@
 							<Li>Bayes Classifier with Adaboost algorithm</Li>
 						</ul>
 						<li>Built and trained different classifiers given a labeled dataset and later used them to infer the labels of a given unlabeled evaluation dataset</Li>
-						<Li>the following machine learning algorithms were used:</Li>
+						<Li>the following machine learning algorithms were used along with their accuracy results:</Li>
 						<ul style="list-style-type:square">	
 							<Li>Logistic Regression: 0.809234 (0.029373)</Li>
 							<Li>Linear Discriminant Analysis: 0.811847 (0.034421)</Li>
@@ -930,21 +893,59 @@
 					<!-- MACHINE LEARNING/ NEURAL NETWORK -->
 					<h2 style="color:rgb(255, 136, 0)" >HAND WRITING DATA DETECTION</h2>
 		
-					<span><img src="images/EX10.jpg" ALIGN="right" width = 550px></span>
 					
 					<ul >
-						<Li>Needed to gather an enormous amount of handwritten data that resides in thousands of scanned pages</Li>
-						<Li>The pages consist of printed data that has empty tables where the handwritten data are filled. The handwritten data is strictly numbers</Li>
-						<Li>Started working on a solution that will automate the data conversion from handwritten to digital excel sheets using Python</Li>
-						<Li>Used the MNIST handwritten digit database to train a Neural Network from the Keras Library</Li>
-						<Li>Used the OpenCv Library for image processing and manipulation to find and pin point the location of the target data (shaping,eroding,finding contours, threshold, and dilate)</Li>
+						<Li>At a previous job, we needed to gather an enormous amount of handwritten data that resided in thousands of scanned papers</Li>
+						<Li>The papers consisted of tables filled with handwritten data that are strictly numbers</Li>
+						<Li>Employed a neural network to transform handwritten data to digital excel sheets using Python</Li>
+						<Li>Trained a Tensorflow Keras CNN model on the MNIST handwritten digit database</Li>
+						<Li>Used OpenCv for image processing to find the location of target data (shaping, eroding, finding contours, threshold, and dilate)</Li>
 						<Li>Iterated through each cell and generated excel sheets with the transformed data</Li>
-					</ul> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+					</ul>
+					<figure ALIGN="center"><img src="images/EX10.jpg" width = 600px></figure>
+					
+					
 					<hr>
+
+
+					<!-- SIMPLE NEURAL NETWORK -->
+					<h2 style="color:rgb(255, 136, 0)" >SIMPLE NEURAL NETWORK DIGIT CLASSIFIER</h2>
+		
+					
+					<ul >
+						<Li>Created a simple neural network without using any frameworks to further understand their structure</Li>
+						<Li>The network is tailored to work with the MNIST data set and only consists of 3 layers:</Li>	
+						<ul style="list-style-type:square">	
+							<Li>Zeroth layer: consists of 784 inputs as it accepts a 28x28 pixel image</Li>
+							<Li>First layer: hidden layer and chose to have 10 nodes inside of it</Li>
+							<Li>Second layer: the output layer and consists of 10, one for each of the digits [0-9]</Li>
+						</ul>												
+						<Li>The training steps:</Li>	
+						<ul style="list-style-type:square">	
+							<Li>The network starts with a random guess for the weights and biases</Li>
+							<Li>make a prediction through forward propagation using the weights and biases [Z = W.A + b]:</Li>
+							<ul style="list-style-type:square">	
+								<Li>calculate first layer and apply a rectified linear unit (Relu) activation making it no longer linear</Li>
+								<Li>calculate second layer and apply a softmax activation function to get probabilities</Li>
+							</ul>	
+							<Li>Apply a backwards propagation:</Li>
+							<ul style="list-style-type:square">	
+								<Li>calculate error between prediction and actual value [dZ = A - Y]</Li>
+								<Li>calculate how much each weight and bias contribute to the error</Li>
+								<Li>update the weights and biases based on your learning rate alpha [hyper parameter]</Li>
+							</ul>	
+		
+						</ul>						
+						<li>Link to the github repo: <a href="https://github.com/basemprince/digit_recognition_nn" target="_blank" rel="noopener noreferrer">Link</a></Li>											
+						
+					</ul>
+					<figure ALIGN = "center"><img src="images/acc.jpg" width = 400px></figure>
+					
+					
+					<hr>
+
 					<p>MORE TO COME</p>
 				</article>
-
 				<article id="simulation">
 					<h1 class="major">SIMULATIONS PORTFOLIO</h1>
 
