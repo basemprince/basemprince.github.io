@@ -403,6 +403,78 @@
 				<article id="robotics">
 					<h1 class="major">ROBOTICS PORTFOLIO</h1>
 
+					<!-- ROBOT SEARCH AND RESCUE -->
+					<h2 style="color:rgb(255, 136, 0)" >ROBOT SEARCH AND RESCUE</h2>
+
+					<ul >
+						<Li>Objective is to search an unknown environment for a target using cooperative robots</Li>
+						<Li>The robots have no previous knowledge of the environment and need to collaboratively explore to find and rescue the target</Li>
+						<Li>Written in Python/C++ and used Robot Operating System(ROS) along with Gazebo as simulation engine</Li>
+						<Li>the robots are the turtlebot3 burger model with 2 drivable wheels and a lidar sensor</Li>
+						<Li>The map is unknown and has obstacles. The robots start close to each other at one side of the map</Li>
+						<Li>Used SLAM gmapping for localization and mapping</Li>
+						<Li>Employed cooperative exploration approach using dynamic Voronoi partitions</Li>
+						<Li>Robots explore map cooperatively until target is found</Li>
+						<Li>Robots favor exploration until target is found</Li>
+						<Li>The density function changes once the target is found to attract them to go rescue it</Li>
+						<Li>The explored map is shared between the robots to minimize duplication</Li>
+						<Li>Used move base package for cost maps and local/global planning</Li>
+						<Li>Global planning uses A* and the local collision avoidance uses DWA</Li>
+						<li>Link to the github repo: <a href="https://github.com/basemprince/search_rescue" target="_blank" rel="noopener noreferrer">Link</a></Li>
+						<figure ALIGN = "center"><img src="images/search_rescue.png"  width = 620px></figure>
+						<!-- <iframe width="600" height="345" src="https://www.youtube.com/embed/G5HU3dn15KI?rel=0"></iframe></figure> -->
+						<div style="display: flex; justify-content: center">
+							<div style="position: relative; width= 620px height=350 px; overflow: hidden;">
+							  <iframe 
+	
+								loading="lazy";
+								srcdoc="<style>
+								  * {
+								  padding: 0;
+								  margin: 0;
+								  overflow: hidden;
+								  }
+								  
+								  body, html {
+									height: 100%;
+								  }
+								  
+								  img, svg {
+									position: absolute;
+									width: 100%;
+									top: 0;
+									bottom: 0;
+									margin: auto;
+								  }
+								  
+								  svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 70.7%, 8%));
+									transition: all 250ms ease-in-out;
+								  }
+								  
+								  body:hover svg {
+									filter: drop-shadow(1px 1px 10px hsl(206.5, 0%, 10%));
+									transform: scale(1.2);
+								  }
+								</style>
+								<a href='https://www.youtube.com/embed/2KugQG_Rvb8?autoplay=1'>
+								  <img src='https://img.youtube.com/vi/2KugQG_Rvb8/hqdefault.jpg'>
+								  <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
+								</a>
+								"
+								width="620" height="350"
+								src="https://www.youtube.com/embed/2KugQG_Rvb8?autoplay=1" 
+								frameborder="0"
+								
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+								allowfullscreen>
+							  </iframe>
+							</div>
+						</div> 	
+					</ul>
+				
+					<hr>
+
 					<!-- ROBOT EVACUATION MISSION PLANNING -->
 					<h2 style="color:rgb(255, 136, 0)" >ROBOT EVACUATION MISSION PLANNING</h2>
 
