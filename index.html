@@ -883,10 +883,28 @@
 						<li>Collecting anomalous data manually from vehicles requires intentional introduction of failure to the vehicles
 							and many hours of driving to collect such data. This process is very expensive and could have the potential
 							of putting the person driving</li>
-						<li></li>
+						<li>Several image based state-of-the-art strategies were considered and compared based on relevant criteria
+							and required limitations. The winning strategies were implemented and tested, which concluded that the
+							least forgiving training strategy was found to be the most effective in decentralized learning based on both
+							qualitative and quantitative evaluation metrics</li>
+						<li>A CNN architecture was implemented for the discriminator and generator, and various mutations were
+							tested. It was observed that implementing a nine-layer architecture for both the discriminator and generator
+							networks proved to be the most effective configuration. However, this approach also poses a significant
+							challenge in terms of physical implementation as the increased number of layers may surpass the com-
+							putational capabilities of the edge devices</li>
+						<li>An LSTM based auto regression model was developed to help with the evaluation of the time-series based
+							output. Two methods were used, which are TSTR and TRTS to train and test the model and three different
+							metrics were calculated, which are R2 score, MAE and RMSE. This evaluation proved useful, but however it
+							was not always definitive, especially for decentralization, as the output of the GAN is a mix of the distribution iof the workers</li>
+						<li>There exits potential for improvements and areas for further research. One avenue for future work is to
+							experiment with LSTM based architectures in comparison to this study’s CNN based approach. Additionally,
+							it would be valuable to investigate other methods such as diffusion models and transformer networks instead
+							of GANs for data generation, as they have recently demonstrated exceptional performance in this field</li>
+						</ul>
+						<figure ALIGN="center"><img src="images/network-arch.png" width = 600px></figure>
+						<figure ALIGN="center"><img src="images/gen-disc.PNG" width = 600px></figure>
+						<figure ALIGN="center"><img src="images/auto-reg.png" width = 600px></figure>
 
-					</ul>
-					
 					<hr>
 
 					<!-- DEEP Q LEARN - PENDULUM -->
