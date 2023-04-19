@@ -1021,17 +1021,19 @@
 					<!-- MACHINE LEARNING/ NEURAL NETWORK -->
 					<h2 style="color:rgb(255, 136, 0)" >HAND WRITING DATA DETECTION</h2>
 		
-					
 					<ul >
-						<Li>At a previous job, we needed to gather an enormous amount of handwritten data that resided in thousands of scanned papers</Li>
-						<Li>The papers consisted of tables filled with handwritten data that are strictly numbers</Li>
-						<Li>Employed a neural network to transform handwritten data to digital excel sheets using Python</Li>
-						<Li>Trained a Tensorflow Keras CNN model on the MNIST handwritten digit database</Li>
-						<Li>Used OpenCv for image processing to find the location of target data (shaping, eroding, finding contours, threshold, and dilate)</Li>
-						<Li>Iterated through each cell and generated excel sheets with the transformed data</Li>
-					</ul>
+						<Li>The project involved processing a large number of scanned documents containing tabular data with handwritten numerical entries. The goal was to accurately digitize the handwritten data into a structured format that could be easily analyzed and managed</Li>
+						<Li>I trained a Convolutional Neural Network (CNN) using the TensorFlow library to recognize handwritten digits. The CNN model was trained on the widely-used MNIST dataset, which contains a large number of labeled examples of handwritten digits</Li>
+						<Li>Using OpenCV for Document Pre-processing to improve the accuracy of the CNN model. Pre-processing steps included:</Li>
+						<ul>
+							<Li>Gaussian Blur: This technique was applied to reduce image noise and minimize the impact of minor variations in handwriting</Li>
+							<Li>Thresholding: This step was employed to convert the images into binary format, allowing for easier detection of handwritten data</Li>
+							<Li>Dilatation and Erosion: Morphological operations were used to refine the binary images, removing any small artifacts and improving the visibility of the handwritten data</Li>
+							<Li>Find Contours (Table Edges Detection): The table edges within the scanned documents were detected using the contour-finding functionality provided by OpenCV</Li>
+							<Li>Bounding Rectangles, Convex Hull (Cell Detection): To identify individual cells within the tables, bounding rectangles and convex hull techniques were applied</Li>
+						</ul>
+						<Li>The extracted handwritten data was then processed and structured using the Python-based Pandas library. Finally, the cleaned data was saved into digital Excel sheets, allowing for further analysis and manipulation</Li>
 					<figure ALIGN="center"><img src="images/EX10.jpg" width = 600px></figure>
-					
 					
 					<hr>
 
@@ -1145,13 +1147,14 @@
 					<!-- FLOWVAC CRYOVAC DUAL INFEED CONVEYORS -->
 					<h2 style="color:rgb(255, 136, 0)" >FLOWVAC CRYOVAC DUAL INFEED CONVEYORS</h2>
 
-					<ul >
-					<Li>The objective of the project is to eliminate the occurrence of product back up at the exit of the Flowvac, which would remove the need for having a personnel there</Li>
-					<Li>I performed 5 Why's analysis and cycle time studies to prove the two main root causes of the problem, which are, the Flowvac and Cryovac speeds are not in sync, and distance between products are not consistent</Li>
-					<Li>Measured the dimensions of the space on the production floor to use as limits for the conveyor redesigns</Li>
-					<Li>I came up with different solutions for each root cause and used javascript coding to simulate current condition and compare it with the implementation of the solutions</Li>
-					<Li>Presented the solutions to the maintenance supervisor and team and agreed on the PLC logic reprogramming</Li>
-					<Li>Designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to keep track of empty spaces between products and only merge when there is enough space</Li></ul>
+					<ul>
+						<Li>The objective of the project is to eliminate the occurrence of product back up at the exit of the Flowvac, which would remove the need for having a personnel there</Li>
+						<Li>I performed 5 Why's analysis and cycle time studies to prove the two main root causes of the problem, which are, the Flowvac and Cryovac speeds are not in sync, and distance between products are not consistent</Li>
+						<Li>Measured the dimensions of the space on the production floor to use as limits for the conveyor redesigns</Li>
+						<Li>I came up with different solutions for each root cause and used javascript coding to simulate current condition and compare it with the implementation of the solutions</Li>
+						<Li>Presented the solutions to the maintenance supervisor and team and agreed on the PLC logic reprogramming</Li>
+						<Li>Designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to keep track of empty spaces between products and only merge when there is enough space</Li>
+					</ul>
 	
 					<!-- <iframe width="720" height="615" src="https://www.youtube.com/embed/Uehql8uK2NE?rel=0"></iframe></figure> -->
 					<div style="display: flex; justify-content: center">
@@ -1201,24 +1204,22 @@
 							allowfullscreen>
 						  </iframe>
 						</div>
-					  </div>  
-					  <figure ALIGN = "center"><img src="images/HY2.jpg" width = 620px>
-
-
+					</div>  
+					<figure ALIGN = "center"><img src="images/HY2.jpg"  width = 620px></figure>
 
 					<hr>
 
 					<!-- SUPERVAC SIMULATION PROJECT FOR BELLY LINE -->
 					<h2 style="color:rgb(255, 136, 0)" >SUPERVAC SIMULATION PROJECT FOR BELLY LINE</h2>
 					
-
 					<ul >
-					<Li>The engineering team was tasked to design a new packaging area for the Belly Line using Supervac machines</Li>
-					<Li>Performed cycle times on bagger stations and Supervacs. I also tested how many bellies can fit inside our current Ham/Tenderloin Supervacs</Li>
-					<Li>Used the speeds of conveyors, cycle times and capacities of Supervacs and bagger stations to create a simulation of a two Supervac system using javascript coding</Li>
-					<Li>The simulation showed that at least five bagging stations is required to keep up with plant speed</Li>
-					<Li>The simulation also showed we will encounter a problem with the take away conveyors after the two Supervacs</Li>
-					<Li>I modelled three different solutions using SolidWorks for the take away conveyor system and presented to management</Li></ul>
+						<Li>The engineering team was tasked to design a new packaging area for the Belly Line using Supervac machines</Li>
+						<Li>Performed cycle times on bagger stations and Supervacs. I also tested how many bellies can fit inside our current Ham/Tenderloin Supervacs</Li>
+						<Li>Used the speeds of conveyors, cycle times and capacities of Supervacs and bagger stations to create a simulation of a two Supervac system using javascript coding</Li>
+						<Li>The simulation showed that at least five bagging stations is required to keep up with plant speed</Li>
+						<Li>The simulation also showed we will encounter a problem with the take away conveyors after the two Supervacs</Li>
+						<Li>I modelled three different solutions using SolidWorks for the take away conveyor system and presented to management</Li>
+					</ul>
 					
 					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/k-blMlFuksY?rel=0"></iframe> -->
 					<div style="display: flex; justify-content: center">
@@ -1269,7 +1270,7 @@
 						  </iframe>
 						</div>
 					</div> 
-					<span><img src="images/HY1.jpg" ALIGN="center" width = 620px></span>
+					<figure ALIGN = "center"><img src="images/HY1.jpg"  width = 620px></figure>
 					<hr>
 
 					<!-- TRIM LINE REDESIGN -->
@@ -1332,8 +1333,8 @@
 							allowfullscreen>
 						  </iframe>
 						</div>
-					</div> 					
-					<span><img src="images/HY4.jpg" ALIGN="center" width = 620px></span>
+					</div>
+					<figure ALIGN = "center"><img src="images/HY4.jpg"  width = 620px></figure>		
 					<!-- <iframe width="620" height="415" src="https://www.youtube.com/embed/FXd6nKMt7so?rel=0"></iframe> -->
 					
 					<hr>
@@ -1354,15 +1355,11 @@
 						<Li>After understanding the requirements for performing the testing within the DIN EN 1433, the testing was outsourced to the University of Manitoba Industrial Technology Center</Li>
 						<Li>A proposal was written with all the test requirements and a detailed step by step procedure</Li>
 						<Li>Test results were studied if specimens couldn't reach the desired class, and modifications were performed to improve the weakest parts</Li>	
-						<span><img src="images/load2.jpg" ALIGN="left" width = 490px></span>
-						<span><img src="images/load3.jpg"  width = 460px></span>
-						<span><img src="images/load4.jpg"  ALIGN="left" width = 490px></span>
-						<span><img src="images/load1-2.jpg"  width = 460 height = 370px> </span>
-
-
 					</ul>
-					
+					<figure ALIGN = "center"><img src="images/load1.png"  width = 620px></figure>
+
 					<hr>
+					
 					<p>MORE TO COME</p>
 				</article>
 
