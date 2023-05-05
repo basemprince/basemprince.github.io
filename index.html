@@ -54,7 +54,7 @@
 				<div class="content">
 					<div class="inner">
 						<h1>BASEM SHAKER</h1>
-						<h3>AUTOMATION / MECHANICAL ENGINEER</h3>
+						<h3>AUTOMATION / ML ENGINEER</h3>
 					</div>
 				</div>
 				<nav>
@@ -72,8 +72,8 @@
 							<i class="fa fa-caret-down"></i></a>
 							<div class="dropdown-container">
 
-							<a href="#robotics">ROBOTICS</a>
 							<a href="#machine_learn">MACHINE LEARNING</a>
+							<a href="#robotics">ROBOTICS</a>
 							<a href="#automation">AUTOMATION</a>
 							<a href="#simulation">SIMULATIONS</a>
 							</div></Li>
@@ -903,34 +903,25 @@
 				<article id="machine_learn">
 					<h1 class="major">MACHINE LEARNING PORTFOLIO</h1>
 
-					<!-- Generative Adversarial Networks -->
-					<h2 style="color:rgb(255, 136, 0)" >GENERATIVE ADVERSARIAL NETWORKS (GANs) AND FEDERATED LEARNING</h2>
-					<ul >
-						<li>My master thesis project involved implementing a Generative Adversarial Network (GAN) using non I.I.D time-series data in a Federated Learning Setting</li>
-						<li>The theis was conducted at Scania CV AB, a renowned provider of commercial vehicles</li>
-						<li>The thesis involves generating synthetic data for a specific system on the vehicles Scania offers, which
-							is called the Air Processing System (APS). APS is responsible for supplying air pressure to multiple sub-
-							systems on the vehicle</li>
-						<li>Collecting anomalous data manually from vehicles requires intentional introduction of failure to the vehicles
-							and many hours of driving to collect such data. This process is very expensive and could have the potential
-							of putting the person driving</li>
-						<li>Several image based state-of-the-art strategies were considered and compared based on relevant criteria
-							and required limitations. The winning strategies were implemented and tested, which concluded that the
-							least forgiving training strategy was found to be the most effective in decentralized learning based on both
-							qualitative and quantitative evaluation metrics</li>
-						<li>A CNN architecture was implemented for the discriminator and generator, and various mutations were
-							tested. It was observed that implementing a nine-layer architecture for both the discriminator and generator
-							networks proved to be the most effective configuration. However, this approach also poses a significant
-							challenge in terms of physical implementation as the increased number of layers may surpass the com-
-							putational capabilities of the edge devices</li>
-						<li>An LSTM based auto regression model was developed to help with the evaluation of the time-series based
-							output. Two methods were used, which are TSTR and TRTS to train and test the model and three different
-							metrics were calculated, which are R2 score, MAE and RMSE. This evaluation proved useful, but however it
-							was not always definitive, especially for decentralization, as the output of the GAN is a mix of the distribution iof the workers</li>
-						<li>There exits potential for improvements and areas for further research. One avenue for future work is to
-							experiment with LSTM based architectures in comparison to this study’s CNN based approach. Additionally,
-							it would be valuable to investigate other methods such as diffusion models and transformer networks instead
-							of GANs for data generation, as they have recently demonstrated exceptional performance in this field</li>
+						<!-- Generative Adversarial Networks -->
+						<h2 style="color:rgb(255, 136, 0)">GENERATIVE ADVERSARIAL NETWORKS (GANs) AND FEDERATED LEARNING</h2>
+						<ul>
+						<li>My master's thesis project involved implementing a Generative Adversarial Network (GAN) using non-i.i.d. time-series data in a Federated Learning setting</li>
+						<li>The thesis was conducted at Scania CV AB, a renowned provider of commercial vehicles</li>
+						<li>The project focused on generating synthetic data for a specific system on Scania's vehicles, called the Air Processing System (APS). APS is responsible for supplying
+							air pressure to multiple subsystems on the vehicle</li>
+						<li>Collecting anomalous data manually from vehicles is an expensive and risky process, requiring intentional introduction of failure and many hours of driving</li>
+						<li>Several image-based state-of-the-art strategies were considered, compared based on relevant criteria, and required limitations. The most effective strategy 
+							was identified and implemented in decentralized learning, based on both qualitative and quantitative evaluation metrics</li>
+						<li>A CNN architecture was implemented for the discriminator and generator, with various mutations tested. A nine-layer architecture for both networks proved 
+							to be the most effective configuration. However, this approach also poses a significant challenge in terms of physical implementation due to the increased number 
+							of layers potentially surpassing the computational capabilities of edge devices</li>
+						<li>An LSTM-based auto-regression model was developed to help evaluate the time-series based output. Two methods, TSTR and TRTS, were used to train and test the model, 
+							and three metrics were calculated: R2 score, MAE, and RMSE. This evaluation proved useful but was not always definitive, especially for decentralization, as the 
+							GAN output is a mix of the distribution of the workers</li>
+						<li>Potential improvements and areas for further research include experimenting with LSTM-based architectures, comparing them to the CNN-based approach used in this
+							 study. Additionally, investigating other methods, such as diffusion models and transformer networks instead of GANs for data generation, would be valuable, as they 
+							 have recently demonstrated exceptional performance in this field</li>
 						</ul>
 						<figure ALIGN="center"><img src="images/network-arch.png" width = 600px></figure>
 						<figure ALIGN="center"><img src="images/gen-disc.PNG" width = 600px></figure>
@@ -939,66 +930,94 @@
 					<hr>
 
 					<!-- DEEP Q LEARN - PENDULUM -->
-					<h2 style="color:rgb(255, 136, 0)" >DEEP Q LEARN - PENDULUM</h2>
-					<ul >
-						<li>I trained a Deep Q network to provide torque control to a pendulum's joints to perform a “handstand maneuver"</li>
-						<li>Two neural networks were created using TensorFlow and Keras:</li>
-						<ul style="list-style-type:square">
-							<li>The first neural network is the main Q-value function (Q) that we are working on minimizing by using Stochastic Gradient Decent (SGD)</li>
-							<li>The second neural network is the Target Q-value function (Q-hat) and is used as a target for (Q)</li>
-							<li>The weights of (Q-hat) remains constant for a much more extended number of iterations</li>
-							<li>Without this feature, the algorithm will become unstable because the target we are trying to reach is constantly moving</li>
-						</ul>
-						<li>The performance of the algorithm relies on a considerable amount of hyper parameters, which were experimented with and optimized</li>
-						<li>An (ε) greedy policy was used with an exponential decay. The probability (ε) starts at 1, which will promote extensive exploration at the beginning</li>
-						<li>The algorithm starts the exploitation process towards later episodes and acts greedily towards reducing cost</li>
-						<li>Utilized a replay buffer that holds a certain number of observations. Old observations get replaced with new ones once it's full</li>
-						<li>A sample is taken from the buffer randomly to use it in training the Q-value function neural network. This is to create more independent data points</li>
-						<li>The model is stored every number of iterations because there is a chance that the algorithm may diverge</li>
-						<li>Link to the github repo: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a></Li>
-						<figure ALIGN = "center"><img src="images/pendulum-gif.webp" height = 315px></figure>
-						<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe> -->
-					
+					<h2 style="color:rgb(255, 136, 0)">DEEP Q LEARN - PENDULUM</h2>
+					<ul>
+					<li>I trained a Deep Q network to provide torque control to a pendulum's joints to perform a "handstand maneuver"</li>
+					<li>Two neural networks were created using TensorFlow and Keras:</li>
+					<ul style="list-style-type:square">
+						<li>The first neural network is the main Q-value function (Q) that we aim to minimize using Stochastic Gradient Descent (SGD)</li>
+						<li>The second neural network is the Target Q-value function (Q-hat) and is used as a target for (Q)</li>
+						<li>The weights of (Q-hat) remain constant for a much more extended number of iterations</li>
+						<li>Without this feature, the algorithm would become unstable because the target we are trying to reach is constantly moving</li>
 					</ul>
+					<li>The performance of the algorithm relies on a considerable amount of hyperparameters, which were experimented with and optimized</li>
+					<li>An (ε) greedy policy with an exponential decay was used. The probability (ε) starts at 1, which promotes extensive exploration at the beginning</li>
+					<li>The algorithm starts the exploitation process towards later episodes and acts greedily towards reducing cost</li>
+					<li>Utilized a replay buffer that holds a certain number of observations. Old observations get replaced with new ones once it's full</li>
+					<li>A sample is taken from the buffer randomly to use it in training the Q-value function neural network. This is to create more independent data points</li>
+					<li>The model is stored every number of iterations because there is a chance that the algorithm may diverge</li>
+					<li>Link to the GitHub repo: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a></li>
+					</ul>
+					<figure ALIGN="center"><img src="images/pendulum-gif.webp" height=315px></figure>
+					<!-- <iframe width="620" height="315" src="https://www.youtube.com/embed/Lbb5raPBL6o?rel=0">></iframe> -->
+					
+
 					
 					<hr>
 
 					<!-- DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH -->
-					<h2 style="color:rgb(255, 136, 0)" >DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
+					<h2 style="color:rgb(255, 136, 0)">DECEPTIVE REVIEWS DETECTION THROUGH ONE-CLASS SVM RESEARCH</h2>
 
-					<ul >
-						<Li>The project evaluated the performance of using One-Class Support Vector Machine (SVM) to detect online deceptive reviews</Li>
-						<Li>The hypothesis is that using only the genuine reviews is enough to detect deceptive reviews, which reduces data and time required for training and inference</Li>
-						<Li>A One-Class SVM is an unsupervised learning approach, usually used for detecting anomalies in data-sets. The algorithm is trained on the normal data, then figures out the boundaries and can classify other points that lies outside that boundary</Li>						
-						<Li>Multiple data-sets were gathered, cleaned up and merged into one table using R studio and Pandas. Some preliminary statistical analysis were conducted as follows:</Li>
-						<ul style="list-style-type:square">
-							<Li>As expected the deceptive reviews are on average contain less words compared to genuine review</Li>
-							<Li>Users that wrote fewer reviews mostly give a rating of 4, with low variance</Li>
-							<Li>Users with more reviews start to diverge in their ratings and the average rating slowly decreases the more reviews a user writes</Li>
-						</ul>					
-						<Li>Extensive pre-processing was done through Natural Language Processing (NLP). The following five steps were performed to transform text into a form that can be fed into the nn:</Li>
-						<ul style="list-style-type:square">
-							<Li><b>Tokenization:</b> To break a block of text into a list of words</Li>
-							<Li><b>Remove Stop words and Non-alpha text:</b> Stop words such as (a, at, but, etc) and numbers are irrelevant and can create over-fitting issues. Therefore, they are removed from the text</Li>
-							<Li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analyzed as a single item.For an example, change, changing, and changer</Li>
-							<Li><b>Word Vectorization:</b> It is a general process of turning a collection of text documents into numerical feature vectors. The method used is called TF-ID. The method summarizes how often a word appears,and down scales words that have a high frequency across all documents, which in return highlights more interesting words</Li>
-							<Li><b>Undersampling:</b> To eliminate imbalance from the data-sets, under-sampling removes samples from the majority class until all labels are equally represented</Li>
-						</ul>
-						<Li>Results of the research:
-							<ul style="list-style-type:square">
-								<Li>One-class SVM lacks in performance compared to the multi-class. The diverse review content made it difficult to detect outliers</Li>
-								<Li>Confirmed that using linguistic features are not enough to detect real life fake reviews</Li>
-								<Li>One-Class Showed great improvement on the time elapsed metric. Poses as a great candidate for quick fake post detection</Li>
-								<Li>One-class SVM could be deployed on a user review level.Performing the training and prediction on the spot could be capable of detecting if a user is posting in an unusual manner or not within their behavior</Li>
-							</ul>
-						</Li>
+					<ul>
+					<li>The project evaluated the performance of using One-Class Support Vector Machine (SVM) to detect online deceptive reviews</li>
+					<li>The hypothesis is that using only genuine reviews is enough to detect deceptive reviews, which reduces data and time required for training and inference</li>
+					<li>A One-Class SVM is an unsupervised learning approach, usually used for detecting anomalies in datasets. The algorithm is trained on the normal data, then figures out the boundaries and can classify other points that lie outside that boundary</li>
+					<li>Multiple datasets were gathered, cleaned up, and merged into one table using R studio and Pandas. Some preliminary statistical analyses were conducted as follows:</li>
+					<ul style="list-style-type:square">
+						<li>As expected, deceptive reviews on average contain fewer words compared to genuine reviews</li>
+						<li>Users who wrote fewer reviews mostly give a rating of 4, with low variance</li>
+						<li>Users with more reviews start to diverge in their ratings, and the average rating slowly decreases as the number of reviews written by a user increases</li>
 					</ul>
-					
-					<span><img src="images/dr1.png" ALIGN = "left" height = 300px></span>
-					<span><img src="images/dr3.jpg" height = 300px></span>
-					<figure ALIGN="center"><img src="images/dr2.png" height = 300px></figure>
+					<li>Extensive pre-processing was done through Natural Language Processing (NLP). The following five steps were performed to transform text into a form that can be fed into the neural network:</li>
+					<ul style="list-style-type:square">
+						<li><b>Tokenization:</b> To break a block of text into a list of words</li>
+						<li><b>Remove Stop words and Non-alpha text:</b> Stop words such as (a, at, but, etc.) and numbers are irrelevant and can create overfitting issues. Therefore, they are removed from the text</li>
+						<li><b>Word Lemmatization:</b> To group together all forms of a word so they can be analyzed as a single item. For example, change, changing, and changer</li>
+						<li><b>Word Vectorization:</b> It is a general process of turning a collection of text documents into numerical feature vectors. The method used is called TF-IDF. The method summarizes how often a word appears and down scales words that have a high frequency across all documents, which in return highlights more interesting words</li>
+						<li><b>Undersampling:</b> To eliminate imbalance from the datasets, under-sampling removes samples from the majority class until all labels are equally represented</li>
+					</ul>
+					<li>Results of the research:
+						<ul style="list-style-type:square">
+						<li>One-class SVM lacks performance compared to multi-class. The diverse review content made it difficult to detect outliers</li>
+						<li>Confirmed that using linguistic features are not enough to detect real-life fake reviews</li>
+						<li>One-Class showed great improvement on the time elapsed metric. Poses as a great candidate for quick fake post detection</li>
+						<li>One-class SVM could be deployed on a user review level. Performing the training and prediction on the spot could be capable of detecting if a user is posting in an unusual manner or not within their behavior</li>
+						</ul>
+					</li>
+					</ul>
+					<figure ALIGN="center"><img src="images/dr1.png" height=300px></figure>
+					<figure ALIGN="center"><img src="images/dr3.jpg" height=300px></figure>
+					<figure ALIGN="center"><img src="images/dr2.png" height=300px></figure>
+					<!-- <span><img src="images/dr3.jpg" height = 300px></span>
+					<figure ALIGN="center"><img src="images/dr2.png" height = 300px></figure> -->
 
 					<hr>
+
+					<!-- WHO IS THE PAYER: USING ML ANALYSIS -->
+					<h2 style="color:rgb(255, 136, 0)" >Who is the Payer: Using ML Analysis</h2>
+					<ul >
+						<li>Dealing with work orders and deciding on the payer at Scania is a time-consuming process. 
+							This project was put in place to provide a proof of concept on how deploying ML can expedite this process</li>
+						<li>With the help of the correct team members, we were able to gather relevant data (features) that aids 
+							in making this decision. The project involved the following steps:</li>
+						<ul style="list-style-type:square">
+						  <li>Data collection: Working closely with the team members, we collected the essential data and features 
+							to help in the decision-making process</li>
+						  <li>Pre-processing: The collected data was pre-processed using various techniques, such as scaling, 
+							encoding, and feature selection, to prepare it for machine learning algorithms</li>
+						  <li>Model selection and training: We implemented and tested multiple machine learning algorithms, 
+							including linear regression, random forest, and support vector machines, to find the 
+							best-performing model for the given dataset, we further employed MLPs</li>
+						  <li>Model evaluation and prediction: The performance of each model was evaluated using 
+							cross-validation and various evaluation metrics, such as accuracy, precision, and recall
+							 The best-performing model was then used for making predictions on new data to determine the payer</li>
+						  </ul>
+						<li>This project not only streamlined the decision-making process, but also demonstrated our 
+							proficiency in data analysis, pre-processing, and applying machine learning techniques for prediction</li>
+					</ul>
+					<figure ALIGN="center"><img src="images/conf.png" height=300px></figure>
+					<figure ALIGN="center"><img src="images/metrics.png" height=220px></figure>
+					<hr>		  
 
 					<!-- MACHINE LEARNING PROJECTS -->
 					<h2 style="color:rgb(255, 136, 0)" >KTH MACHINE LEARNING PROJECTS</h2>
