@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Basem Shaker</title>
+  <title>Basem Shaker - ML Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -36,7 +36,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="index.html#">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portfolios">Portfolios</a></li>
           <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
         </ul>
@@ -55,7 +55,7 @@
             <li class="breadcrumb-item">
               <a href="index.html#">Home</a>
             </li>
-            <li class="breadcrumb-item active">ML Portfolio Details</li>
+            <li class="breadcrumb-item active">ML Portfolio</li>
           </ol>
         </div>
       </div>
@@ -64,55 +64,314 @@
 
   <main id="main">
 
-    <!-- ======= Portfolio Details Section ======= -->
+    <!-- ======= Generative Adversarial Networks (GANs) & Federated Learning ======= -->
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
+        <div class="col-md-12">
+          <div class="gans pt-4 pt-md-0">
+            <div class="title-box-2">
+              <h5 class="title-left">
+                Generative Adversarial Networks (GANs) & Federated Learning
+              </h5>
+            </div>
+            <p>For my master's thesis, I implemented a Generative Adversarial Network (GAN) using non-i.i.d. time-series data in a Federated Learning setting at Scania CV AB, a leading provider of commercial vehicles. The aim was to generate synthetic data for a specific vehicle system to avoid the costly and risky process of manually collecting anomalous data.</p>
+        
+            <p>I evaluated various image-based strategies and identified the most effective one for decentralized learning. The GAN was based on a deep Convolutional Neural Network (CNN) architecture, and after testing various mutations, I found a nine-layer architecture to be most efficient. However, the complexity of the model presents challenges for edge device implementation due to computational limitations.</p>
+        
+            <p>To evaluate time-series based output, I developed an LSTM-based auto-regression model using two training methods and three evaluation metrics. Although the evaluation proved insightful, it was not definitive due to the mixed distribution of GAN output from the workers in decentralization.</p>
+        
+            <p>You can find the report of the thesis <a href="https://drive.google.com/file/d/11g7uDik7NQ4jzcv3xHHqdfHhG8JDcBop/view?usp=sharing">[here]</a>. I am also awaiting aproval for a publication based on my thesis work.</p>
+          </div>
+        </div>
 
         <div class="row gy-4">
-
-          <div class="col-lg-8">
+          <div class="col-lg-4 offset-lg-4">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/ml-details-1.jpg" alt="">
+                  <img src="images/network-arch.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/ml-details-2.jpg" alt="">
+                  <img src="images/gen-disc.PNG" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/ml-details-3.jpg" alt="">
+                  <img src="images/auto-reg.png" alt="">
                 </div>
 
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
+      </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category</strong>: Machine Learning</li>
-                <li><strong>Client</strong>: Tech Company XYZ</li>
-                <li><strong>Project Date</strong>: 01 March, 2023</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
+    </section><!-- End Generative Adversarial Networks (GANs) & Federated Learning Section -->
+
+    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+    </div>
+
+    <!-- ======= Deep Q Learn - Pendulum ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="deep-q pt-4 pt-md-0">
+            <div class="title-box-2">
+              <h5 class="title-left">
+                Deep Q Learn - Pendulum
+              </h5>
             </div>
-            <div class="portfolio-description">
-              <h2>This is an example of a machine learning project</h2>
-              <p>
-                This project involved using advanced machine learning algorithms to develop predictive models. This served to enhance the company's decision-making process, improving efficiency and profitability. The project was a success, leading to a significant improvement in the company's operational efficiency.
-              </p>
-            </div>
+            <p>In this project, I trained a Deep Q network to control a pendulum's torque, enabling it to perform a "handstand maneuver". I leveraged TensorFlow and Keras to create two neural networks:</p>
+            <ul>
+              <li>A primary Q-value function aimed at minimization using Stochastic Gradient Descent (SGD).</li>
+              <li>A target Q-value function used as a goal for the primary Q-value function. To stabilize the algorithm, I maintained its weights constant for an extended number of iterations, preventing a constantly moving target.</li>
+            </ul>
+            <p>Through experimentation and optimization, I fine-tuned the hyperparameters essential for the algorithm's performance. I used an (ε) greedy policy with an exponential decay, promoting broad exploration initially, followed by exploitation in later episodes to reduce cost.</p>
+            
+            <p>To create more independent data points for training the Q-value function, I used a replay buffer holding a set number of observations, replacing older ones with new data when full. I also implemented periodic model storage to safeguard against potential algorithm divergence. </p>
+            
+            <p>For a deeper dive into the project, check out the GitHub repository: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">Link</a>.</p>
           </div>
-
         </div>
 
+        <div class="row gy-4">
+          <div class="col-lg-4 offset-lg-4">
+              <img src="images/pendulum-gif.webp" height=315px>
+          </div>
       </div>
-    </section><!-- End Portfolio Details Section -->
+
+    </section><!-- End Deep Q Learn - Pendulum Section -->
+
+    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+    </div>
+
+    <!-- ======= Who is the Payer: Using ML Analysis ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="deep-q pt-4 pt-md-0">
+            <div class="title-box-2">
+              <h5 class="title-left">
+                Who is the Payer: Using ML Analysis
+              </h5>
+            </div>
+            <p>Addressing work orders and determining the payer at Scania was a time-consuming task, prompting the initiation of a project to explore how machine learning (ML) could expedite this process. I collaborated with the relevant team members to gather necessary data (features) for decision-making, and the project encompassed the following stages:</p>
+
+            <ul>
+            <li><strong>Data collection:</strong> I worked closely with team members to gather critical data and features for decision-making.</li>
+            <li><strong>Pre-processing:</strong> Using techniques like scaling, encoding, and feature selection, I prepared the collected data for ML algorithms.</li> 
+            <li><strong>Model selection and training:</strong> I tested multiple ML algorithms, including linear regression, random forest, support vector machines, and MLPs, to identify the best-performing model for our dataset.</li>
+            <li><strong>Model evaluation and prediction:</strong> Each model's performance was assessed using cross-validation and various evaluation metrics such as accuracy, precision, and recall. I then used the best-performing model to make predictions on new data to identify the payer.</li>
+            </ul>
+            <p>This project not only streamlined the decision-making process but also showcased my proficiency in data analysis, pre-processing, and applying ML techniques for predictive purposes.</p>
+            
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 offset-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="images/conf.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/metrics.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+      </div>
+
+    </section><!-- End Who is the Payer: Using ML Analysis Section -->
+
+    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+    </div>
+
+    <!-- ======= Deceptive Reviews Detection Using One-Class SVM Research ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="deep-q pt-4 pt-md-0">
+            <div class="title-box-2">
+              <h5 class="title-left">
+                Deceptive Reviews Detection Using One-Class SVM Research
+              </h5>
+            </div>
+            <p>This project explored the effectiveness of a One-Class Support Vector Machine (SVM) in identifying deceptive online reviews. I theorized that training on genuine reviews alone could spot deceptive ones, reducing training and inference time and data requirements.</p>
+
+            <p>A One-Class SVM, an unsupervised learning approach, is often used for anomaly detection in datasets. It trains on normal data, defines boundaries, and classifies points outside those boundaries. Multiple datasets were collected, cleaned, and merged using R studio and Pandas, followed by some preliminary statistical analyses.</p>
+            
+            <p>I performed extensive pre-processing through Natural Language Processing (NLP) to transform text into a form suitable for the neural network. This process involved tokenization, stop word and non-alpha text removal, word lemmatization, word vectorization, and undersampling to balance the datasets.</p>
+            
+            <p>However, the research results indicated that One-Class SVM, despite its time efficiency, was less effective than multi-class SVM due to the diverse review content. The study concluded that linguistic features alone are insufficient to detect real-life fake reviews but suggested that a user-level deployment of One-Class SVM could potentially identify unusual user posting behaviors.</p>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 offset-lg-4">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="images/dr1.png" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="images/dr3.jpg" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="images/dr2.png" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+      </div>
+
+    </section><!-- End Deceptive Reviews Detection Using One-Class SVM Research Section -->
+
+    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+    </div>
+
+    
+    <!-- ======= Handwriting Data Detection ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+          <div class="col-md-12">
+              <div class="handwriting-detection pt-4 pt-md-0">
+                  <div class="title-box-2">
+                      <h5 class="title-left">
+                          Handwriting Data Detection
+                      </h5>
+                  </div>
+                  <p>This project required processing a vast number of scanned documents with tabular data containing handwritten numerical entries, aiming to digitize the handwritten data accurately for easy analysis and management.</p>
+  
+                  <p>I trained a Convolutional Neural Network (CNN) with TensorFlow to recognize handwritten digits, using the extensive MNIST dataset for training. To enhance the CNN model's accuracy, I used OpenCV for document pre-processing, which included:</p>
+  
+                  <ul>
+                      <li><strong>Gaussian Blur:</strong> To reduce image noise and minimize handwriting variations.</li>
+                      <li><strong>Thresholding:</strong> To convert images into a binary format, simplifying handwritten data detection.</li>
+                      <li><strong>Dilatation and Erosion:</strong> To refine the binary images, eliminating minor artifacts and enhancing handwritten data visibility.</li>
+                      <li><strong>Find Contours:</strong> To detect table edges within scanned documents.</li>
+                      <li><strong>Bounding Rectangles, Convex Hull:</strong> To identify individual table cells.</li>
+                  </ul>
+  
+                  <p>After extraction, I processed and structured the handwritten data with the Pandas library and saved the cleaned data into digital Excel sheets for subsequent analysis and manipulation.</p>
+              </div>
+          </div>
+          <div class="row gy-4">
+              <div class="col-lg-4 offset-lg-3">
+                  <img src="images/EX10.jpg" width="600px">
+              </div>
+          </div>
+      </div>
+  </section><!-- End Handwriting Data Detection Section -->
+  
+
+  <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+  </div>
+  
+    
+  <!-- =======  Simple Neural Network Digit Classifier ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="col-md-12">
+            <div class="simple-neural-network pt-4 pt-md-0">
+                <div class="title-box-2">
+                    <h5 class="title-left">
+                        Simple Neural Network Digit Classifier
+                    </h5>
+                </div>
+                <p>In this project, I created a simple neural network without using any frameworks to delve deeper into their structure. The network was specifically tailored for the MNIST dataset and consisted of three layers:</p>
+
+                <ul>
+                    <li>Zeroth layer: Comprising of 784 inputs as it accepts a 28x28 pixel image.</li>
+                    <li>First layer: A hidden layer with 10 nodes.</li>
+                    <li>Second layer: An output layer with 10 nodes, each representing a digit from 0-9.</li>
+                </ul>
+
+                <p>Training the network involved the following steps:</p>
+
+                <ul>
+                    <li>Initialize random weights and biases.</li>
+                    <li>Perform forward propagation using the weights and biases (Z = W.A + b), where:</li>
+                        <ul>
+                            <li>The first layer is calculated and a rectified linear unit (Relu) activation is applied to make it non-linear.</li>
+                            <li>The second layer is calculated and a softmax activation function is applied to obtain probabilities.</li>
+                        </ul>
+                    <li>Backward propagation is then applied:</li>
+                        <ul>
+                            <li>Calculate the error between prediction and actual value (dZ = A - Y).</li>
+                            <li>Determine the contribution of each weight and bias to the error.</li>
+                            <li>Update the weights and biases based on your learning rate alpha (hyper parameter).</li>
+                        </ul>
+                </ul>
+
+                <p>Check out the full project on GitHub: <a href="https://github.com/basemprince/digit_recognition_nn" target="_blank" rel="noopener noreferrer">Link</a>.</p>
+            </div>
+        </div>
+        <div class="row gy-4">
+            <div class="col-lg-4 offset-lg-4">
+                <img src="images/acc.jpg" width="400px">
+            </div>
+        </div>
+    </div>
+</section><!-- End Simple Neural Network Digit Classifier Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+    <div class="overlay-mf"></div>
+</div>
+
+  <!-- =======  KTH Machine Learning Projects ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="kth-ml-projects pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      KTH Machine Learning Projects
+                  </h5>
+              </div>
+              <p>In this series of projects, I gained foundational knowledge of significant algorithms and theory in machine learning. This was achieved through lab work, where I implemented various machine learning algorithms, including:</p>
+              
+              <ul>
+                  <li>Face classification using Boosted Decision Trees.</li>
+                  <li>Support Vector Machines.</li>
+                  <li>Bayes Classifier with Adaboost algorithm.</li>
+              </ul>
+              
+              <p>I built and trained different classifiers on a labeled dataset, which were later used to infer labels on an unlabeled evaluation dataset. The following machine learning algorithms were used with their respective accuracy results:</p>
+              
+              <ul>
+                  <li>Logistic Regression: 0.809 (0.029)</li>
+                  <li>Linear Discriminant Analysis: 0.811 (0.034)</li>
+                  <li>K Nearest Neighbor: 0.816 (0.041)</li>
+                  <li>Decision Tree Classifier: 0.784 (0.035)</li>
+                  <li>Gaussian Naive Bayes: 0.842 (0.043)</li>
+                  <li>Support Vector Machine: 0.850 (0.030)</li>
+                  <li>Random Forest: 0.859 (0.020)</li>
+              </ul>
+              
+              <p>The best-performing model, given the nature of the dataset, was the <b>Random Forest</b>.</p>
+              <p>For more information, visit the GitHub repository: <a href="https://github.com/basemprince/ML_algorithms" target="_blank" rel="noopener noreferrer">Link</a>.</p>
+          </div>
+      </div>
+  </div>
+</section><!-- End Simple Neural Network Digit Classifier Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
 
   </main><!-- End #main -->
 

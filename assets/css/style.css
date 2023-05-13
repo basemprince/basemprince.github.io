@@ -1472,7 +1472,16 @@ footer .credits a {
   color: #fff;
 }
 
+
+/*--------------------------------------------------------------
+# Extra
+--------------------------------------------------------------*/
+
 .img-resize {
   width: 500px;
   height: auto;
+}
+
+.transition-paralax {
+  padding: 12rem 0 0 0;
 }
