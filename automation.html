@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Basem Shaker - Robotics Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <span class="logo"><a href="index.html#"><img src="images/logo.png" alt="" /></a></span>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html#">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portfolios">Portfolios</a></li>
+          <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <div class="hero hero-single route bg-image" style="background-image: url(images/bg_1.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="hero-title mb-4">Robotics Portfolio</h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="index.html#">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Robotics Portfolio</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+<!-- ======= Court Detection using Deep Hough Transform Line Priors ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="court-detect pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Court Detection using Deep Hough Transform Line Priors
+          </h5>
+        </div>
+        <p>This is a course project implementing the use of the <a href="https://arxiv.org/abs/2007.09493" target="_blank" rel="noopener noreferrer">Deep-Hough-Transform-Line-Priors</a> to detect tennis court lines and find the homography matrix. Filtering the lines post detection is necessary to identify the true bounding box of the court and to calculate the homography matrix. The homography matrix can be utilized to warp the perspective and deployed in various other applications such as score tracking or player movement behaviour during the match.</p>
+        <p>For a deeper dive into the project, check out the GitHub repository: <a href="https://github.com/basemprince/court_detection" target="_blank" rel="noopener noreferrer">[Link]</a>. The process pipeline and three examples of applying and scoring the homography matrix are shown below:</p>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="images/pipeline.png" alt="Pipeline">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/homography_scoring.webp" alt="Homography Scoring">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Court Detection using Deep Hough Transform Line Priors Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= ARTIFICIAL INTELLIGENCE ALGORITHMS ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="artificial-intelligence-algorithms pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Artificial Intelligence Algorithms
+                  </h5>
+              </div>
+              <p>I learned about different principles of artificial intelligence and used them to implement solutions to AI problems. The topics covered include problem solving, taming uncertainty, decision making under uncertainty, knowledge, reasoning, planning, communicating, and perceiving.</p>
+              <p>One of the projects involved implementing the Minmax algorithm in a game of Fishing Derby against an intelligent agent, using scoring and Euclidean distance as a heuristic. Another project involved using a Hidden Markov Model (HMM) to model a fish type guessing game. Initially, we started with random guessing, but later, those guesses were used to build lambda models for known types to build a more accurate guess for the unknown fish.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-8 offset-lg-2 plyr--video">
+          <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+            <div class="plyr__video-embed" id="player">
+              <iframe
+                src="https://www.youtube.com/embed/fieUkDx-bsU?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+  </div>
+</section><!-- End Artificial Intelligence Algorithms Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="agent-negotiate pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS
+          </h5>
+        </div>
+        <p>UNDER CONSTRUCTION</p>
+      </div>
+    </div>
+  </div>
+</section><!-- End AGENT NEGOTIATION AND COMMUNICATION WITH GAMA SIMULATIONS Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= AUTONOMOUS TARGET SHOOTING VEHICLE ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="target-shoot pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            AUTONOMOUS TARGET SHOOTING VEHICLE
+          </h5>
+        </div>
+        <p>The main objective of the project was to design and manufacture an autonomous vehicle powered by Arduino that can navigate a course and fire projectiles at targets. The vehicle and all of its external components were designed using SolidWorks, with additional components manufactured using rapid prototyping (3D printing), laser cutting, and CNC machining.</p>
+        <p>Navigation was based on skid steering, utilizing line sensors mounted to the front of the vehicle and bump sensors on the sides. In order to hit the targets, a spring-powered rack and pinion launcher was designed, using a continuous servo (for pulling back the rack) and one position control servo (for a rotary magazine/carousel to load BBs). The launcher was placed on a movable platform to adjust trajectory. A gear reduction was used to maintain torque when pulling the firing piston (rack) back. A PID controller was employed to keep the car in the middle of the track.</p>
+        <p>For more pictures and a testing video, see the <a href="https://photos.google.com/album/AF1QipNk2Y268nYljKo0g91r4BSwKUo_JcBu4RFaglVN" target="_blank" rel="noopener noreferrer">album here</a>.</p>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 offset-lg-5">
+          <img src="images/UOFM5.jpg" width="300px">
+      </div>
+  </div>
+  
+  </div>
+</section><!-- End AUTONOMOUS TARGET SHOOTING VEHICLE Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= AUTOMATED OCEAN CLEANER [WESTERN ENGINEERING COMPETITION] ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 pt-4 pt-lg-0 content">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            AUTOMATED OCEAN CLEANER [WESTERN ENGINEERING COMPETITION]
+          </h5>
+        </div>
+        <p>
+          Chosen to be a part of the University of Manitoba team for the Western Engineering Competition (WEC), I designed and presented an automated solution for cleaning the oceans from micro-plastics. The oceans currently host around 5.25 trillion pieces of plastic debris, translating to roughly 269,000 tons of floating plastic waste. The harmful UV radiations fragment these larger plastic pieces into micro-plastics, which are not only harder to extract but also harmful to small marine creatures.
+        </p>
+        <ul>
+          <li>Designed an automated drone to collect floating micro-plastics, equipped with a storage unit that, when filled, returns to a base for emptying.</li>
+          <li>Ensured the drone's functionality without human interference, enabling it to return to its base when full or in need of charging.</li>
+          <li>The drone featured a torpedo-shaped body frame, floaters for maintaining sea level, a renewable energy power source, and autonomous control, providing real-time data.</li>
+          <li>Designed bases 100 km apart to host the drone, drop collected waste, clean the filter, and charge if needed. The bases included a swivel and sliding mechanism to hoist the drone in position, a filter extractor, an onboard tracking system, batteries, and solar panels.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <img src="images/UOFM2.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/UOFM8.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl1.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl2.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl3.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl4.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl5.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl6.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl7.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/cl8.jpg" alt="AUTOMATED OCEAN CLEANER">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End AUTOMATED OCEAN CLEANER [WESTERN ENGINEERING COMPETITION] -->
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
