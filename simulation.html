@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Basem Shaker - Simulation Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <span class="logo"><a href="index.html#"><img src="images/logo.png" alt="" /></a></span>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html#">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portfolios">Portfolios</a></li>
+          <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <div class="hero hero-single route bg-image" style="background-image: url(images/bg_1.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="hero-title mb-4">Simulation Portfolio</h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="index.html#">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Simulation Portfolio</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+<!-- ======= BUTT AND LOIN LINES MERGE CONVEYORS ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="butt-loin pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Butt and Loin Lines Merge Conveyors
+          </h5>
+        </div>
+        <p>At a previous job, merge conveyors between two different product ( butt and loin) lines posed several challenges, including the presence of foreign material and product pile-ups. I collaborated with the industrial engineer from the loin and packaging area and the continuous improvement manager to devise solutions for these issues.</p>
+        <ul>
+          <li><strong>Measurement:</strong> I took measurements of conveyor lengths and product flow to enable a JavaScript simulation for determining optimal conveyor speeds to prevent product pile-ups.</li>
+          <li><strong>Simulation:</strong> I simulated layouts for several ideas, including a dual merge system and an indexer triple merge system.</li>
+          <li><strong>Evaluation:</strong> The simulation of the indexer triple merge system demonstrated the highest consistency and coped well with the randomness of production floor operations.</li>
+          <li><strong>Implementation:</strong> The simulation, along with the calculated conveyor speeds, was shared with the equipment supplier for installation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-8 offset-lg-2 plyr--video">
+        <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              src="https://www.youtube.com/embed/huuG1ylV_P8?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Butt and Loin Lines Merge Conveyors Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= FLOWVAC CRYOVAC DUAL INFEED CONVEYORS ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="cryo-flow pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Flowvac Cryovac Dual Infeed Conveyors
+          </h5>
+        </div>
+        <p>The project aimed to eliminate product backup at the Flowvac's exit, removing the need for personnel at that location. I utilized a 5 Why's analysis and cycle time studies to identify the two primary root causes of the issue: Flowvac and Cryovac speeds not being synchronized, and inconsistent distances between products.</p>
+        <ul>
+          <li><strong>Measurement:</strong> I measured the dimensions of the available space on the production floor, providing constraints for conveyor redesigns.</li>
+          <li><strong>Solution Development:</strong> I devised separate solutions for each root cause and used JavaScript coding to simulate the current condition and compare it with the proposed solutions.</li>
+          <li><strong>Presentation:</strong> I presented the solutions to the maintenance supervisor and the team, and we decided on the reprogramming of the PLC logic.</li>
+          <li><strong>Implementation:</strong> I designed and wrote a new logic for the PLC controlling the dual infeed conveyor. The PLC would use proximity sensors to monitor the empty spaces between products and only merge when sufficient space is available.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-8 offset-lg-2 plyr--video">
+        <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              src="https://www.youtube.com/embed/Uehql8uK2NE?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Flowvac Cryovac Dual Infeed Conveyors Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= SUPERVAC SIMULATION PROJECT FOR BELLY LINE ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="supervac pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Supervac Simulation Project for Belly Line
+          </h5>
+        </div>
+        <p>The engineering team was assigned to design a new packaging area for the Belly Line using Supervac machines. I took on several key responsibilities to ensure the success of the project.</p>
+        <ul>
+          <li><strong>Data Collection:</strong> I performed cycle times on bagger stations and Supervacs, and tested how many bellies our current Ham/Tenderloin Supervacs could accommodate.</li>
+          <li><strong>Simulation:</strong> I created a simulation of a two Supervac system using JavaScript coding, incorporating conveyor speeds, cycle times, and the capacities of Supervacs and bagger stations.</li>
+          <li><strong>Findings:</strong> The simulation indicated that at least five bagging stations would be necessary to maintain plant speed. It also revealed a potential issue with the take-away conveyors following the two Supervacs.</li>
+          <li><strong>Solution Design:</strong> I modelled three different solutions for the take-away conveyor system using SolidWorks and presented these to management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-8 offset-lg-2 plyr--video">
+        <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              src="https://www.youtube.com/embed/k-blMlFuksY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 offset-lg-3">
+          <img src="images/HY1.jpg" width="600px">
+      </div>
+  </div>
+
+  </div>
+</section><!-- End Supervac Simulation Project for Belly Line Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= TRIM LINE REDESIGN ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="trim-line pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Trim Line Redesign
+          </h5>
+        </div>
+        <p>I played an essential role in the team that was tasked with redesigning the trim line on the new cut floor.</p>
+        <ul>
+          <li><strong>Role Assignment:</strong> My responsibilities included calculating the required manning power and designing ergonomic worker stations.</li>
+          <li><strong>Data Collection:</strong> I performed cycle times on the current trim line and collected data on all the different products processed through the trim line.</li>
+          <li><strong>Calculation and Simulation:</strong> I collaborated with the shipping industrial engineer, using the product flow speeds and cycle times to calculate manning power. I simulated the timings of the different products flowing into the trim line using the production data.</li>
+          <li><strong>Validation:</strong> Using cycle times for each type of product and the number of manning required, I demonstrated that these parameters could meet the production demand.</li>
+          <li><strong>Design:</strong> I utilized SolidWorks to create various layouts for the trim line worker stations to enhance ergonomics, which I then presented to the production team.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-8 offset-lg-2 plyr--video">
+        <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+          <div class="plyr__video-embed" id="player">
+            <iframe
+              src="https://www.youtube.com/embed/FXd6nKMt7so?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+              allowfullscreen
+              allowtransparency
+              allow="autoplay"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 offset-lg-3">
+          <img src="images/HY4.jpg" width="600px">
+      </div>
+  </div>
+
+  </div>
+</section><!-- End Trim Line Redesign Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= DRAIN LOAD TESTING ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="deep-q pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Drain Load Testing
+          </h5>
+        </div>
+        <p>I played a key role in conducting multiple tests with various drain products to ensure they meet the load specifications for industrial applications.</p>
+        <ul>
+          <li><strong>Understanding the Standards:</strong> I learned and understood the DIN EN 1433 classification, which is the standard for drainage channels for vehicular and pedestrian areas.</li>
+          <li><strong>Product Classification:</strong> The drain products were designed to achieve class E or F, suitable for high wheel loads such as ports, docks, and aircraft hangars.</li>
+          <li><strong>Preliminary Testing:</strong> I used Inventor stress analysis to digitally load test the products as a preliminary check to verify the likelihood of physical testing success.</li>
+          <li><strong>Testing Procedure:</strong> After understanding the requirements, the testing was outsourced to the University of Manitoba Industrial Technology Center. I wrote a proposal outlining all the test requirements and a detailed step-by-step procedure.</li>
+          <li><strong>Review and Modification:</strong> I studied the test results, and if the specimens didn't reach the desired class, modifications were made to improve the weakest parts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-4 offset-lg-3">
+          <img src="images/load1.webp" width="600px">
+      </div>
+  </div>
+
+  </div>
+</section><!-- End Drain Load Testing Section -->
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(images/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
