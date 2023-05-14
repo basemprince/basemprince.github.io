@@ -1,9 +1,11 @@
 # Website Portfolio
 
-Link: <https://basemprince.github.io/>
+Link: 
+<https://basemprince.github.io/>
+<https://basemshaker.com/>
 
 Includes:
 * About Me
-* Eduction Expereince / Portfolio
-* Work Expereince / Portfolio
+* Eduction Experience / Portfolio
+* Work Experience / Portfolio
 * Extracurricular
