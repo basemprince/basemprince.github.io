@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Basem Shaker - Robotics Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.ico" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <span class="logo"><a href="../index.html#"><img src="../assets/img/logo.png" alt="" /></a></span>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../index.html#">Home</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#portfolios">Portfolios</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <div class="hero hero-single route bg-image" style="background-image: url(../assets/img/bg_1.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="hero-title mb-4">Robotics Portfolio</h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="../index.html#">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Robotics Portfolio</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+<!-- ======= ROBOT SEARCH AND RESCUE ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="robot-rescue pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Robot Search and Rescue
+                  </h5>
+              </div>
+              <p>This project involved searching an unknown environment for a target using cooperative robots. The robots, which had no prior knowledge of the environment, needed to collaboratively explore to find and rescue the target. The project was written in Python/C++ and used Robot Operating System (ROS) along with Gazebo as the simulation engine. The robots were the turtlebot3 burger model with two drivable wheels and a lidar sensor.</p>
+              <p>The unknown map had obstacles, and the robots started close to each other at one side of the map. I used SLAM gmapping for localization and mapping and implemented a cooperative exploration approach using dynamic Voronoi partitions. The robots continued to explore the map cooperatively until the target was found. Once the target was found, the density function changed to attract the robots to go and rescue it.</p>
+              <p>The explored map was shared between the robots to minimize duplication, and I used the move base package for cost maps and local/global planning. Global planning used A* and the local collision avoidance used DWA.</p>
+              <p>For a deeper dive into the project, check out the GitHub repository: <a href="https://github.com/basemprince/search_rescue" target="_blank" rel="noopener noreferrer">[Link]</a>. Check out the report here: <a href="https://drive.google.com/file/d/1-f-GhazCF9MGFh6q9hwRU9GvR8rBgb6m/view?usp=sharing" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-8 offset-lg-2 plyr--video">
+          <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+            <div class="plyr__video-embed" id="player">
+              <iframe
+                src="https://www.youtube.com/embed/2KugQG_Rvb8?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="../assets/img/pipeline1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/img/dynamic_voronoi.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/img/robot-rescue.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+    </div>
+</section><!-- End Robot Search and Rescue Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= ROBOT EVACUATION MISSION PLANNING ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="robot-evacuation pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Robot Evacuation Mission Planning
+                  </h5>
+              </div>
+              <p>The project's goal was to evacuate three robots from a room filled with numerous obstacles as quickly as possible without collision. The robots' initial positions, the gate's location, and the number/location of obstacles were randomly determined. The solution was entirely written in C++ and used Robot Operating System (ROS).</p>
+              <p>I based the solution on constructing a roadmap using the vertical cell decomposition algorithm. The path for each robot was then determined using a breadth-first search and later optimized to eliminate redundant movements. After finding all paths for the robots, we recursively checked for collision detection between the robot paths and adjusted them accordingly.</p>
+              <p>The optimization process involved looking ahead to future points on the path. Each point could examine the upcoming points (up to a defined limit), comparing the distances between itself and each point on the horizon. The shortest distance determined the next point we would jump to, provided that no collision was detected.</p>
+              <p>Further details, including the full code, are available on the GitHub repository: <a href="https://github.com/basemprince/robot_evacuation_planning" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-8 offset-lg-2 plyr--video">
+          <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+            <div class="plyr__video-embed" id="player">
+              <iframe
+                src="https://www.youtube.com/embed/G5HU3dn15KI?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="../assets/img/plan1.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/img/plan2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../assets/img/collision_a.webp" alt="">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section><!-- End Robot Evacuation Mission Planning Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= ROBOT MISSION PLANNER SIMULATION ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="robot-mission-planner pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Robot Mission Planner Simulation
+                  </h5>
+              </div>
+              <p>This project was a Gazebo simulation of a TIAGo robot localizing in a previously mapped apartment. The robot was equipped with several onboard sensors and a manipulator, which allowed it to navigate and interact with the environment through simple manipulation tasks. The robot had modules for path planning, control, localization, sensing, and manipulation.</p>
+              <p>The primary mission was to navigate to a specific location to pick up an object, then transport it to a different target location. We utilized the available sensors and actuator through the software packages provided to accomplish this goal. The simulation used the Robot Operating System (ROS).</p>
+              <p>During the localization step, the robot spun around to gather as much information as possible from the environment using its sensors. We used a particle filter for localization. ARUCO markers were used to find the cube's pose, which the robot could target with its manipulator once it could see the marker.</p>
+              <p>State Machine and Behavior Tree were both used as models for the robot's behavior, and the robot had the capability to recognize when it was kidnapped and re-localize when it occurred.</p>
+              <p>Further details, including the full code, are available on the GitHub repository: <a href="https://github.com/basemprince/mission_planner" target="_blank" rel="noopener noreferrer">[Link]</a>. You can also view a video showcasing the project on YouTube: <a href="https://www.youtube.com/watch?v=K5JCUoVxqic" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="../assets/img/rob1.jpg" width="420px">
+        </div>
+    </div>
+
+  </div>
+</section><!-- End Robot Mission Planner Simulation Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= PERCEPTION SENSOR FUSION ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="perception-sensor-fusion pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Perception Sensor Fusion
+                  </h5>
+              </div>
+              <p>In my role as a member of the Driver-less Formula team, I focused on fusing the input from the camera and lidar sensors. We used a Zed stereo camera and a Velodyne VLP-16, with an Nvidia Xavier as a GPU, and the Driver-less pipeline utilized the Robot Operating System (ROS).</p>
+              <p>YOLO (You Only Look Once), a real-time object detection CNN, was used to process the Zed camera input. This identified the cones and provided the color and bounding box points locations. The point cloud output from the Lidar, transformed to the camera image frame, was used to accurately determine the distance to the cones. This process involved computing the intrinsic and extrinsic matrices, which we calculated using Matlab's camera calibration toolbox.</p>
+              <p>Ultimately, our output included the location, distance and color of all cones, along with a time stamp and the covariance matrices. This was fed into the next step in the pipeline, SLAM. Additionally, we designed and 3D printed a bracket holder to connect the lidar and camera together for consistent locating during calibration procedures.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="d-flex justify-content-center align-items-center">
+            <img src="../assets/img/lookup-gif.webp" width="500px">
+        </div>
+    </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 offset-lg-4">
+            <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                        <img src="../assets/img/eq-int.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/img/zed_vel_eq.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/img/lookup_pipeline.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</section><!-- End Perception Sensor Fusion Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= OPTIMIZATION BASED ROBOT CONTROL ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="optimization-based-robot-control pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Optimization Based Robot Control
+                  </h5>
+              </div>
+              <p>I took an elective class in my master's program that covered a wide range of robot control methods and algorithms. This included reactive control methods in both joint and task spaces, with a focus on PID, inverse dynamics, operational space control, task space inverse dynamics, and impedance control for motion control.</p>
+              <p>We explored optimization-based control using quadratic programs in inverse dynamics, covering applications such as under-actuation and rigid contact. We also covered multiple methods for solving optimal control problems, such as dynamic programming and direct methods [single shooting, multiple shooting, collocation].</p>
+              <p>One of the key topics was the Linear Quadratic Regulator (LQR) as a special optimal control problem. We expanded this into a nonlinear problem using Differential Dynamic Programming (DDP).</p>
+              <p>Model Predictive Control (MPC) was another important method we studied for finding a reference trajectory and providing a feedback loop to follow it. We also tackled the challenges of stability and recursive feasibility.</p>
+              <p>The course included Reinforcement Learning algorithms that follow a Markovian structure (Markov Decision Process). We discussed prediction methods such as Monte-Carlo and Temporal Difference [TD0,TD(λ)], and control methods such as Q-learning and SARSA. We briefly touched on value approximations, such as Deep Q Networks, which I implemented as the main project for the course.</p>
+          </div>
+      </div>
+  </div>
+</section><!-- End Optimization Based Robot Control Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+<!-- ======= Robot Exploration Simulation ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="robot-exploration-simulation pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Robot Exploration Simulation
+                  </h5>
+              </div>
+              <p>The objective of this project was to create a Gazebo simulation of a turtlebot using Robot Operating System(ROS). The exploration was done based on a strategy called receding horizon "next-best-view" (RH-NBV).</p>
+              <p>Collision avoidance was implemented based on the obstacle-restriction method (ORM) and pure pursuit. For localization, we used Hector SLAM for mapping and to localize the robot in its environment.</p>
+              <p>A ROS controller node was created to combine the exploration, SLAM, and collision avoidance nodes to move the robot around in the environment.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-8 offset-lg-2 plyr--video">
+          <div class="plyr__video-wrapper " style="height: 350px; margin: auto;">
+            <div class="plyr__video-embed" id="player">
+              <iframe
+                src="https://www.youtube.com/embed/bMZBmDRP2XM?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                allowfullscreen
+                allowtransparency
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+              <img src="../assets/img/turtlebot.jpg" width="420px">
+          </div>
+      </div>
+
+  </div>
+</section><!-- End Robot Exploration Simulation Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= 6 Axis Robot Arm ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="6-axis-robot-arm pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      6 Axis Robot Arm
+                  </h5>
+              </div>
+              <p>This project involved the construction of a 6-axis robot arm using a 3D printer, servo motors, and an Arduino Mega with a RepRap shield and servo drives.</p>
+              <p>The next step in the development process is to build a ROS interface to control the servos using inverse kinematics. We also plan to add a vision system using OpenCV to identify targets, and enable the robot arm to pick up and deliver payloads.</p>
+              <p>You can view a timeline of pictures of the robot via this link: <a href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7" target="_blank" rel="noopener noreferrer">[Link]</a>. A demonstration of the project can be seen in this video: <a href="https://www.youtube.com/watch?v=U-jQ4iV8sJ8" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+              <img src="../assets/img/EX1_merg.jpg" width="500px">
+          </div>
+      </div>
+
+  </div>
+</section><!-- End 6 Axis Robot Arm Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+<!-- ======= Applied Instrumentation ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+      <div class="col-md-12">
+          <div class="applied-instrumentation pt-4 pt-md-0">
+              <div class="title-box-2">
+                  <h5 class="title-left">
+                      Applied Instrumentation
+                  </h5>
+              </div>
+              <p>In this program, I learned more about the design, implementation, deployment, and analysis of the measurement chain. I got exposure to test system instrumentation, particularly in the gas turbine engine industry.</p>
+              <p>Furthermore, I gained an understanding of how to apply a measurement system design methodology and how to measure system accuracy. I also gained experience using LABVIEW.</p>
+              <p>As part of the program, I worked on three group projects that involved designing measurement systems to tackle real-life design problems.</p>
+          </div>
+      </div>
+
+      <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+              <img src="../assets/img/UOFM10.jpg" width="420px">
+          </div>
+      </div>
+
+  </div>
+</section><!-- End Applied Instrumentation Section -->
+
+<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+  <div class="overlay-mf"></div>
+</div>
+
+
+  </main><!-- End #main -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
