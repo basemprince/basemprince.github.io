@@ -1485,3 +1485,13 @@ footer .credits a {
 .transition-paralax {
   padding: 8rem 0 0 0;
 }
+
+.img-container {
+  max-width: 400px; 
+  height: auto;
+  margin: auto; 
+}
+
+img {
+  border-radius: 10px; /* adjust as needed */
+}
