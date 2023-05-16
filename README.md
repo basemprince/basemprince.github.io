@@ -1,7 +1,6 @@
 # Website Portfolio
 
 Link: 
-<https://basemprince.github.io/>
 <https://basemshaker.com/>
 
 Includes:
