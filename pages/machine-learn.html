@@ -85,9 +85,11 @@
             </div>
             <p>For my master's thesis, I implemented a Generative Adversarial Network (GAN) using non-i.i.d. time-series data in a Federated Learning setting at Scania CV AB, a leading provider of commercial vehicles. The aim was to generate synthetic data for a specific vehicle system to avoid the costly and risky process of manually collecting anomalous data.</p>
         
-            <p>I evaluated various image-based strategies and identified the most effective one for decentralized learning. The GAN was based on a deep Convolutional Neural Network (CNN) architecture, and after testing various mutations, I found a nine-layer architecture to be most efficient. However, the complexity of the model presents challenges for edge device implementation due to computational limitations.</p>
-        
-            <p>To evaluate time-series based output, I developed an LSTM-based auto-regression model using two training methods and three evaluation metrics. Although the evaluation proved insightful, it was not definitive due to the mixed distribution of GAN output from the workers in decentralization.</p>
+            <p>I evaluated various image-based strategies and identified the most effective one for decentralized learning. The GAN was based on a deep Convolutional Neural Network (CNN) architecture, and after testing various mutations, the final architecture used 1D convolution layers along with Spectral Normalization to stabilize the discriminator training.</p>
+            <p>I employed the use of adaptive average pooling after the convolution layers to make the network work with inputs of different sizes to use a dynamic window instead of a static one. This improves the capabilities of the generator to create sequences of different sizes.</p>
+            <p>I proposed a novel normalization technique to further enhance the training process. More in details, the server determines the global minimum and maximum values for each feature, considering the lowest minimum and the highest maximum values received from all the workers. These global boundaries are then sent back to all workers for normalization of their local data.</p>
+            <p>The model was proven to effectively learn from multiple non-IID time-series and converge to a solution that fools all discriminators. Experimental results show that the approach outperforms existing centralized methods, such as TimeGAN, for non-IID time-series in terms of the quality of the generated synthetic data.</p>
+            <p>To evaluate time-series based output, I developed an LSTM-based auto-regression model using two training methods and three evaluation metrics. the two methods were Train on Synthetic Test on Real (TSTR) and Train on Real Test on Synthetic (TRTS) and three metrics were calculated: R2 score, MAE, and RMSE.</p>
         
             <p>You can find the report of the thesis <a href="https://drive.google.com/file/d/11g7uDik7NQ4jzcv3xHHqdfHhG8JDcBop/view?usp=sharing">[here]</a>. I am also awaiting aproval for a publication based on my thesis work.</p>
           </div>
@@ -99,15 +101,24 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/network-arch.png" alt="">
+                  <img class="lozad" src="../assets/img/gan1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lozad" src="../assets/img/gan2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lozad" src="../assets/img/gan3.png" alt="">
                 </div>
 
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gen-disc.PNG" alt="">
-                </div>
+                <!-- <div class="swiper-slide">
+                  <img class="lozad" src="../assets/img/gan4.png" alt="">
+                </div> -->
 
                 <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/auto-reg.png" alt="">
+                  <img class="lozad" src="../assets/img/gan5.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lozad" src="../assets/img/gan6.png" alt="">
                 </div>
 
               </div>
