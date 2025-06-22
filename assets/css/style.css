@@ -855,6 +855,10 @@ a:hover {
   }
 }
 
+.skill-mf {
+  font-size: 0.8rem;
+}
+
 .skill-mf span {
   color: #4e4e4e;
 }
