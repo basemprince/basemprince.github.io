@@ -1507,3 +1507,72 @@ footer .credits a {
 img {
   border-radius: 10px; /* adjust as needed */
 }
+
+.chat-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #0f520b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 160px;
+  right: 30px;
+  width: 340px;
+  height: 450px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 1000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.chat-header {
+  background: #0f520b;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+}
+
+.chat-log {
+  height: 330px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.chat-send-btn {
+  margin-left: 8px;
+  background: #0f520b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
