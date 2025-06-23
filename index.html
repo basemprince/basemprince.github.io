@@ -26,9 +26,6 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <!-- <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
-  <!-- <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
-  <!-- <link href="assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -372,25 +369,14 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <!-- <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script> -->
-  <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/lozad/lozad.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-
-<!-- Basem Chatbot Widget -->
+  <!-- Basem Chatbot Widget -->
 <button id="chat-btn" class="chat-btn">LLM Chat</button>
 
-<div id="chat-popup" class="chat-popup">
-  <div class="chat-header">Basem Assistant</div>
+<div id="chat-popup" class="chat-popup" style="display: none;">
+  <div class="chat-header">
+    Basem's Assistant
+    <div class="chat-note">⚠️ First response may take up to 50 seconds due to cold start</div>
+  </div>
   <div id="chat-log" class="chat-log"></div>
   <div class="chat-input-area">
     <input id="chat-input" class="chat-input" placeholder="Ask me anything..." />
@@ -398,56 +384,15 @@
   </div>
 </div>
 
-<script>
-  const btn = document.getElementById("chat-btn");
-  const popup = document.getElementById("chat-popup");
-  const log = document.getElementById("chat-log");
-  const input = document.getElementById("chat-input");
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/lozad/lozad.min.js"></script>
 
-  let loadingInterval;
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/chatbot.js"></script>
 
-  btn.onclick = () => {
-    popup.style.display = popup.style.display === "none" ? "block" : "none";
-  };
-
-  document.getElementById("send-btn").onclick = async () => {
-    const userText = input.value.trim();
-    if (!userText) return;
-
-    log.innerHTML += `<div><b>You:</b> ${userText}</div>`;
-    input.value = "";
-
-    // Show flashing loading message
-    const loadingId = `loading-${Date.now()}`;
-    log.innerHTML += `<div id="${loadingId}"><b>BasemBot:</b> <span class="dots">Generating answer</span></div>`;
-    const dotsSpan = document.querySelector(`#${loadingId} .dots`);
-
-    let dotCount = 0;
-    loadingInterval = setInterval(() => {
-      dotCount = (dotCount + 1) % 4;
-      dotsSpan.textContent = "Generating answer" + ".".repeat(dotCount);
-    }, 400);
-
-    try {
-      const res = await fetch("https://basem-chatbot.onrender.com/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: userText })
-      });
-
-      const data = await res.json();
-
-      clearInterval(loadingInterval);
-      document.getElementById(loadingId).innerHTML = `<b>BasemBot:</b> ${data}`;
-      log.scrollTop = log.scrollHeight;
-    } catch (error) {
-      clearInterval(loadingInterval);
-      document.getElementById(loadingId).innerHTML = `<b>BasemBot:</b> Error getting response.`;
-      console.error("Error:", error);
-    }
-  };
-</script>
-
-
-
+</body>
 </html>

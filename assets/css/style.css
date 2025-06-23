@@ -1510,7 +1510,7 @@ img {
 
 .chat-btn {
   position: fixed;
-  bottom: 100px;
+  bottom: 80px;
   right: 30px;
   padding: 10px 16px;
   font-size: 16px;
@@ -1526,10 +1526,10 @@ img {
 .chat-popup {
   display: none;
   position: fixed;
-  bottom: 160px;
+  bottom: 130px;
   right: 30px;
   width: 340px;
-  height: 450px;
+  height: 455px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
@@ -1541,7 +1541,7 @@ img {
 .chat-header {
   background: #0f520b;
   color: white;
-  padding: 12px 16px;
+  padding: 13px 16px;
   font-weight: bold;
 }
 
@@ -1575,4 +1575,10 @@ img {
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.chat-note {
+  font-size: 0.6rem;
+  color: #aaa;
+  margin-top: 4px;
 }

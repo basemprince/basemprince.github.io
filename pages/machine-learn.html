@@ -73,31 +73,32 @@
 
   <main id="main">
 
-<!-- ======= LLM-Powered Portfolio Chatbot with LangChain & OpenAI ======= -->
+<!-- ======= LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1 ======= -->
 <section id="portfolio-details" class="portfolio-details">
   <div class="container">
     <div class="col-md-12">
       <div class="gans pt-4 pt-md-0">
         <div class="title-box-2">
           <h5 class="title-left">
-            LLM-Powered Portfolio Chatbot with LangChain & OpenAI
+            LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1
           </h5>
         </div>
-        <p>I designed and deployed an AI-powered assistant for my portfolio using OpenAI's GPT-3.5 and the LangChain framework. The chatbot integrates directly into my website, allowing visitors to ask questions about my background, skills, and projects in a conversational format.</p>
-        
-        <p>The core backend was built with Python, FastAPI, and LangChain's `ConversationChain`, using a custom prompt and conversation memory to preserve context across user interactions. I configured the OpenAI LLM to provide concise, technical, and accurate answers about my professional experience.</p>
-        
-        <p>To make the assistant truly interactive, I developed a frontend popup chatbot widget from scratch using vanilla JavaScript and styled it for a modern user experience. It communicates with the backend API asynchronously, showing a real-time "Generating answer..." indicator during response generation.</p>
-        
-        <p>The system was deployed to Render using a secure and scalable setup, including CORS handling and environment-based API key management. I implemented request preflight support for browser compatibility and tested using both browser-based tools and command-line clients like `curl`.</p>
+        <p>I built and deployed an AI-powered assistant on my portfolio site using OpenAI’s gpt-4.1-nano and LangChain. This chatbot allows visitors to ask natural language questions about my background, experience, and technical projects in real time.</p>
 
-        <p>This project showcases my ability to integrate state-of-the-art language models into real-world applications, from backend orchestration with LangChain to frontend UX and cloud deployment.</p>
-        
-        <p>You can interact with the chatbot directly on my <a href="https://www.basemshaker.com">[portfolio site]</a>.</p>
+        <p>The system architecture uses LangChain’s `RetrievalQA` over a FAISS vector store populated with data scraped and indexed from multiple pages of my site. This enables context-aware, precise answers grounded in actual portfolio content, rather than relying on static prompts.</p>
+
+        <p>To ensure efficiency, I cache the embeddings and index using FAISS to avoid repeated web scraping, and I tuned the LLM with a focused system prompt and a low temperature to keep answers accurate and concise. Chat memory is persisted client-side via `localStorage`, allowing continuity across page visits.</p>
+
+        <p>On the frontend, I implemented a lightweight popup widget using vanilla JavaScript and styled it for responsiveness. Features include a real-time "Generating answer..." indicator, keyboard input via the Enter key, and a startup note to explain the potential delay on first interaction due to cold start latency.</p>
+
+        <p>The full-stack app was deployed to Render using FastAPI and environment-secured API keys, with CORS configured for local and production domains. This demonstrates my ability to build and deploy intelligent assistants with optimized user experience, cloud hosting, and scalable LLM pipelines.</p>
+
+        <p>You can try it now by clicking the “LLM Chat” button on the bottom right of this page.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 
     <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
@@ -430,16 +431,30 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+
+  <!-- Basem Chatbot Widget -->
+  <button id="chat-btn" class="chat-btn">LLM Chat</button>
+
+  <div id="chat-popup" class="chat-popup" style="display: none;">
+    <div class="chat-header">
+      Basem's Assistant
+      <div class="chat-note">⚠️ First response may take up to 50 seconds due to cold start</div>
+    </div>
+    <div id="chat-log" class="chat-log"></div>
+    <div class="chat-input-area">
+      <input id="chat-input" class="chat-input" placeholder="Ask me anything..." />
+      <button id="send-btn" class="chat-send-btn">Send</button>
+    </div>
+  </div>
+
   <!-- Vendor JS Files -->
-  <!-- <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
-  <!-- <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script> -->
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <!-- <script src="../assets/vendor/typed.js/typed.min.js"></script> -->
   <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="../assets/vendor/lozad/lozad.min.js"></script>
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/chatbot.js"></script>
 
 </body>
 
