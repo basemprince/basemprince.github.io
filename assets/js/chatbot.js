@@ -4,20 +4,21 @@ const log = document.getElementById("chat-log");
 const input = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");
 
-// Restore chat log
+// Restore chat log or reset on manual refresh
 window.onload = () => {
+  // Detect manual refresh and reset chat
+  if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
+    localStorage.removeItem("basem_chat_log");
+  }
+
   const saved = localStorage.getItem("basem_chat_log");
   if (saved) {
     log.innerHTML = saved;
     log.scrollTop = log.scrollHeight;
   }
-
-  // Inform user about first-time load delay
-//   if (!localStorage.getItem("basem_notice_shown")) {
-//     alert("Note: The first response may take up to 50 seconds as the assistant is waking up.");
-//     localStorage.setItem("basem_notice_shown", "true");
-//   }
 };
+
+
 
 let loadingInterval;
 
@@ -29,6 +30,36 @@ function saveChatLog() {
 btn.addEventListener("click", () => {
   popup.style.display = popup.style.display === "block" ? "none" : "block";
 });
+
+// Hide popup when clicking outside of it
+document.addEventListener("click", (event) => {
+  if (
+    popup.style.display === "block" &&
+    !popup.contains(event.target) &&
+    !btn.contains(event.target)
+  ) {
+    popup.style.display = "none";
+  }
+});
+
+async function fetchWithFallback(userText) {
+  const payload = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text: userText })
+  };
+
+  try {
+    const localRes = await fetch("http://127.0.0.1:8000/chat", payload);
+    if (!localRes.ok) throw new Error("Local fetch failed");
+    return await localRes.json();
+  } catch (err) {
+    console.warn("Local server failed, trying Render endpoint...", err);
+    const cloudRes = await fetch("https://basem-chatbot.onrender.com/chat", payload);
+    if (!cloudRes.ok) throw new Error("Cloud fetch failed");
+    return await cloudRes.json();
+  }
+}
 
 // Send on button click or Enter key
 async function handleSend() {
@@ -50,14 +81,7 @@ async function handleSend() {
   }, 400);
 
   try {
-    const res = await fetch("https://basem-chatbot.onrender.com/chat", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: userText })
-    });
-
-    const data = await res.json();
-
+    const data = await fetchWithFallback(userText);
     clearInterval(loadingInterval);
     document.getElementById(loadingId).innerHTML = `<b>BasemBot:</b> ${data}`;
     log.scrollTop = log.scrollHeight;
