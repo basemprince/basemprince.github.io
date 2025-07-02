@@ -73,6 +73,36 @@
 
   <main id="main">
 
+<!-- ======= Multi-Modal Runner Clustering with YOLOv11, TorchreID, HDBSCAN & OCR ======= -->
+<section id="portfolio-details" class="portfolio-details">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="gans pt-4 pt-md-0">
+        <div class="title-box-2">
+          <h5 class="title-left">
+            Multi-Modal Runner Clustering with YOLOv11, TorchreID, HDBSCAN & OCR
+          </h5>
+        </div>
+        <p>I developed a pipeline to detect, cluster, and label marathon runners across multiple photos using a combination of computer vision and unsupervised learning. The system uses multiple modalities—body appearance, face embeddings, and OCR-detected bib numbers—to more accurately group photos of the same person.</p>
+
+        <p>First, runners are detected using a YOLOv11-based object detector. Then, I extract embeddings from each detected person using TorchreID for body features and InsightFace for facial features. Bib numbers are read from each crop using EasyOCR and filtered using YOLO-based text detection to localize potential bib areas.</p>
+
+        <p>All these features are then combined and normalized into a single vector per person. I use HDBSCAN for unsupervised clustering of these multi-modal embeddings, which allows automatic discovery of the number of distinct runners. Each cluster is assigned a bib number based on a voting system, outliers are considered individual runners.</p>
+
+        <p>The final output is all the pictures clustered to folders of the bib number, or a person number if bib wasn't detected</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
+      <div class="overlay-mf"></div>
+    </div>
+
+
+
 <!-- ======= LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1 ======= -->
 <section id="portfolio-details" class="portfolio-details">
   <div class="container">
@@ -433,19 +463,7 @@
 
 
   <!-- Basem Chatbot Widget -->
-  <button id="chat-btn" class="chat-btn">LLM Chat</button>
-
-  <div id="chat-popup" class="chat-popup" style="display: none;">
-    <div class="chat-header">
-      Basem's Assistant
-      <div class="chat-note">⚠️ First response may take up to 50 seconds due to cold start</div>
-    </div>
-    <div id="chat-log" class="chat-log"></div>
-    <div class="chat-input-area">
-      <input id="chat-input" class="chat-input" placeholder="Ask me anything..." />
-      <button id="send-btn" class="chat-send-btn">Send</button>
-    </div>
-  </div>
+  <div id="chatbot-container"></div>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
