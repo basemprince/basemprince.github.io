@@ -73,27 +73,52 @@
 
   <main id="main">
 
-<!-- ======= Multi-Modal Runner Clustering with YOLOv11, TorchreID, HDBSCAN & OCR ======= -->
+<!-- ======= Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR ======= -->
 <section id="portfolio-details" class="portfolio-details">
   <div class="container">
     <div class="col-md-12">
       <div class="gans pt-4 pt-md-0">
         <div class="title-box-2">
           <h5 class="title-left">
-            Multi-Modal Runner Clustering with YOLOv11, TorchreID, HDBSCAN & OCR
+            Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR
           </h5>
         </div>
-        <p>I developed a pipeline to detect, cluster, and label marathon runners across multiple photos using a combination of computer vision and unsupervised learning. The system uses multiple modalities—body appearance, face embeddings, and OCR-detected bib numbers—to more accurately group photos of the same person.</p>
-
-        <p>First, runners are detected using a YOLOv11-based object detector. Then, I extract embeddings from each detected person using TorchreID for body features and InsightFace for facial features. Bib numbers are read from each crop using EasyOCR and filtered using YOLO-based text detection to localize potential bib areas.</p>
-
-        <p>All these features are then combined and normalized into a single vector per person. I use HDBSCAN for unsupervised clustering of these multi-modal embeddings, which allows automatic discovery of the number of distinct runners. Each cluster is assigned a bib number based on a voting system, outliers are considered individual runners.</p>
-
-        <p>The final output is all the pictures clustered to folders of the bib number, or a person number if bib wasn't detected</p>
-
+        <p>
+          The project detects runners in photos with a YOLO model (<code>yolo11n.pt</code>),
+          extracts face embeddings using the InsightFace <em>buffalo_l</em> model,
+          and clusters the embeddings via HDBSCAN.
+          Optional bib recognition relies on EasyOCR.
+        </p>
+        <p>
+          All processing is orchestrated in <code>main.py</code>
+          and exposed through <code>app.py</code>, a Streamlit UI.
+          The web interface lets you upload images, enable debug mode,
+          toggle OCR, and choose a dimensionality reducer (PCA or t‑SNE).
+          A progress bar tracks processing status.
+          After clustering, results appear in expandable sections and can be
+          downloaded as a ZIP archive.
+        </p>
+        <p>
+          Each cluster directory inside <code>output/</code>
+          contains original images, body crops, and
+          debug versions annotated with face boxes and detected bib numbers.
+          When enabled, a 2‑D visualization of the embeddings
+          (<code>output/embeddings.png</code>) is also generated.
+        </p>
+        <p>
+          The Streamlit app is deployed at:
+          <a href="https://runner-face-clustering.streamlit.app/" target="_blank">
+            runner-face-clustering.streamlit.app
+          </a>
+        </p>
       </div>
     </div>
   </div>
+          <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+              <img class="lozad" src="../assets/img/ml2.png" height=415px>
+          </div>
+      </div>
 </section>
 
 
@@ -127,6 +152,11 @@
       </div>
     </div>
   </div>
+        <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+              <img class="lozad" src="../assets/img/ml1.png" height=415px>
+          </div>
+      </div>
 </section>
 
 
