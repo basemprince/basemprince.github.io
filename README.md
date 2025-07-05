@@ -11,10 +11,11 @@ Includes:
 
 ## Development
 
-Install pre-commit and set up git hooks:
+Create the Conda environment and set up git hooks:
 
 ```bash
-pip install pre-commit
+conda env create -f environment.yaml
+conda activate website-dev
 pre-commit install
 ```
 
