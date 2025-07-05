@@ -1,290 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KVDDZ633SZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVDDZ633SZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      gtag("config", "G-KVDDZ633SZ");
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-    gtag('config', 'G-KVDDZ633SZ');
-  </script>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Basem Shaker - ML Portfolio</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-  <title>Basem Shaker - ML Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.ico" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.ico" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
+    <link
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <!-- <link href="../assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet"> -->
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet" />
+  </head>
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <!-- <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!-- <link href="../assets/vendor/glightbox/css/plyr.min.css" rel="stylesheet"> -->
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <span class="logo"
+          ><a href="../index.html#"
+            ><img src="../assets/img/logo.png" alt="" /></a
+        ></span>
 
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <span class="logo"><a href="../index.html#"><img src="../assets/img/logo.png" alt="" /></a></span>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="../index.html#">Home</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#portfolios">Portfolios</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#resume">Resume</a></li>
-          <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-  <div class="hero hero-single route bg-image" style="background-image: url(../assets/img/bg_1.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h2 class="hero-title mb-4">Machine Learning Portfolio</h2>
-          <ol class="breadcrumb d-flex justify-content-center">
-            <li class="breadcrumb-item">
-              <a href="../index.html#">Home</a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto active" href="../index.html#">Home</a>
             </li>
-            <li class="breadcrumb-item active">ML Portfolio</li>
-          </ol>
-        </div>
+            <li>
+              <a class="nav-link scrollto" href="../index.html#about">About</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="../index.html#portfolios"
+                >Portfolios</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="../index.html#resume"
+                >Resume</a
+              >
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="../index.html#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
       </div>
-    </div>
-  </div>
-
-  <main id="main">
-
-<!-- ======= Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR ======= -->
-<section id="portfolio-details" class="portfolio-details">
-  <div class="container">
-    <div class="col-md-12">
-      <div class="gans pt-4 pt-md-0">
-        <div class="title-box-2">
-          <h5 class="title-left">
-            Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR
-          </h5>
-        </div>
-        <p>
-          The project detects runners in photos with a YOLO model (<code>yolo11n.pt</code>),
-          extracts face embeddings using the InsightFace <em>buffalo_l</em> model,
-          and clusters the embeddings via HDBSCAN.
-          Optional bib recognition relies on EasyOCR.
-        </p>
-        <p>
-          All processing is orchestrated in <code>main.py</code>
-          and exposed through <code>app.py</code>, a Streamlit UI.
-          The web interface lets you upload images, enable debug mode,
-          toggle OCR, and choose a dimensionality reducer (PCA or t‑SNE).
-          A progress bar tracks processing status.
-          After clustering, results appear in expandable sections and can be
-          downloaded as a ZIP archive.
-        </p>
-        <p>
-          Each cluster directory inside <code>output/</code>
-          contains original images, body crops, and
-          debug versions annotated with face boxes and detected bib numbers.
-          When enabled, a 2‑D visualization of the embeddings
-          (<code>output/embeddings.png</code>) is also generated.
-        </p>
-        <p>
-          The Streamlit app is deployed at:
-          <a href="https://runner-face-clustering.streamlit.app/" target="_blank">
-            runner-face-clustering.streamlit.app
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-          <div class="row gy-4">
-          <div class="d-flex justify-content-center align-items-center">
-              <img class="lozad" src="../assets/img/ml2.png" height=415px>
+    </header>
+    <!-- End Header -->
+    <div
+      class="hero hero-single route bg-image"
+      style="background-image: url(../assets/img/bg_1.jpg)"
+    >
+      <div class="overlay-itro"></div>
+      <div class="hero-content display-table">
+        <div class="table-cell">
+          <div class="container">
+            <h2 class="hero-title mb-4">Machine Learning Portfolio</h2>
+            <ol class="breadcrumb d-flex justify-content-center">
+              <li class="breadcrumb-item">
+                <a href="../index.html#">Home</a>
+              </li>
+              <li class="breadcrumb-item active">ML Portfolio</li>
+            </ol>
           </div>
-      </div>
-</section>
-
-
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
-
-
-
-<!-- ======= LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1 ======= -->
-<section id="portfolio-details" class="portfolio-details">
-  <div class="container">
-    <div class="col-md-12">
-      <div class="gans pt-4 pt-md-0">
-        <div class="title-box-2">
-          <h5 class="title-left">
-            LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1
-          </h5>
         </div>
-        <p>I built and deployed an AI-powered assistant on my portfolio site using OpenAI’s gpt-4.1-nano and LangChain. This chatbot allows visitors to ask natural language questions about my background, experience, and technical projects in real time.</p>
-
-        <p>The system architecture uses LangChain’s `RetrievalQA` over a FAISS vector store populated with data scraped and indexed from multiple pages of my site. This enables context-aware, precise answers grounded in actual portfolio content, rather than relying on static prompts.</p>
-
-        <p>To ensure efficiency, I cache the embeddings and index using FAISS to avoid repeated web scraping, and I tuned the LLM with a focused system prompt and a low temperature to keep answers accurate and concise. Chat memory is persisted client-side via `localStorage`, allowing continuity across page visits.</p>
-
-        <p>On the frontend, I implemented a lightweight popup widget using vanilla JavaScript and styled it for responsiveness. Features include a real-time "Generating answer..." indicator, keyboard input via the Enter key, and a startup note to explain the potential delay on first interaction due to cold start latency.</p>
-
-        <p>The full-stack app was deployed to Render using FastAPI and environment-secured API keys, with CORS configured for local and production domains. This demonstrates my ability to build and deploy intelligent assistants with optimized user experience, cloud hosting, and scalable LLM pipelines.</p>
-
-        <p>You can try it now by clicking the “LLM Chat” button on the bottom right of this page.</p>
       </div>
     </div>
-  </div>
-        <div class="row gy-4">
-          <div class="d-flex justify-content-center align-items-center">
-              <img class="lozad" src="../assets/img/ml1.png" height=415px>
-          </div>
-      </div>
-</section>
 
-
-
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
-
-
-    <!-- ======= Generative Adversarial Networks (GANs) & Federated Learning ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="gans pt-4 pt-md-0">
-            <div class="title-box-2">
-              <h5 class="title-left">
-                Generative Adversarial Networks (GANs) & Federated Learning
-              </h5>
+    <main id="main">
+      <!-- ======= Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="gans pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  Runner Face Clustering with YOLO, InsightFace, HDBSCAN & OCR
+                </h5>
+              </div>
+              <p>
+                The project detects runners in photos with a YOLO model
+                (<code>yolo11n.pt</code>), extracts face embeddings using the
+                InsightFace <em>buffalo_l</em> model, and clusters the
+                embeddings via HDBSCAN. Optional bib recognition relies on
+                EasyOCR.
+              </p>
+              <p>
+                All processing is orchestrated in <code>main.py</code> and
+                exposed through <code>app.py</code>, a Streamlit UI. The web
+                interface lets you upload images, enable debug mode, toggle OCR,
+                and choose a dimensionality reducer (PCA or t‑SNE). A progress
+                bar tracks processing status. After clustering, results appear
+                in expandable sections and can be downloaded as a ZIP archive.
+              </p>
+              <p>
+                Each cluster directory inside <code>output/</code>
+                contains original images, body crops, and debug versions
+                annotated with face boxes and detected bib numbers. When
+                enabled, a 2‑D visualization of the embeddings
+                (<code>output/embeddings.png</code>) is also generated.
+              </p>
+              <p>
+                The Streamlit app is deployed at:
+                <a
+                  href="https://runner-face-clustering.streamlit.app/"
+                  target="_blank"
+                >
+                  runner-face-clustering.streamlit.app
+                </a>
+              </p>
             </div>
-            <p>For my master's thesis, I implemented a Generative Adversarial Network (GAN) using non-i.i.d. time-series data in a Federated Learning setting at Scania CV AB, a leading provider of commercial vehicles. The aim was to generate synthetic data for a specific vehicle system to avoid the costly and risky process of manually collecting anomalous data.</p>
-        
-            <p>I evaluated various image-based strategies and identified the most effective one for decentralized learning. The GAN was based on a deep Convolutional Neural Network (CNN) architecture, and after testing various mutations, the final architecture used 1D convolution layers along with Spectral Normalization to stabilize the discriminator training.</p>
-            <p>I employed the use of adaptive average pooling after the convolution layers to make the network work with inputs of different sizes to use a dynamic window instead of a static one. This improves the capabilities of the generator to create sequences of different sizes.</p>
-            <p>I proposed a novel normalization technique to further enhance the training process. More in details, the server determines the global minimum and maximum values for each feature, considering the lowest minimum and the highest maximum values received from all the workers. These global boundaries are then sent back to all workers for normalization of their local data.</p>
-            <p>The model was proven to effectively learn from multiple non-IID time-series and converge to a solution that fools all discriminators. Experimental results show that the approach outperforms existing centralized methods, such as TimeGAN, for non-IID time-series in terms of the quality of the generated synthetic data.</p>
-            <p>To evaluate time-series based output, I developed an LSTM-based auto-regression model using two training methods and three evaluation metrics. the two methods were Train on Synthetic Test on Real (TSTR) and Train on Real Test on Synthetic (TRTS) and three metrics were calculated: R2 score, MAE, and RMSE.</p>
-        
-            <p>You can find the report of the thesis <a href="https://drive.google.com/file/d/11g7uDik7NQ4jzcv3xHHqdfHhG8JDcBop/view?usp=sharing">[here]</a>. The thesis was succesfully published in IEEE: <a href="https://ieeexplore.ieee.org/document/10597551">[publication link].</a></p>
           </div>
         </div>
-
         <div class="row gy-4">
-          <div class="col-lg-5 offset-lg-3">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
+          <div class="d-flex justify-content-center align-items-center">
+            <img class="lozad" src="../assets/img/ml2.png" height="415px" />
+          </div>
+        </div>
+      </section>
 
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gan1.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gan2.png" alt="">
-                </div>
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gan3.png" alt="">
-                </div>
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
 
-                <!-- <div class="swiper-slide">
+      <!-- ======= LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1 ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="gans pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  LLM-Powered Portfolio Chatbot with LangChain & OpenAI GPT-4.1
+                </h5>
+              </div>
+              <p>
+                I built and deployed an AI-powered assistant on my portfolio
+                site using OpenAI’s gpt-4.1-nano and LangChain. This chatbot
+                allows visitors to ask natural language questions about my
+                background, experience, and technical projects in real time.
+              </p>
+
+              <p>
+                The system architecture uses LangChain’s `RetrievalQA` over a
+                FAISS vector store populated with data scraped and indexed from
+                multiple pages of my site. This enables context-aware, precise
+                answers grounded in actual portfolio content, rather than
+                relying on static prompts.
+              </p>
+
+              <p>
+                To ensure efficiency, I cache the embeddings and index using
+                FAISS to avoid repeated web scraping, and I tuned the LLM with a
+                focused system prompt and a low temperature to keep answers
+                accurate and concise. Chat memory is persisted client-side via
+                `localStorage`, allowing continuity across page visits.
+              </p>
+
+              <p>
+                On the frontend, I implemented a lightweight popup widget using
+                vanilla JavaScript and styled it for responsiveness. Features
+                include a real-time "Generating answer..." indicator, keyboard
+                input via the Enter key, and a startup note to explain the
+                potential delay on first interaction due to cold start latency.
+              </p>
+
+              <p>
+                The full-stack app was deployed to Render using FastAPI and
+                environment-secured API keys, with CORS configured for local and
+                production domains. This demonstrates my ability to build and
+                deploy intelligent assistants with optimized user experience,
+                cloud hosting, and scalable LLM pipelines.
+              </p>
+
+              <p>
+                You can try it now by clicking the “LLM Chat” button on the
+                bottom right of this page.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img class="lozad" src="../assets/img/ml1.png" height="415px" />
+          </div>
+        </div>
+      </section>
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+
+      <!-- ======= Generative Adversarial Networks (GANs) & Federated Learning ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="gans pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  Generative Adversarial Networks (GANs) & Federated Learning
+                </h5>
+              </div>
+              <p>
+                For my master's thesis, I implemented a Generative Adversarial
+                Network (GAN) using non-i.i.d. time-series data in a Federated
+                Learning setting at Scania CV AB, a leading provider of
+                commercial vehicles. The aim was to generate synthetic data for
+                a specific vehicle system to avoid the costly and risky process
+                of manually collecting anomalous data.
+              </p>
+
+              <p>
+                I evaluated various image-based strategies and identified the
+                most effective one for decentralized learning. The GAN was based
+                on a deep Convolutional Neural Network (CNN) architecture, and
+                after testing various mutations, the final architecture used 1D
+                convolution layers along with Spectral Normalization to
+                stabilize the discriminator training.
+              </p>
+              <p>
+                I employed the use of adaptive average pooling after the
+                convolution layers to make the network work with inputs of
+                different sizes to use a dynamic window instead of a static one.
+                This improves the capabilities of the generator to create
+                sequences of different sizes.
+              </p>
+              <p>
+                I proposed a novel normalization technique to further enhance
+                the training process. More in details, the server determines the
+                global minimum and maximum values for each feature, considering
+                the lowest minimum and the highest maximum values received from
+                all the workers. These global boundaries are then sent back to
+                all workers for normalization of their local data.
+              </p>
+              <p>
+                The model was proven to effectively learn from multiple non-IID
+                time-series and converge to a solution that fools all
+                discriminators. Experimental results show that the approach
+                outperforms existing centralized methods, such as TimeGAN, for
+                non-IID time-series in terms of the quality of the generated
+                synthetic data.
+              </p>
+              <p>
+                To evaluate time-series based output, I developed an LSTM-based
+                auto-regression model using two training methods and three
+                evaluation metrics. the two methods were Train on Synthetic Test
+                on Real (TSTR) and Train on Real Test on Synthetic (TRTS) and
+                three metrics were calculated: R2 score, MAE, and RMSE.
+              </p>
+
+              <p>
+                You can find the report of the thesis
+                <a
+                  href="https://drive.google.com/file/d/11g7uDik7NQ4jzcv3xHHqdfHhG8JDcBop/view?usp=sharing"
+                  >[here]</a
+                >. The thesis was succesfully published in IEEE:
+                <a href="https://ieeexplore.ieee.org/document/10597551"
+                  >[publication link].</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-5 offset-lg-3">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/gan1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/gan2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/gan3.png" alt="" />
+                  </div>
+
+                  <!-- <div class="swiper-slide">
                   <img class="lozad" src="../assets/img/gan4.png" alt="">
                 </div> -->
 
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gan5.png" alt="">
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/gan5.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/gan6.png" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/gan6.png" alt="">
-                </div>
-
+                <div class="swiper-pagination"></div>
               </div>
-              <div class="swiper-pagination"></div>
             </div>
-          </div>
-      </div>
-
-    </section><!-- End Generative Adversarial Networks (GANs) & Federated Learning Section -->
-
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
-
-    <!-- ======= Deep Q Learn - Pendulum ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="deep-q pt-4 pt-md-0">
-            <div class="title-box-2">
-              <h5 class="title-left">
-                Deep Q Learn - Pendulum
-              </h5>
-            </div>
-            <p>In this project, I trained a Deep Q network to control a pendulum's torque, enabling it to perform a "handstand maneuver". I leveraged TensorFlow and Keras to create two neural networks:</p>
-            <ul>
-              <li>A primary Q-value function aimed at minimization using Stochastic Gradient Descent (SGD).</li>
-              <li>A target Q-value function used as a goal for the primary Q-value function. To stabilize the algorithm, I maintained its weights constant for an extended number of iterations, preventing a constantly moving target.</li>
-            </ul>
-            <p>Through experimentation and optimization, I fine-tuned the hyperparameters essential for the algorithm's performance. I used an (ε) greedy policy with an exponential decay, promoting broad exploration initially, followed by exploitation in later episodes to reduce cost.</p>
-            
-            <p>To create more independent data points for training the Q-value function, I used a replay buffer holding a set number of observations, replacing older ones with new data when full. I also implemented periodic model storage to safeguard against potential algorithm divergence. </p>
-            
-            <p>For a deeper dive into the project, check out the GitHub repository: <a href="https://github.com/basemprince/pendulum_deepQ_learn" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
           </div>
         </div>
+      </section>
+      <!-- End Generative Adversarial Networks (GANs) & Federated Learning Section -->
 
-        <div class="row gy-4">
-          <div class="d-flex justify-content-center align-items-center">
-              <img class="lozad" src="../assets/img/pendulum-gif.webp" height=315px>
-          </div>
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
       </div>
 
-    </section><!-- End Deep Q Learn - Pendulum Section -->
+      <!-- ======= Deep Q Learn - Pendulum ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="deep-q pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">Deep Q Learn - Pendulum</h5>
+              </div>
+              <p>
+                In this project, I trained a Deep Q network to control a
+                pendulum's torque, enabling it to perform a "handstand
+                maneuver". I leveraged TensorFlow and Keras to create two neural
+                networks:
+              </p>
+              <ul>
+                <li>
+                  A primary Q-value function aimed at minimization using
+                  Stochastic Gradient Descent (SGD).
+                </li>
+                <li>
+                  A target Q-value function used as a goal for the primary
+                  Q-value function. To stabilize the algorithm, I maintained its
+                  weights constant for an extended number of iterations,
+                  preventing a constantly moving target.
+                </li>
+              </ul>
+              <p>
+                Through experimentation and optimization, I fine-tuned the
+                hyperparameters essential for the algorithm's performance. I
+                used an (ε) greedy policy with an exponential decay, promoting
+                broad exploration initially, followed by exploitation in later
+                episodes to reduce cost.
+              </p>
 
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
+              <p>
+                To create more independent data points for training the Q-value
+                function, I used a replay buffer holding a set number of
+                observations, replacing older ones with new data when full. I
+                also implemented periodic model storage to safeguard against
+                potential algorithm divergence.
+              </p>
 
-    <!-- ======= Who is the Payer: Using ML Analysis ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="who-pay pt-4 pt-md-0">
-            <div class="title-box-2">
-              <h5 class="title-left">
-                Who is the Payer: Using ML Analysis
-              </h5>
+              <p>
+                For a deeper dive into the project, check out the GitHub
+                repository:
+                <a
+                  href="https://github.com/basemprince/pendulum_deepQ_learn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >[Link]</a
+                >.
+              </p>
             </div>
-            <p>Addressing work orders and determining the payer at Scania was a time-consuming task, prompting the initiation of a project to explore how machine learning (ML) could expedite this process. I collaborated with the relevant team members to gather necessary data (features) for decision-making, and the project encompassed the following stages:</p>
+          </div>
 
-            <ul>
-            <li><strong>Data collection:</strong> I worked closely with team members to gather critical data and features for decision-making.</li>
-            <li><strong>Pre-processing:</strong> Using techniques like scaling, encoding, and feature selection, I prepared the collected data for ML algorithms.</li> 
-            <li><strong>Model selection and training:</strong> I tested multiple ML algorithms, including linear regression, random forest, support vector machines, and MLPs, to identify the best-performing model for our dataset.</li>
-            <li><strong>Model evaluation and prediction:</strong> Each model's performance was assessed using cross-validation and various evaluation metrics such as accuracy, precision, and recall. I then used the best-performing model to make predictions on new data to identify the payer.</li>
-            </ul>
-            <p>This project not only streamlined the decision-making process but also showcased my proficiency in data analysis, pre-processing, and applying ML techniques for predictive purposes.</p>
-            
+          <div class="row gy-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                class="lozad"
+                src="../assets/img/pendulum-gif.webp"
+                height="315px"
+              />
+            </div>
           </div>
         </div>
+      </section>
+      <!-- End Deep Q Learn - Pendulum Section -->
 
-        <!-- <div class="row gy-4">
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+
+      <!-- ======= Who is the Payer: Using ML Analysis ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="who-pay pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">Who is the Payer: Using ML Analysis</h5>
+              </div>
+              <p>
+                Addressing work orders and determining the payer at Scania was a
+                time-consuming task, prompting the initiation of a project to
+                explore how machine learning (ML) could expedite this process. I
+                collaborated with the relevant team members to gather necessary
+                data (features) for decision-making, and the project encompassed
+                the following stages:
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Data collection:</strong> I worked closely with team
+                  members to gather critical data and features for
+                  decision-making.
+                </li>
+                <li>
+                  <strong>Pre-processing:</strong> Using techniques like
+                  scaling, encoding, and feature selection, I prepared the
+                  collected data for ML algorithms.
+                </li>
+                <li>
+                  <strong>Model selection and training:</strong> I tested
+                  multiple ML algorithms, including linear regression, random
+                  forest, support vector machines, and MLPs, to identify the
+                  best-performing model for our dataset.
+                </li>
+                <li>
+                  <strong>Model evaluation and prediction:</strong> Each model's
+                  performance was assessed using cross-validation and various
+                  evaluation metrics such as accuracy, precision, and recall. I
+                  then used the best-performing model to make predictions on new
+                  data to identify the payer.
+                </li>
+              </ul>
+              <p>
+                This project not only streamlined the decision-making process
+                but also showcased my proficiency in data analysis,
+                pre-processing, and applying ML techniques for predictive
+                purposes.
+              </p>
+            </div>
+          </div>
+
+          <!-- <div class="row gy-4">
           <div class="col-lg-4 offset-lg-4">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
@@ -297,213 +487,344 @@
               </div>
               <div class="swiper-pagination"></div>
             </div>
-          </div>
-      </div> -->
-
-    </section><!-- End Who is the Payer: Using ML Analysis Section -->
-
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
-
-    <!-- ======= Deceptive Reviews Detection Using One-Class SVM Research ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="deceptive pt-4 pt-md-0">
-            <div class="title-box-2">
-              <h5 class="title-left">
-                Deceptive Reviews Detection Using One-Class SVM Research
-              </h5>
-            </div>
-            <p>This project explored the effectiveness of a One-Class Support Vector Machine (SVM) in identifying deceptive online reviews. I theorized that training on genuine reviews alone could spot deceptive ones, reducing training and inference time and data requirements.</p>
-
-            <p>A One-Class SVM, an unsupervised learning approach, is often used for anomaly detection in datasets. It trains on normal data, defines boundaries, and classifies points outside those boundaries. Multiple datasets were collected, cleaned, and merged using R studio and Pandas, followed by some preliminary statistical analyses.</p>
-            
-            <p>I performed extensive pre-processing through Natural Language Processing (NLP) to transform text into a form suitable for the neural network. This process involved tokenization, stop word and non-alpha text removal, word lemmatization, word vectorization, and undersampling to balance the datasets.</p>
-            
-            <p>However, the research results indicated that One-Class SVM, despite its time efficiency, was less effective than multi-class SVM due to the diverse review content. The study concluded that linguistic features alone are insufficient to detect real-life fake reviews but suggested that a user-level deployment of One-Class SVM could potentially identify unusual user posting behaviors.</p>
-          </div>
+          </div> -->
         </div>
+      </section>
+      <!-- End Who is the Payer: Using ML Analysis Section -->
 
-        <div class="row gy-4">
-          <div class="col-lg-5 offset-lg-4">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/dr1.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/dr3.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img class="lozad" src="../assets/img/dr2.png" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
       </div>
 
-    </section><!-- End Deceptive Reviews Detection Using One-Class SVM Research Section -->
-
-    <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-    </div>
-
-    
-    <!-- ======= Handwriting Data Detection ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+      <!-- ======= Deceptive Reviews Detection Using One-Class SVM Research ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
           <div class="col-md-12">
-              <div class="handwriting-detection pt-4 pt-md-0">
-                  <div class="title-box-2">
-                      <h5 class="title-left">
-                          Handwriting Data Detection
-                      </h5>
-                  </div>
-                  <p>This project required processing a vast number of scanned documents with tabular data containing handwritten numerical entries, aiming to digitize the handwritten data accurately for easy analysis and management.</p>
-  
-                  <p>I trained a Convolutional Neural Network (CNN) with TensorFlow to recognize handwritten digits, using the extensive MNIST dataset for training. To enhance the CNN model's accuracy, I used OpenCV for document pre-processing, which included:</p>
-  
-                  <ul>
-                      <li><strong>Gaussian Blur:</strong> To reduce image noise and minimize handwriting variations.</li>
-                      <li><strong>Thresholding:</strong> To convert images into a binary format, simplifying handwritten data detection.</li>
-                      <li><strong>Dilatation and Erosion:</strong> To refine the binary images, eliminating minor artifacts and enhancing handwritten data visibility.</li>
-                      <li><strong>Find Contours:</strong> To detect table edges within scanned documents.</li>
-                      <li><strong>Bounding Rectangles, Convex Hull:</strong> To identify individual table cells.</li>
-                  </ul>
-  
-                  <p>After extraction, I processed and structured the handwritten data with the Pandas library and saved the cleaned data into digital Excel sheets for subsequent analysis and manipulation.</p>
+            <div class="deceptive pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  Deceptive Reviews Detection Using One-Class SVM Research
+                </h5>
               </div>
+              <p>
+                This project explored the effectiveness of a One-Class Support
+                Vector Machine (SVM) in identifying deceptive online reviews. I
+                theorized that training on genuine reviews alone could spot
+                deceptive ones, reducing training and inference time and data
+                requirements.
+              </p>
+
+              <p>
+                A One-Class SVM, an unsupervised learning approach, is often
+                used for anomaly detection in datasets. It trains on normal
+                data, defines boundaries, and classifies points outside those
+                boundaries. Multiple datasets were collected, cleaned, and
+                merged using R studio and Pandas, followed by some preliminary
+                statistical analyses.
+              </p>
+
+              <p>
+                I performed extensive pre-processing through Natural Language
+                Processing (NLP) to transform text into a form suitable for the
+                neural network. This process involved tokenization, stop word
+                and non-alpha text removal, word lemmatization, word
+                vectorization, and undersampling to balance the datasets.
+              </p>
+
+              <p>
+                However, the research results indicated that One-Class SVM,
+                despite its time efficiency, was less effective than multi-class
+                SVM due to the diverse review content. The study concluded that
+                linguistic features alone are insufficient to detect real-life
+                fake reviews but suggested that a user-level deployment of
+                One-Class SVM could potentially identify unusual user posting
+                behaviors.
+              </p>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="col-lg-5 offset-lg-4">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/dr1.png" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/dr3.jpg" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/dr2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Deceptive Reviews Detection Using One-Class SVM Research Section -->
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+
+      <!-- ======= Handwriting Data Detection ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="handwriting-detection pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">Handwriting Data Detection</h5>
+              </div>
+              <p>
+                This project required processing a vast number of scanned
+                documents with tabular data containing handwritten numerical
+                entries, aiming to digitize the handwritten data accurately for
+                easy analysis and management.
+              </p>
+
+              <p>
+                I trained a Convolutional Neural Network (CNN) with TensorFlow
+                to recognize handwritten digits, using the extensive MNIST
+                dataset for training. To enhance the CNN model's accuracy, I
+                used OpenCV for document pre-processing, which included:
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Gaussian Blur:</strong> To reduce image noise and
+                  minimize handwriting variations.
+                </li>
+                <li>
+                  <strong>Thresholding:</strong> To convert images into a binary
+                  format, simplifying handwritten data detection.
+                </li>
+                <li>
+                  <strong>Dilatation and Erosion:</strong> To refine the binary
+                  images, eliminating minor artifacts and enhancing handwritten
+                  data visibility.
+                </li>
+                <li>
+                  <strong>Find Contours:</strong> To detect table edges within
+                  scanned documents.
+                </li>
+                <li>
+                  <strong>Bounding Rectangles, Convex Hull:</strong> To identify
+                  individual table cells.
+                </li>
+              </ul>
+
+              <p>
+                After extraction, I processed and structured the handwritten
+                data with the Pandas library and saved the cleaned data into
+                digital Excel sheets for subsequent analysis and manipulation.
+              </p>
+            </div>
           </div>
           <div class="row gy-4">
-              <div class="d-flex justify-content-center align-items-center">
-                  <img class="lozad" src="../assets/img/EX10.jpg" width="600px">
-              </div>
-          </div>
-      </div>
-  </section><!-- End Handwriting Data Detection Section -->
-  
-
-  <div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-      <div class="overlay-mf"></div>
-  </div>
-  
-    
-  <!-- =======  Simple Neural Network Digit Classifier ======= -->
-  <section id="portfolio-details" class="portfolio-details">
-    <div class="container">
-        <div class="col-md-12">
-            <div class="simple-neural-network pt-4 pt-md-0">
-                <div class="title-box-2">
-                    <h5 class="title-left">
-                        Simple Neural Network Digit Classifier
-                    </h5>
-                </div>
-                <p>In this project, I created a simple neural network without using any frameworks to delve deeper into their structure. The network was specifically tailored for the MNIST dataset and consisted of three layers:</p>
-
-                <ul>
-                    <li>Zeroth layer: Comprising of 784 inputs as it accepts a 28x28 pixel image.</li>
-                    <li>First layer: A hidden layer with 10 nodes.</li>
-                    <li>Second layer: An output layer with 10 nodes, each representing a digit from 0-9.</li>
-                </ul>
-
-                <p>Training the network involved the following steps:</p>
-
-                <ul>
-                    <li>Initialize random weights and biases.</li>
-                    <li>Perform forward propagation using the weights and biases (Z = W.A + b), where:</li>
-                        <ul>
-                            <li>The first layer is calculated and a rectified linear unit (Relu) activation is applied to make it non-linear.</li>
-                            <li>The second layer is calculated and a softmax activation function is applied to obtain probabilities.</li>
-                        </ul>
-                    <li>Backward propagation is then applied:</li>
-                        <ul>
-                            <li>Calculate the error between prediction and actual value (dZ = A - Y).</li>
-                            <li>Determine the contribution of each weight and bias to the error.</li>
-                            <li>Update the weights and biases based on your learning rate alpha (hyper parameter).</li>
-                        </ul>
-                </ul>
-
-                <p>Check out the full project on GitHub: <a href="https://github.com/basemprince/digit_recognition_nn" target="_blank" rel="noopener noreferrer">Link</a>.</p>
-            </div>
-        </div>
-        <div class="row gy-4">
             <div class="d-flex justify-content-center align-items-center">
-                <img class="lozad" src="../assets/img/acc.jpg" width="400px">
+              <img class="lozad" src="../assets/img/EX10.jpg" width="600px" />
             </div>
-        </div>
-    </div>
-</section><!-- End Simple Neural Network Digit Classifier Section -->
-
-<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-    <div class="overlay-mf"></div>
-</div>
-
-  <!-- =======  KTH Machine Learning Projects ======= -->
-<section id="portfolio-details" class="portfolio-details">
-  <div class="container">
-      <div class="col-md-12">
-          <div class="kth-ml-projects pt-4 pt-md-0">
-              <div class="title-box-2">
-                  <h5 class="title-left">
-                      KTH Machine Learning Projects
-                  </h5>
-              </div>
-              <p>In this series of projects, I gained foundational knowledge of significant algorithms and theory in machine learning. This was achieved through lab work, where I implemented various machine learning algorithms, including:</p>
-              
-              <ul>
-                  <li>Face classification using Boosted Decision Trees.</li>
-                  <li>Support Vector Machines.</li>
-                  <li>Bayes Classifier with Adaboost algorithm.</li>
-              </ul>
-              
-              <p>I built and trained different classifiers on a labeled dataset, which were later used to infer labels on an unlabeled evaluation dataset. The following machine learning algorithms were used with their respective accuracy results:</p>
-              
-              <ul>
-                  <li>Logistic Regression: 0.809 (0.029)</li>
-                  <li>Linear Discriminant Analysis: 0.811 (0.034)</li>
-                  <li>K Nearest Neighbor: 0.816 (0.041)</li>
-                  <li>Decision Tree Classifier: 0.784 (0.035)</li>
-                  <li>Gaussian Naive Bayes: 0.842 (0.043)</li>
-                  <li>Support Vector Machine: 0.850 (0.030)</li>
-                  <li>Random Forest: 0.859 (0.020)</li>
-              </ul>
-              
-              <p>The best-performing model, given the nature of the dataset, was the <b>Random Forest</b>.</p>
-              <p>For more information, visit the GitHub repository: <a href="https://github.com/basemprince/ML_algorithms" target="_blank" rel="noopener noreferrer">[Link]</a>.</p>
           </div>
+        </div>
+      </section>
+      <!-- End Handwriting Data Detection Section -->
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
       </div>
-  </div>
-</section><!-- End Simple Neural Network Digit Classifier Section -->
 
-<div id="transition" class="paralax-mf transition-paralax bg-image sect-mt4 route" style="background-image: url(../assets/img/bg_2.jpg)">
-  <div class="overlay-mf"></div>
-</div>
+      <!-- =======  Simple Neural Network Digit Classifier ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="simple-neural-network pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">
+                  Simple Neural Network Digit Classifier
+                </h5>
+              </div>
+              <p>
+                In this project, I created a simple neural network without using
+                any frameworks to delve deeper into their structure. The network
+                was specifically tailored for the MNIST dataset and consisted of
+                three layers:
+              </p>
 
-  </main><!-- End #main -->
+              <ul>
+                <li>
+                  Zeroth layer: Comprising of 784 inputs as it accepts a 28x28
+                  pixel image.
+                </li>
+                <li>First layer: A hidden layer with 10 nodes.</li>
+                <li>
+                  Second layer: An output layer with 10 nodes, each representing
+                  a digit from 0-9.
+                </li>
+              </ul>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+              <p>Training the network involved the following steps:</p>
 
+              <ul>
+                <li>Initialize random weights and biases.</li>
+                <li>
+                  Perform forward propagation using the weights and biases (Z =
+                  W.A + b), where:
+                </li>
+                <ul>
+                  <li>
+                    The first layer is calculated and a rectified linear unit
+                    (Relu) activation is applied to make it non-linear.
+                  </li>
+                  <li>
+                    The second layer is calculated and a softmax activation
+                    function is applied to obtain probabilities.
+                  </li>
+                </ul>
+                <li>Backward propagation is then applied:</li>
+                <ul>
+                  <li>
+                    Calculate the error between prediction and actual value (dZ
+                    = A - Y).
+                  </li>
+                  <li>
+                    Determine the contribution of each weight and bias to the
+                    error.
+                  </li>
+                  <li>
+                    Update the weights and biases based on your learning rate
+                    alpha (hyper parameter).
+                  </li>
+                </ul>
+              </ul>
 
-  <!-- Basem Chatbot Widget -->
-  <div id="chatbot-container"></div>
+              <p>
+                Check out the full project on GitHub:
+                <a
+                  href="https://github.com/basemprince/digit_recognition_nn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Link</a
+                >.
+              </p>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <img class="lozad" src="../assets/img/acc.jpg" width="400px" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Simple Neural Network Digit Classifier Section -->
 
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- <script src="../assets/vendor/typed.js/typed.min.js"></script> -->
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/lozad/lozad.min.js"></script>
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/chatbot.js"></script>
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
 
-</body>
+      <!-- =======  KTH Machine Learning Projects ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="kth-ml-projects pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">KTH Machine Learning Projects</h5>
+              </div>
+              <p>
+                In this series of projects, I gained foundational knowledge of
+                significant algorithms and theory in machine learning. This was
+                achieved through lab work, where I implemented various machine
+                learning algorithms, including:
+              </p>
 
+              <ul>
+                <li>Face classification using Boosted Decision Trees.</li>
+                <li>Support Vector Machines.</li>
+                <li>Bayes Classifier with Adaboost algorithm.</li>
+              </ul>
+
+              <p>
+                I built and trained different classifiers on a labeled dataset,
+                which were later used to infer labels on an unlabeled evaluation
+                dataset. The following machine learning algorithms were used
+                with their respective accuracy results:
+              </p>
+
+              <ul>
+                <li>Logistic Regression: 0.809 (0.029)</li>
+                <li>Linear Discriminant Analysis: 0.811 (0.034)</li>
+                <li>K Nearest Neighbor: 0.816 (0.041)</li>
+                <li>Decision Tree Classifier: 0.784 (0.035)</li>
+                <li>Gaussian Naive Bayes: 0.842 (0.043)</li>
+                <li>Support Vector Machine: 0.850 (0.030)</li>
+                <li>Random Forest: 0.859 (0.020)</li>
+              </ul>
+
+              <p>
+                The best-performing model, given the nature of the dataset, was
+                the <b>Random Forest</b>.
+              </p>
+              <p>
+                For more information, visit the GitHub repository:
+                <a
+                  href="https://github.com/basemprince/ML_algorithms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >[Link]</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Simple Neural Network Digit Classifier Section -->
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+    </main>
+    <!-- End #main -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Basem Chatbot Widget -->
+    <div id="chatbot-container"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="../assets/vendor/typed.js/typed.min.js"></script> -->
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/lozad/lozad.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/chatbot.js"></script>
+  </body>
 </html>

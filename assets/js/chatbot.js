@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const payload = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: userText })
+      body: JSON.stringify({ text: userText }),
     };
 
     try {
@@ -75,7 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return await localRes.json();
     } catch (err) {
       console.warn("Local server failed, trying Render endpoint...", err);
-      const cloudRes = await fetch("https://basem-chatbot.onrender.com/chat", payload);
+      const cloudRes = await fetch(
+        "https://basem-chatbot.onrender.com/chat",
+        payload,
+      );
       if (!cloudRes.ok) throw new Error("Cloud fetch failed");
       return await cloudRes.json();
     }
@@ -107,7 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
       saveChatLog();
     } catch (err) {
       clearInterval(loadingInterval);
-      document.getElementById(loadingId).innerHTML = `<b>BasemBot:</b> Error getting response.`;
+      document.getElementById(loadingId).innerHTML =
+        `<b>BasemBot:</b> Error getting response.`;
       console.error(err);
     }
   }
