@@ -1,6 +1,6 @@
 # Website Portfolio
 
-Link: 
+Link:
 <https://basemshaker.com/>
 
 Includes:
@@ -8,3 +8,18 @@ Includes:
 * Eduction Experience / Portfolio
 * Work Experience / Portfolio
 * Extracurricular
+
+## Development
+
+Install pre-commit and set up git hooks:
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Run hooks against all files with:
+
+```bash
+pre-commit run --all-files
+```
