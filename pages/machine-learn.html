@@ -235,6 +235,104 @@
         <div class="overlay-mf"></div>
       </div>
 
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="gans pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">Pokémon GO PVP Battle Assistant</h5>
+              </div>
+              <p>
+                A Python tool that helps trainers manage Pokémon GO PVP battles.
+                The assistant reads your device screen via
+                <code>scrcpy</code> and overlays recommended moves, switch
+                timers, and energy counts in a Tkinter-based UI.
+              </p>
+              <p>
+                <code>main.py</code> orchestrates the process: it auto-detects
+                the battle league, keeps track of both players' Pokémon, and
+                logs results to <code>battle_records.csv</code>. The UI
+                highlights current Pokémon, records optional video, and updates
+                move data from PvPoke when needed.
+              </p>
+              <p>
+                Under the hood the project makes extensive use of Python
+                libraries:
+              </p>
+              <ul>
+                <li>
+                  <code>scrcpy</code> and <code>adbutils</code> to mirror the
+                  Android screen.
+                </li>
+                <li>
+                  <code>OpenCV</code> and <code>Numpy</code> for real-time frame
+                  processing.
+                </li>
+                <li>
+                  <code>Tesserocr</code> for OCR of move text and energy counts.
+                </li>
+                <li>
+                  <code>Pandas</code> for tracking battles and updating
+                  datasets.
+                </li>
+                <li>
+                  <code>CustomTkinter</code> and <code>Tkinter</code> for the
+                  desktop interface.
+                </li>
+                <li>
+                  <code>Ultralytics YOLOv8</code> models for ongoing computer
+                  vision experiments.
+                </li>
+              </ul>
+              <p>
+                To use the assistant, connect an Android device with USB
+                debugging enabled and run
+                <code>python main.py</code>. Align the regions of interest when
+                prompted, then monitor battle progress with real-time move
+                recommendations.
+              </p>
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-lg-5 offset-lg-3">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg2.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg3.png" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg4.png" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg5.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="lozad" src="../assets/img/pg6.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+
       <!-- ======= Generative Adversarial Networks (GANs) & Federated Learning ======= -->
       <section id="portfolio-details" class="portfolio-details">
         <div class="container">
