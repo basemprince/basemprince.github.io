@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("chatbot-container");
   if (!container) return;
 
+  // Inject widget HTML
   container.innerHTML = `
-    <!-- Basem Chatbot Widget -->
     <button id="chat-btn" class="chat-btn">LLM Chat</button>
-
     <div id="chat-popup" class="chat-popup" style="display: none;">
       <div class="chat-header">
         Basem's Assistant
@@ -25,33 +24,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("chat-input");
   const sendBtn = document.getElementById("send-btn");
 
-  // Restore chat log or reset on manual refresh
+  let loadingInterval;
+  let sessionId = localStorage.getItem("basem_chat_session") || null;
+
+  // Restore chat or reset on refresh
   if (performance.getEntriesByType("navigation")[0]?.type === "reload") {
     localStorage.removeItem("basem_chat_log");
+    localStorage.removeItem("basem_chat_session");
+    sessionId = null;
   }
 
-  const saved = localStorage.getItem("basem_chat_log");
-  if (saved) {
-    log.innerHTML = saved;
-    log.scrollTop = log.scrollHeight;
+  const savedLog = localStorage.getItem("basem_chat_log");
+  if (savedLog) {
+    log.innerHTML = savedLog;
   } else {
-    // Initial message
     log.innerHTML = `<div><b>BasemBot:</b> Hi! I'm Basem's assistant. What would you like to know about him?</div>`;
     saveChatLog();
   }
-
-  let loadingInterval;
+  log.scrollTop = log.scrollHeight;
 
   function saveChatLog() {
     localStorage.setItem("basem_chat_log", log.innerHTML);
   }
 
-  // Toggle popup reliably
+  // Show/Hide Chat
   btn.addEventListener("click", () => {
     popup.style.display = popup.style.display === "block" ? "none" : "block";
   });
 
-  // Hide popup when clicking outside of it
+  // Hide popup when clicking outside
   document.addEventListener("click", (event) => {
     if (
       popup.style.display === "block" &&
@@ -66,15 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const payload = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: userText }),
+      body: JSON.stringify({ text: userText, session_id: sessionId }),
     };
 
     try {
       const localRes = await fetch("http://127.0.0.1:8000/chat", payload);
       if (!localRes.ok) throw new Error("Local fetch failed");
       return await localRes.json();
-    } catch (err) {
-      console.warn("Local server failed, trying Render endpoint...", err);
+    } catch {
       const cloudRes = await fetch(
         "https://basem-chatbot.onrender.com/chat",
         payload,
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Send on button click or Enter key
+  // Handle send
   async function handleSend() {
     const userText = input.value.trim();
     if (!userText) return;
@@ -103,9 +103,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 400);
 
     try {
-      const data = await fetchWithFallback(userText);
+      const response = await fetchWithFallback(userText);
       clearInterval(loadingInterval);
-      document.getElementById(loadingId).innerHTML = `<b>BasemBot:</b> ${data}`;
+
+      sessionId = response.session_id || sessionId;
+      localStorage.setItem("basem_chat_session", sessionId);
+
+      document.getElementById(loadingId).innerHTML =
+        `<b>BasemBot:</b> ${response.answer}`;
       log.scrollTop = log.scrollHeight;
       saveChatLog();
     } catch (err) {
@@ -117,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   sendBtn.addEventListener("click", handleSend);
-
   input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
