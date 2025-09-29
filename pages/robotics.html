@@ -105,6 +105,139 @@
     </div>
 
     <main id="main">
+      <!-- ======= 6 Axis Robot Arm ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="6-axis-robot-arm pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">6 Axis Robot Arm</h5>
+              </div>
+
+              <p>
+                I designed and built a fully custom 6-axis robot arm: 3D-printed
+                mechanics, a KiCad PCB (ATmega1284P + MCP23017 + six TMC5160s),
+                and firmware that talks to
+                <em>ros2_control</em> over a lightweight serial protocol. It
+                homes with limit switches and uses StallGuard on the largest
+                joint. Later, I integrated ROS 2 + MoveIt (OMPL) for planning
+                and execution on macOS (ROS 2 “Kilted Kaiju”, 2025).
+              </p>
+
+              <h6>Hardware</h6>
+              <ul>
+                <li>
+                  Custom PCB in KiCad: ATmega1284P, MCP23017 I/O expander, 6×
+                  TMC5160 stepper drivers.
+                </li>
+                <li>
+                  Limit switches for homing; StallGuard sensorless homing on
+                  J<sub>largest</sub>.
+                </li>
+                <li>
+                  Paired motors for J2, MOSFET fan/LED control, servo channel on
+                  PB1.
+                </li>
+              </ul>
+
+              <h6>Firmware</h6>
+              <ul>
+                <li>
+                  SPI config + runtime control of TMC5160s (current, microsteps,
+                  spreadCycle/StealthChop).
+                </li>
+                <li>
+                  Deterministic step generation (AccelStepper), homing (switch +
+                  StallGuard).
+                </li>
+                <li>
+                  MCP23017 for enables/IO; periodic telemetry:
+                  <code>PV:&lt;ms&gt;,&lt;pos&gt;,&lt;vel&gt;,...</code>
+                </li>
+              </ul>
+
+              <h6>ROS 2 Integration</h6>
+              <ul>
+                <li>
+                  Custom
+                  <code>hardware_interface::SystemInterface</code>
+                  (“ArduinoSystem”) over USB serial.
+                </li>
+                <li>
+                  <code>ros2_control</code> controllers + MoveIt (OMPL).
+                  URDF/Xacro + SRDF + joint limits.
+                </li>
+                <li>
+                  Validated in RViz; executed trajectories on the real hardware.
+                </li>
+              </ul>
+
+              <h6>Launch (excerpt)</h6>
+              <pre><code>&lt;ros2&gt; robot_state_publisher, ros2_control_node,
+                spawners (joint_state_broadcaster, manipulator_controller, gripper_controller),
+                move_group (MoveIt + OMPL), RViz with preloaded config.</code></pre>
+
+              <h6>Highlights</h6>
+              <ul>
+                <li>
+                  End-to-end stack: MoveIt → ros2_control → custom HW interface
+                  → custom PCB.
+                </li>
+                <li>Runs natively on macOS with ROS 2 “Kilted Kaiju”.</li>
+                <li>
+                  Sensorless homing (StallGuard) + traditional switches in one
+                  system.
+                </li>
+              </ul>
+
+              <p>
+                Photos (build timeline):
+                <a
+                  href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >[Link]</a
+                >.
+              </p>
+
+              <h6>Tech</h6>
+              <p>
+                KiCad • ATmega1284P • MCP23017 • TMC5160 • AccelStepper •
+                Arduino • ROS 2 (Kilted Kaiju) • ros2_control • MoveIt (OMPL) •
+                RViz • macOS
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img class="lozad" src="../assets/img/EX1_merg.jpg" width="500px" />
+            <img class="lozad" src="../assets/img/board2.gif" width="335px" />
+          </div>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2 plyr--video">
+            <div
+              class="plyr__video-wrapper"
+              style="height: 590px; margin: auto"
+            >
+              <div class="plyr__video-embed" id="player">
+                <iframe
+                  src="https://www.youtube.com/embed/FVzKyWYHTbM?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                  allowfullscreen
+                  allowtransparency
+                  allow="autoplay"
+                  class="lozad"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End 6 Axis Robot Arm Section -->
+
       <!-- ======= ROBOT SEARCH AND RESCUE ======= -->
       <section id="portfolio-details" class="portfolio-details">
         <div class="container">
@@ -599,57 +732,6 @@
       >
         <div class="overlay-mf"></div>
       </div>
-
-      <!-- ======= 6 Axis Robot Arm ======= -->
-      <section id="portfolio-details" class="portfolio-details">
-        <div class="container">
-          <div class="col-md-12">
-            <div class="6-axis-robot-arm pt-4 pt-md-0">
-              <div class="title-box-2">
-                <h5 class="title-left">6 Axis Robot Arm</h5>
-              </div>
-              <p>
-                This project involved the construction of a 6-axis robot arm
-                using a 3D printer, servo motors, and an Arduino Mega with a
-                RepRap shield and servo drives.
-              </p>
-              <p>
-                The next step in the development process is to build a ROS
-                interface to control the servos using inverse kinematics. We
-                also plan to add a vision system using OpenCV to identify
-                targets, and enable the robot arm to pick up and deliver
-                payloads.
-              </p>
-              <p>
-                You can view a timeline of pictures of the robot via this link:
-                <a
-                  href="https://photos.app.goo.gl/4KtaCbckyJ37qjmg7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >[Link]</a
-                >. A demonstration of the project can be seen in this video:
-                <a
-                  href="https://www.youtube.com/watch?v=U-jQ4iV8sJ8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >[Link]</a
-                >.
-              </p>
-            </div>
-          </div>
-
-          <div class="row gy-4">
-            <div class="d-flex justify-content-center align-items-center">
-              <img
-                class="lozad"
-                src="../assets/img/EX1_merg.jpg"
-                width="500px"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End 6 Axis Robot Arm Section -->
 
       <div
         id="transition"
