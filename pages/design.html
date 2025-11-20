@@ -107,6 +107,111 @@
     </div>
 
     <main id="main">
+      <!-- ======= CUSTOM 3D PRINTER CONTROL BOARD ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="custom-board pt-4 pt-md-0">
+              <div class="title-box-2">
+                <h5 class="title-left">Custom 3D Printer Control Board</h5>
+              </div>
+
+              <p>
+                This is a multi-revision engineering project where I designed
+                and built a professional-grade 32-bit 3D-printer control board
+                entirely from scratch. The work spanned electronics design, PCB
+                layout, firmware bring-up, power engineering, and real-time
+                debugging.
+              </p>
+
+              <ul>
+                <li>
+                  <strong>Early Prototypes:</strong> The project began with a
+                  custom ATmega1284P-based board to validate the basic motion
+                  system, heaters, thermistors, and power rails. This confirmed
+                  the fundamental architecture and guided the next revision.
+                </li>
+
+                <li>
+                  <strong>ARM Upgrade:</strong> I redesigned the board around an
+                  STM32F446ZE (LQFP-144), adding native USB, SWD debugging,
+                  multiple thermistor channels, a full 24&nbsp;V → 5&nbsp;V buck
+                  → 3.3&nbsp;V LDO power chain, BLTouch/inductive probe support,
+                  and a clean clock system with an external 8&nbsp;MHz crystal.
+                </li>
+
+                <li>
+                  <strong>Stepper Driver Architecture:</strong> Integrated
+                  TMC5160/TMC2240 drivers with full SPI control, proper
+                  CS/OE/DIAG routing, SPI integrity tuning, and thermal
+                  considerations. Added ground stitching and signal-integrity
+                  improvements across the motion subsystem.
+                </li>
+
+                <li>
+                  <strong>Power & MOSFET Stage:</strong> Designed high-current
+                  outputs for the heated bed and hotends using a MIC4427 gate
+                  driver, IRFS7420-class MOSFETs, controlled switching behavior,
+                  and correct pull-downs to prevent pre-fire during boot.
+                </li>
+
+                <li>
+                  <strong>Firmware Bring-Up:</strong> Brought the board online
+                  with both Marlin and Klipper on a fully custom pin map.
+                  Debugged HSE oscillation, DFU enumeration, USB stability,
+                  SWD/JTAG conflicts, ADC channels, heater control, and
+                  temperature sensing.
+                </li>
+
+                <li>
+                  <strong>Stability & Validation:</strong> Verified power
+                  sequencing, thermistor accuracy, MOSFET switching
+                  characteristics, analog-ground noise reduction, and long-term
+                  reliability under full motor and heater load.
+                </li>
+
+                <li>
+                  <strong>Final Result:</strong> A stable, high-performance
+                  32-bit controller capable of running modern high-speed 3D
+                  printers with advanced motion algorithms and multiple
+                  expansion options.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row gy-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                class="lozad"
+                src="../assets/img/pcb1.gif"
+                width="550px"
+                alt="Custom 3D Printer Control Board"
+              />
+            </div>
+          </div>
+          <div class="row gy-4">
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                class="lozad"
+                src="../assets/img/pcb2.gif"
+                width="550px"
+                alt="Custom 3D Printer Control Board"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Custom 3D Printer Control Board Section -->
+
+      <div
+        id="transition"
+        class="paralax-mf transition-paralax bg-image sect-mt4 route"
+        style="background-image: url(../assets/img/bg_2.jpg)"
+      >
+        <div class="overlay-mf"></div>
+      </div>
+
       <!-- ======= 3D PRINTING AND 3D PRINTERS ======= -->
       <section id="portfolio-details" class="portfolio-details">
         <div class="container">
