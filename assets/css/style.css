@@ -1509,6 +1509,32 @@ footer .credits a {
   margin: auto;
 }
 
+.thought-essay h6 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  position: relative;
+}
+
+.thought-essay h6:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--main-bg-color);
+}
+
+@media (min-width: 768px) {
+  .thought-essay h6 {
+    font-size: 2.45rem;
+  }
+}
+
 img {
   border-radius: 10px; /* adjust as needed */
 }
